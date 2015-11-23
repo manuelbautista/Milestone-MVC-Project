@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a43bc20cacb943cd9a3e265c3efa419a" Name="Diagram1" ZoomLevel="81">
+        <EntityTypeShape EntityType="DCSModel.ETOPlaybook" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="DCSModel.ProjectMilestone" Width="1.5" PointX="8.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DCSModel.ProjectOwner" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="DCSModel.Project" Width="1.5" PointX="3" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="DCSModel.ProjectSchedule" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="DCSModel.ProjectTracking" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="false" />
+        <EntityTypeShape EntityType="DCSModel.RiskMilestone" Width="1.5" PointX="3" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="DCSModel.Status" Width="1.5" PointX="3" PointY="1.125" IsExpanded="false" />
+        <AssociationConnector Association="DCSModel.FK_Projects_ETOPlaybooks" ManuallyRouted="false" />
+        <AssociationConnector Association="DCSModel.FK_Projects_ETOPlaybooks1" ManuallyRouted="false" />
+        <AssociationConnector Association="DCSModel.FK_ProjectMilestones_Projects" ManuallyRouted="false" />
+        <AssociationConnector Association="DCSModel.FK_ProjectMilestones_Projects1" ManuallyRouted="false" />
+        <AssociationConnector Association="DCSModel.FK_Projects_ProjectOwners" ManuallyRouted="false" />
+        <AssociationConnector Association="DCSModel.FK_Projects_ProjectOwners1" ManuallyRouted="false" />
+        <AssociationConnector Association="DCSModel.FK_ProjectSchedule_Projects" ManuallyRouted="false" />
+        <AssociationConnector Association="DCSModel.FK_ProjectTracking_Projects" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DCSModel.ProjectStatu" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="false" />
+        <AssociationConnector Association="DCSModel.FK_ProjectStatus_Projects" />
+        <AssociationConnector Association="DCSModel.FK_ProjectStatus_Status" />
+        <AssociationConnector Association="DCSModel.FK_ProjectStatus_Status1" />
+        <AssociationConnector Association="DCSModel.FK_ProjectStatus_Status2" />
+        <AssociationConnector Association="DCSModel.FK_ProjectStatus_Status3" />
+        <AssociationConnector Association="DCSModel.FK_ProjectStatus_Status4" />
+        <EntityTypeShape EntityType="DCSModel.ProjectMultiEmail" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="DCSModel.TimestampDetail" Width="1.5" PointX="3.375" PointY="7.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,352 @@
+﻿/****RESPONSIVE CSS*****/
+
+@media only screen and (max-width:1366px) {
+    .main-btn {
+        font-size: 17px;
+        padding: 5px;
+    }
+
+    #spn-overall, #spn-schedule, #spn-scope, #spn-financial, #spn-resource {
+        padding: 3px;
+    }
+
+
+    .p-sign {
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (max-width:1280px) {
+
+    .main-btn {
+        font-size: 10px;
+        padding: 5px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+   
+
+    #spn-overall, #spn-schedule, #spn-scope, #spn-financial, #spn-resource {
+        padding: 3px;
+    }
+
+
+    .p-sign {
+        margin-right: 0px;
+    }
+
+    .legendmilestone2 {
+        padding: 4px 3px;
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width:1199px) {
+
+    .main-btn {
+        font-size: 10px;
+        padding: 5px;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #spn-overall, #spn-schedule, #spn-scope, #spn-financial, #spn-resource {
+        padding: 3px;
+        display: inline-block;
+    }
+
+
+    .p-sign {
+        margin-right: 0px;
+    }
+
+    .s-p-sign > .p-sign {
+        width: 100%;
+    }
+
+    .legendmilestone2 {
+        margin-left: 2px;
+        width: 100%;
+    }
+
+    #spn-overall, #spn-schedule, #spn-scope, #spn-financial, #spn-resource {
+        padding: 3px;
+    }
+}
+
+
+@media only screen and (max-width:1024px) {
+    .tableheading2 {
+        width: 28%;
+    }
+
+    .tableheading4 {
+        width: 78px;
+    }
+
+    .main-btn {
+        font-size: 10px;
+        padding: 5px;
+        display: inline-block;
+        width: 100%;
+    }
+
+
+    #spn-overall, #spn-schedule, #spn-scope, #spn-financial, #spn-resource {
+        padding: 3px;
+        display: inline-block;
+    }
+
+
+    .p-sign {
+        margin-right: 0px;
+    }
+
+    .s-p-sign > .p-sign {
+        width: 100%;
+    }
+
+    .legendmilestone2 {
+        width: 100%;
+        margin-left: 35px;
+        margin-right: 0px;
+        font-weight: bold;
+        padding: 6px 5px;
+    }
+    /*.top-btns > .main-btn {
+        width:75%;
+    }
+    .top-btns > #spn-overall, #spn-schedule, #spn-scope, #spn-financial, #spn-resource {
+        width:25%;
+    }*/
+    .main-btn {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 16px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:960px) {
+
+    .s-p-sign > .p-sign {
+        width: 100%;
+    }
+
+    .start {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .end {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .complete {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .legendmilestone2 {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        font-weight: bold;
+        padding: 6px 5px;
+    }
+
+    .main-btn {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    #spn-overall, #spn-schedule, #spn-scope, #spn-financial, #spn-resource {
+        padding: 5px;
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .s-p-sign > .p-sign {
+        width: 100%;
+        padding: 8px 5px;
+        font-size: 12px;
+    }
+      .legendmilestone {
+        width: 100%;
+    }
+
+
+    .legendmilestone2 {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 8px 5px;
+    }
+
+    .start {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .end {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .complete {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .main-btn {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 17px;
+        width: 100%;
+       
+    }
+
+    .legendproject {
+        text-align: center;
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    #spn-overall, #spn-schedule, #spn-scope, #spn-financial, #spn-resource {
+        padding: 5px;
+        display: inline-block;
+        margin-left:-10px !important;
+    }
+
+    .m-legend {
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .milestonedetail {
+        margin-right: 0px;
+    }
+
+    .legendmilestone {
+        width: 100%;
+    }
+
+    .p-sign {
+        width: 100%;
+    }
+
+    .start {
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .end {
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .complete {
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .legendproject {
+        text-align: center;
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .m-legend {
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .main-btn {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    #spn-overall, #spn-schedule, #spn-scope, #spn-financial, #spn-resource {
+        display: inline-block;
+        margin-left:0px;
+    }
+
+    .legendmilestone2 {
+        margin-left: 2px;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width:320px) {
+    .milestonedetail {
+        margin-right: -8px;
+    }
+
+    .legendmilestone2 {
+        margin-left: 2px;
+        width: 100%;
+    }
+
+    .legendmilestone {
+        width: 100%;
+    }
+
+    .p-sign {
+        width: 100%;
+    }
+
+    .start {
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .end {
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .complete {
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .legendproject {
+        text-align: center;
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .m-legend {
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .main-btn {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    #spn-overall, #spn-schedule, #spn-scope, #spn-financial, #spn-resource {
+        display: inline-block;
+         margin-left:0px;
+    }
+}
+
+/****************************************************************/

@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{26D80907-801F-4864-A85B-0926BFD3BB73}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DCS.DAL</RootNamespace>
+    <AssemblyName>DCS.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.1.1\lib\net40\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper.Net4, Version=3.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.1.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseAutoMap.cs" />
+    <Compile Include="DataAccess\ETOPlaybooksBL.cs" />
+    <Compile Include="DataAccess\Repository.cs" />
+    <Compile Include="DCS.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DCS.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DCS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DCS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DCS.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ETOPlaybook.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllProjectsIndex_Result.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllProjects_Result.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetDetailForProject1_Result.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetDetailForProject_Result.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetProjectById1_Result.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetProjectById2_Result.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetProjectById3_Result.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetProjectById4_Result.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetProjectById5_Result.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetProjectById_Result.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetProjectDetailById1_Result.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetProjectDetailById_Result.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectMilestone.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectMultiEmail.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectOwner.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectSchedule.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectStatu.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectTracking.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RiskMilestone.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Status.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TimestampDetail.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetAllProjectsSummary_Result.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetETOPlayBookMileStones_Result.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetProjectMileStones_Result.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetProjectMultiEmail_Result.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetProjectMultiEmail_Result1.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetProjectPercentageCompleteByProjectId1_Result.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetProjectSchedules1_Result.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetProjectSchedules_Result.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetProjectSummaryDetails1_Result.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_RemoveMultiEmail1_Result1.cs">
+      <DependentUpon>DCS.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="DCS.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DCS.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DCS.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DCS.edmx</DependentUpon>
+      <LastGenOutput>DCS.Context.cs</LastGenOutput>
+    </None>
+    <None Include="DCS.edmx.diagram">
+      <DependentUpon>DCS.edmx</DependentUpon>
+    </None>
+    <None Include="DCS.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DCS.edmx</DependentUpon>
+      <LastGenOutput>DCS.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DCS.Common\DCS.Common.csproj">
+      <Project>{1171854c-2ae3-4d33-b81b-2247441b5add}</Project>
+      <Name>DCS.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\packages\AutoMapper.3.1.1\lib\net40\AutoMapper.Net4.dll">
+      <Link>AutoMapper.Net4.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

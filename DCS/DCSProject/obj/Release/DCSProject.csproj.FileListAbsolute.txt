@@ -1,0 +1,981 @@
+D:\TFS\DCS\DCS\DCSProject\bin\AutoMapper.Net4.dll
+D:\TFS\DCS\DCS\DCSProject\bin\DCSProject.dll.config
+D:\TFS\DCS\DCS\DCSProject\bin\DCSProject.dll
+D:\TFS\DCS\DCS\DCSProject\bin\DCSProject.pdb
+D:\TFS\DCS\DCS\DCSProject\bin\AutoMapper.dll
+D:\TFS\DCS\DCS\DCSProject\bin\DCS.BAL.dll
+D:\TFS\DCS\DCS\DCSProject\bin\DCS.Common.dll
+D:\TFS\DCS\DCS\DCSProject\bin\DCS.DAL.dll
+D:\TFS\DCS\DCS\DCSProject\bin\DotNetOpenAuth.AspNet.dll
+D:\TFS\DCS\DCS\DCSProject\bin\DotNetOpenAuth.Core.dll
+D:\TFS\DCS\DCS\DCSProject\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\TFS\DCS\DCS\DCSProject\bin\DotNetOpenAuth.OAuth.dll
+D:\TFS\DCS\DCS\DCSProject\bin\DotNetOpenAuth.OpenId.dll
+D:\TFS\DCS\DCS\DCSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\TFS\DCS\DCS\DCSProject\bin\EntityFramework.dll
+D:\TFS\DCS\DCS\DCSProject\bin\EntityFramework.SqlServer.dll
+D:\TFS\DCS\DCS\DCSProject\bin\Microsoft.Data.Edm.dll
+D:\TFS\DCS\DCS\DCSProject\bin\Microsoft.Data.OData.dll
+D:\TFS\DCS\DCS\DCSProject\bin\Microsoft.OData.Core.dll
+D:\TFS\DCS\DCS\DCSProject\bin\Microsoft.OData.Edm.dll
+D:\TFS\DCS\DCS\DCSProject\bin\Microsoft.Spatial.dll
+D:\TFS\DCS\DCS\DCSProject\bin\Microsoft.Web.Infrastructure.dll
+D:\TFS\DCS\DCS\DCSProject\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\TFS\DCS\DCS\DCSProject\bin\Newtonsoft.Json.dll
+D:\TFS\DCS\DCS\DCSProject\bin\System.Net.Http.Extensions.dll
+D:\TFS\DCS\DCS\DCSProject\bin\System.Net.Http.Formatting.dll
+D:\TFS\DCS\DCS\DCSProject\bin\System.Net.Http.Primitives.dll
+D:\TFS\DCS\DCS\DCSProject\bin\System.Spatial.dll
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.Helpers.dll
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.Http.dll
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.Http.OData.dll
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.Http.WebHost.dll
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.Mvc.dll
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.OData.dll
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.Optimization.dll
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.Razor.dll
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.WebPages.Deployment.dll
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.WebPages.dll
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.WebPages.Razor.dll
+D:\TFS\DCS\DCS\DCSProject\bin\WebGrease.dll
+D:\TFS\DCS\DCS\DCSProject\bin\WebMatrix.Data.dll
+D:\TFS\DCS\DCS\DCSProject\bin\WebMatrix.WebData.dll
+D:\TFS\DCS\DCS\DCSProject\bin\Org.Mentalis.Security.Cryptography.dll
+D:\TFS\DCS\DCS\DCSProject\bin\Mono.Math.dll
+D:\TFS\DCS\DCS\DCSProject\bin\DCS.BAL.pdb
+D:\TFS\DCS\DCS\DCSProject\bin\DCS.Common.pdb
+D:\TFS\DCS\DCS\DCSProject\bin\DCS.DAL.pdb
+D:\TFS\DCS\DCS\DCSProject\bin\AutoMapper.xml
+D:\TFS\DCS\DCS\DCSProject\bin\DotNetOpenAuth.AspNet.xml
+D:\TFS\DCS\DCS\DCSProject\bin\DotNetOpenAuth.Core.xml
+D:\TFS\DCS\DCS\DCSProject\bin\DotNetOpenAuth.OAuth.xml
+D:\TFS\DCS\DCS\DCSProject\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\TFS\DCS\DCS\DCSProject\bin\DotNetOpenAuth.OpenId.xml
+D:\TFS\DCS\DCS\DCSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\TFS\DCS\DCS\DCSProject\bin\EntityFramework.xml
+D:\TFS\DCS\DCS\DCSProject\bin\EntityFramework.SqlServer.xml
+D:\TFS\DCS\DCS\DCSProject\bin\Microsoft.Data.Edm.xml
+D:\TFS\DCS\DCS\DCSProject\bin\Microsoft.Data.OData.xml
+D:\TFS\DCS\DCS\DCSProject\bin\Microsoft.OData.Core.xml
+D:\TFS\DCS\DCS\DCSProject\bin\Microsoft.OData.Edm.xml
+D:\TFS\DCS\DCS\DCSProject\bin\Microsoft.Spatial.xml
+D:\TFS\DCS\DCS\DCSProject\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\TFS\DCS\DCS\DCSProject\bin\Newtonsoft.Json.xml
+D:\TFS\DCS\DCS\DCSProject\bin\System.Net.Http.Extensions.xml
+D:\TFS\DCS\DCS\DCSProject\bin\System.Net.Http.Formatting.xml
+D:\TFS\DCS\DCS\DCSProject\bin\System.Net.Http.Primitives.xml
+D:\TFS\DCS\DCS\DCSProject\bin\System.Spatial.xml
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.Helpers.xml
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.Http.xml
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.Http.OData.xml
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.Http.WebHost.xml
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.Mvc.xml
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.OData.xml
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.Optimization.xml
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.Razor.xml
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.WebPages.xml
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.WebPages.Deployment.xml
+D:\TFS\DCS\DCS\DCSProject\bin\System.Web.WebPages.Razor.xml
+D:\TFS\DCS\DCS\DCSProject\bin\WebMatrix.Data.xml
+D:\TFS\DCS\DCS\DCSProject\bin\WebMatrix.WebData.xml
+D:\TFS\DCS\DCS\DCSProject\bin\Org.Mentalis.Security.Cryptography.xml
+D:\TFS\DCS\DCS\DCSProject\bin\Mono.Math.xml
+D:\TFS\DCS\DCS\DCSProject\bin\de\Microsoft.Data.Edm.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\es\Microsoft.Data.Edm.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\it\Microsoft.Data.Edm.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\de\Microsoft.Data.OData.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\es\Microsoft.Data.OData.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\fr\Microsoft.Data.OData.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\it\Microsoft.Data.OData.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\ja\Microsoft.Data.OData.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\ko\Microsoft.Data.OData.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\ru\Microsoft.Data.OData.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\de\Microsoft.OData.Core.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\es\Microsoft.OData.Core.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\fr\Microsoft.OData.Core.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\it\Microsoft.OData.Core.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\ja\Microsoft.OData.Core.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\ko\Microsoft.OData.Core.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\ru\Microsoft.OData.Core.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\zh-Hans\Microsoft.OData.Core.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\zh-Hant\Microsoft.OData.Core.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\de\Microsoft.OData.Edm.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\es\Microsoft.OData.Edm.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\fr\Microsoft.OData.Edm.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\it\Microsoft.OData.Edm.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\ja\Microsoft.OData.Edm.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\ko\Microsoft.OData.Edm.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\ru\Microsoft.OData.Edm.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\zh-Hans\Microsoft.OData.Edm.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\zh-Hant\Microsoft.OData.Edm.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\de\Microsoft.Spatial.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\es\Microsoft.Spatial.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\fr\Microsoft.Spatial.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\it\Microsoft.Spatial.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\ja\Microsoft.Spatial.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\ko\Microsoft.Spatial.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\ru\Microsoft.Spatial.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\zh-Hans\Microsoft.Spatial.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\zh-Hant\Microsoft.Spatial.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\de\System.Spatial.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\es\System.Spatial.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\fr\System.Spatial.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\it\System.Spatial.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\ja\System.Spatial.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\ko\System.Spatial.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\ru\System.Spatial.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\zh-Hans\System.Spatial.resources.dll
+D:\TFS\DCS\DCS\DCSProject\bin\zh-Hant\System.Spatial.resources.dll
+D:\TFS\DCS\DCS\DCSProject\obj\Release\DCSProject.csproj.App.config
+D:\TFS\DCS\DCS\DCSProject\obj\Release\DCSProject.csprojResolveAssemblyReference.cache
+D:\TFS\DCS\DCS\DCSProject\obj\Release\DCSProject.dll
+D:\TFS\DCS\DCS\DCSProject\obj\Release\DCSProject.pdb
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\AutoMapper.Net4.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\DCSProject.dll.config
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\DCSProject.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\DCSProject.pdb
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\AutoMapper.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\ClosedXML.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\DCS.BAL.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\DCS.Common.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\DCS.DAL.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\DotNetOpenAuth.AspNet.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\DotNetOpenAuth.Core.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\EntityFramework.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\EntityFramework.SqlServer.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\Microsoft.Data.Edm.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\Microsoft.Data.OData.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\Microsoft.OData.Core.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\Microsoft.OData.Edm.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\Microsoft.Spatial.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\Microsoft.Web.Infrastructure.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\Newtonsoft.Json.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Net.Http.Extensions.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Net.Http.Formatting.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Net.Http.Primitives.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Spatial.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.Helpers.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.Http.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.Http.OData.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.Http.WebHost.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.Mvc.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.OData.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.Optimization.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.Razor.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.WebPages.Deployment.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.WebPages.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.WebPages.Razor.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\WebGrease.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\WebMatrix.Data.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\WebMatrix.WebData.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\Org.Mentalis.Security.Cryptography.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\Mono.Math.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\DCS.BAL.pdb
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\DCS.Common.pdb
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\DCS.DAL.pdb
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\AutoMapper.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\DotNetOpenAuth.AspNet.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\DotNetOpenAuth.Core.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\EntityFramework.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\EntityFramework.SqlServer.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\Microsoft.Data.Edm.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\Microsoft.Data.OData.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\Microsoft.OData.Core.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\Microsoft.OData.Edm.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\Microsoft.Spatial.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\Newtonsoft.Json.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Net.Http.Extensions.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Net.Http.Formatting.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Net.Http.Primitives.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Spatial.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.Helpers.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.Http.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.Http.OData.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.Http.WebHost.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.Mvc.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.OData.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.Optimization.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.Razor.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.WebPages.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.WebPages.Deployment.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\System.Web.WebPages.Razor.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\WebMatrix.Data.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\WebMatrix.WebData.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\Org.Mentalis.Security.Cryptography.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\Mono.Math.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\de\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\es\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\it\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\de\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\es\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\fr\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\it\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\ja\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\ko\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\ru\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\de\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\es\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\fr\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\it\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\ja\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\ko\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\ru\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\zh-Hans\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\zh-Hant\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\de\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\es\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\fr\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\it\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\ja\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\ko\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\ru\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\zh-Hans\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\zh-Hant\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\de\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\es\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\fr\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\it\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\ja\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\ko\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\ru\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\zh-Hans\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\zh-Hant\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\de\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\es\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\fr\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\it\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\ja\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\ko\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\ru\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\zh-Hans\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\bin\zh-Hant\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\obj\Release\DCSProject.csproj.App.config
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\obj\Release\DCSProject.csprojResolveAssemblyReference.cache
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\obj\Release\DCSProject.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCSProject\obj\Release\DCSProject.pdb
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\AutoMapper.Net4.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\DCSProject.dll.config
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\DCSProject.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\DCSProject.pdb
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\AutoMapper.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\DCS.BAL.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\DCS.Common.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\DCS.DAL.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\DotNetOpenAuth.AspNet.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\DotNetOpenAuth.Core.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\EntityFramework.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\EntityFramework.SqlServer.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\Microsoft.Data.Edm.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\Microsoft.Data.OData.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\Microsoft.OData.Core.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\Microsoft.OData.Edm.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\Microsoft.Spatial.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\Microsoft.Web.Infrastructure.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\Newtonsoft.Json.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Net.Http.Extensions.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Net.Http.Formatting.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Net.Http.Primitives.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Spatial.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.Helpers.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.Http.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.Http.OData.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.Http.WebHost.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.Mvc.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.OData.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.Optimization.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.Razor.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.WebPages.Deployment.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.WebPages.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.WebPages.Razor.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\WebGrease.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\WebMatrix.Data.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\WebMatrix.WebData.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\Org.Mentalis.Security.Cryptography.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\Mono.Math.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\DCS.BAL.pdb
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\DCS.Common.pdb
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\DCS.DAL.pdb
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\AutoMapper.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\DotNetOpenAuth.AspNet.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\DotNetOpenAuth.Core.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\EntityFramework.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\EntityFramework.SqlServer.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\Microsoft.Data.Edm.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\Microsoft.Data.OData.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\Microsoft.OData.Core.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\Microsoft.OData.Edm.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\Microsoft.Spatial.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\Newtonsoft.Json.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Net.Http.Extensions.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Net.Http.Formatting.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Net.Http.Primitives.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Spatial.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.Helpers.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.Http.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.Http.OData.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.Http.WebHost.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.Mvc.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.OData.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.Optimization.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.Razor.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.WebPages.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.WebPages.Deployment.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\System.Web.WebPages.Razor.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\WebMatrix.Data.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\WebMatrix.WebData.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\Org.Mentalis.Security.Cryptography.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\Mono.Math.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\de\Microsoft.Data.Edm.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\es\Microsoft.Data.Edm.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\fr\Microsoft.Data.Edm.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\it\Microsoft.Data.Edm.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\ja\Microsoft.Data.Edm.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\ko\Microsoft.Data.Edm.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\ru\Microsoft.Data.Edm.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\de\Microsoft.Data.OData.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\es\Microsoft.Data.OData.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\fr\Microsoft.Data.OData.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\it\Microsoft.Data.OData.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\ja\Microsoft.Data.OData.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\ko\Microsoft.Data.OData.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\ru\Microsoft.Data.OData.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\de\Microsoft.OData.Core.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\es\Microsoft.OData.Core.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\fr\Microsoft.OData.Core.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\it\Microsoft.OData.Core.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\ja\Microsoft.OData.Core.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\ko\Microsoft.OData.Core.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\ru\Microsoft.OData.Core.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\zh-Hans\Microsoft.OData.Core.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\zh-Hant\Microsoft.OData.Core.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\de\Microsoft.OData.Edm.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\es\Microsoft.OData.Edm.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\fr\Microsoft.OData.Edm.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\it\Microsoft.OData.Edm.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\ja\Microsoft.OData.Edm.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\ko\Microsoft.OData.Edm.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\ru\Microsoft.OData.Edm.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\zh-Hans\Microsoft.OData.Edm.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\zh-Hant\Microsoft.OData.Edm.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\de\Microsoft.Spatial.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\es\Microsoft.Spatial.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\fr\Microsoft.Spatial.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\it\Microsoft.Spatial.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\ja\Microsoft.Spatial.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\ko\Microsoft.Spatial.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\ru\Microsoft.Spatial.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\zh-Hans\Microsoft.Spatial.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\zh-Hant\Microsoft.Spatial.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\de\System.Spatial.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\es\System.Spatial.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\fr\System.Spatial.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\it\System.Spatial.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\ja\System.Spatial.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\ko\System.Spatial.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\ru\System.Spatial.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\zh-Hans\System.Spatial.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\bin\zh-Hant\System.Spatial.resources.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\obj\Release\DCSProject.csproj.App.config
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\obj\Release\DCSProject.csprojResolveAssemblyReference.cache
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\obj\Release\DCSProject.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCSProject\obj\Release\DCSProject.pdb
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\AutoMapper.Net4.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\DCSProject.dll.config
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\DCSProject.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\DCSProject.pdb
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\AutoMapper.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\DCS.BAL.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\DCS.Common.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\DCS.DAL.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\DotNetOpenAuth.AspNet.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\DotNetOpenAuth.Core.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\EntityFramework.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\EntityFramework.SqlServer.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\Microsoft.Data.Edm.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\Microsoft.Data.OData.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\Microsoft.OData.Core.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\Microsoft.OData.Edm.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\Microsoft.Spatial.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\Microsoft.Web.Infrastructure.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\Newtonsoft.Json.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Net.Http.Extensions.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Net.Http.Formatting.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Net.Http.Primitives.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Spatial.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.Helpers.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.Http.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.Http.OData.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.Http.WebHost.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.Mvc.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.OData.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.Optimization.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.Razor.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.WebPages.Deployment.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.WebPages.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.WebPages.Razor.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\WebGrease.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\WebMatrix.Data.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\WebMatrix.WebData.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\Org.Mentalis.Security.Cryptography.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\Mono.Math.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\DCS.BAL.pdb
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\DCS.Common.pdb
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\DCS.DAL.pdb
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\AutoMapper.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\DotNetOpenAuth.AspNet.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\DotNetOpenAuth.Core.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\EntityFramework.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\EntityFramework.SqlServer.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\Microsoft.Data.Edm.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\Microsoft.Data.OData.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\Microsoft.OData.Core.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\Microsoft.OData.Edm.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\Microsoft.Spatial.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\Newtonsoft.Json.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Net.Http.Extensions.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Net.Http.Formatting.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Net.Http.Primitives.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Spatial.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.Helpers.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.Http.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.Http.OData.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.Http.WebHost.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.Mvc.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.OData.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.Optimization.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.Razor.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.WebPages.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.WebPages.Deployment.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\System.Web.WebPages.Razor.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\WebMatrix.Data.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\WebMatrix.WebData.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\Org.Mentalis.Security.Cryptography.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\Mono.Math.xml
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\de\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\es\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\it\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\de\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\es\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\fr\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\it\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\ja\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\ko\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\ru\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\de\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\es\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\fr\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\it\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\ja\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\ko\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\ru\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\zh-Hans\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\zh-Hant\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\de\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\es\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\fr\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\it\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\ja\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\ko\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\ru\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\zh-Hans\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\zh-Hant\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\de\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\es\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\fr\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\it\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\ja\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\ko\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\ru\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\zh-Hans\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\zh-Hant\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\de\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\es\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\fr\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\it\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\ja\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\ko\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\ru\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\zh-Hans\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\bin\zh-Hant\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\obj\Release\DCSProject.csproj.App.config
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\obj\Release\DCSProject.csprojResolveAssemblyReference.cache
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\obj\Release\DCSProject.dll
+D:\ServerProjects\DCS\DCS(20_10_2015)\DCSProject\obj\Release\DCSProject.pdb
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\AutoMapper.Net4.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\DCSProject.dll.config
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\DCSProject.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\DCSProject.pdb
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\AutoMapper.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\DCS.BAL.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\DCS.Common.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\DCS.DAL.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\DotNetOpenAuth.AspNet.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\DotNetOpenAuth.Core.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\EntityFramework.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\EntityFramework.SqlServer.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\Microsoft.Data.Edm.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\Microsoft.Data.OData.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\Microsoft.OData.Core.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\Microsoft.OData.Edm.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\Microsoft.Spatial.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\Microsoft.Web.Infrastructure.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\Newtonsoft.Json.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Net.Http.Extensions.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Net.Http.Formatting.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Net.Http.Primitives.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Spatial.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.Helpers.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.Http.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.Http.OData.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.Http.WebHost.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.Mvc.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.OData.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.Optimization.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.Razor.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.WebPages.Deployment.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.WebPages.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.WebPages.Razor.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\WebGrease.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\WebMatrix.Data.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\WebMatrix.WebData.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\Org.Mentalis.Security.Cryptography.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\Mono.Math.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\DCS.BAL.pdb
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\DCS.Common.pdb
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\DCS.DAL.pdb
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\AutoMapper.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\DotNetOpenAuth.AspNet.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\DotNetOpenAuth.Core.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\EntityFramework.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\EntityFramework.SqlServer.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\Microsoft.Data.Edm.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\Microsoft.Data.OData.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\Microsoft.OData.Core.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\Microsoft.OData.Edm.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\Microsoft.Spatial.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\Newtonsoft.Json.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Net.Http.Extensions.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Net.Http.Formatting.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Net.Http.Primitives.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Spatial.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.Helpers.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.Http.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.Http.OData.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.Http.WebHost.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.Mvc.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.OData.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.Optimization.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.Razor.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.WebPages.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.WebPages.Deployment.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\System.Web.WebPages.Razor.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\WebMatrix.Data.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\WebMatrix.WebData.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\Org.Mentalis.Security.Cryptography.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\Mono.Math.xml
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\de\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\es\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\it\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\de\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\es\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\fr\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\it\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\ja\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\ko\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\ru\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\de\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\es\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\fr\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\it\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\ja\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\ko\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\ru\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\zh-Hans\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\zh-Hant\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\de\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\es\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\fr\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\it\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\ja\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\ko\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\ru\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\zh-Hans\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\zh-Hant\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\de\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\es\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\fr\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\it\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\ja\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\ko\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\ru\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\zh-Hans\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\zh-Hant\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\de\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\es\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\fr\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\it\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\ja\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\ko\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\ru\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\zh-Hans\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\bin\zh-Hant\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\obj\Release\DCSProject.csproj.App.config
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\obj\Release\DCSProject.csprojResolveAssemblyReference.cache
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\obj\Release\DCSProject.dll
+D:\ServerProjects\DCS\DCS(26_10_2015)\DCSProject\obj\Release\DCSProject.pdb
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\AutoMapper.Net4.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\DCSProject.dll.config
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\DCSProject.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\DCSProject.pdb
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\AutoMapper.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\DCS.BAL.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\DCS.Common.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\DCS.DAL.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\DotNetOpenAuth.AspNet.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\DotNetOpenAuth.Core.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\EntityFramework.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\EntityFramework.SqlServer.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\Microsoft.Data.Edm.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\Microsoft.Data.OData.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\Microsoft.OData.Core.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\Microsoft.OData.Edm.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\Microsoft.Spatial.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\Microsoft.Web.Infrastructure.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\Newtonsoft.Json.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Net.Http.Extensions.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Net.Http.Formatting.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Net.Http.Primitives.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Spatial.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.Helpers.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.Http.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.Http.OData.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.Http.WebHost.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.Mvc.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.OData.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.Optimization.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.Razor.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.WebPages.Deployment.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.WebPages.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.WebPages.Razor.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\WebGrease.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\WebMatrix.Data.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\WebMatrix.WebData.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\Org.Mentalis.Security.Cryptography.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\Mono.Math.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\DCS.BAL.pdb
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\DCS.Common.pdb
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\DCS.DAL.pdb
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\AutoMapper.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\DotNetOpenAuth.AspNet.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\DotNetOpenAuth.Core.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\EntityFramework.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\EntityFramework.SqlServer.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\Microsoft.Data.Edm.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\Microsoft.Data.OData.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\Microsoft.OData.Core.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\Microsoft.OData.Edm.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\Microsoft.Spatial.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\Newtonsoft.Json.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Net.Http.Extensions.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Net.Http.Formatting.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Net.Http.Primitives.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Spatial.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.Helpers.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.Http.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.Http.OData.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.Http.WebHost.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.Mvc.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.OData.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.Optimization.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.Razor.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.WebPages.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.WebPages.Deployment.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\System.Web.WebPages.Razor.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\WebMatrix.Data.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\WebMatrix.WebData.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\Org.Mentalis.Security.Cryptography.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\Mono.Math.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\de\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\es\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\it\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\de\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\es\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\fr\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\it\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\ja\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\ko\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\ru\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\de\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\es\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\fr\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\it\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\ja\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\ko\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\ru\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\zh-Hans\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\zh-Hant\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\de\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\es\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\fr\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\it\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\ja\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\ko\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\ru\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\zh-Hans\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\zh-Hant\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\de\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\es\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\fr\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\it\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\ja\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\ko\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\ru\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\zh-Hans\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\zh-Hant\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\de\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\es\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\fr\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\it\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\ja\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\ko\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\ru\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\zh-Hans\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\bin\zh-Hant\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\obj\Release\DCSProject.csproj.App.config
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\obj\Release\DCSProject.csprojResolveAssemblyReference.cache
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\obj\Release\DCSProject.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCSProject\obj\Release\DCSProject.pdb
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\obj\Release\DCSProject.csproj.App.config
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\obj\Release\DCSProject.csprojResolveAssemblyReference.cache
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\obj\Release\DCSProject.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\obj\Release\DCSProject.pdb
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\AutoMapper.Net4.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\DCSProject.dll.config
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\DCSProject.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\DCSProject.pdb
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\AutoMapper.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\DCS.BAL.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\DCS.Common.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\DCS.DAL.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\DotNetOpenAuth.AspNet.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\DotNetOpenAuth.Core.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\EntityFramework.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\EntityFramework.SqlServer.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\Microsoft.Data.Edm.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\Microsoft.Data.OData.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\Microsoft.OData.Core.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\Microsoft.OData.Edm.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\Microsoft.Spatial.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\Microsoft.Web.Infrastructure.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\Newtonsoft.Json.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Net.Http.Extensions.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Net.Http.Formatting.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Net.Http.Primitives.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Spatial.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.Helpers.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.Http.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.Http.OData.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.Http.WebHost.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.Mvc.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.OData.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.Optimization.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.Razor.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.WebPages.Deployment.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.WebPages.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.WebPages.Razor.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\WebGrease.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\WebMatrix.Data.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\WebMatrix.WebData.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\Org.Mentalis.Security.Cryptography.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\Mono.Math.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\DCS.BAL.pdb
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\DCS.Common.pdb
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\DCS.DAL.pdb
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\AutoMapper.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\DotNetOpenAuth.AspNet.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\DotNetOpenAuth.Core.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\EntityFramework.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\EntityFramework.SqlServer.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\Microsoft.Data.Edm.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\Microsoft.Data.OData.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\Microsoft.OData.Core.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\Microsoft.OData.Edm.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\Microsoft.Spatial.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\Newtonsoft.Json.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Net.Http.Extensions.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Net.Http.Formatting.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Net.Http.Primitives.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Spatial.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.Helpers.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.Http.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.Http.OData.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.Http.WebHost.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.Mvc.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.OData.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.Optimization.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.Razor.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.WebPages.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.WebPages.Deployment.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\System.Web.WebPages.Razor.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\WebMatrix.Data.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\WebMatrix.WebData.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\Org.Mentalis.Security.Cryptography.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\Mono.Math.xml
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\de\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\es\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\it\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\de\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\es\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\fr\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\it\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\ja\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\ko\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\ru\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\de\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\es\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\fr\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\it\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\ja\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\ko\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\ru\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\zh-Hans\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\zh-Hant\Microsoft.OData.Core.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\de\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\es\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\fr\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\it\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\ja\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\ko\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\ru\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\zh-Hans\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\zh-Hant\Microsoft.OData.Edm.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\de\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\es\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\fr\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\it\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\ja\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\ko\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\ru\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\zh-Hans\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\zh-Hant\Microsoft.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\de\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\es\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\fr\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\it\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\ja\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\ko\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\ru\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\zh-Hans\System.Spatial.resources.dll
+D:\ServerProjects\DCS\DCS(28_10_2015)\DCSProject\bin\zh-Hant\System.Spatial.resources.dll

@@ -1,0 +1,69 @@
+﻿@{
+    Layout = null;
+}
+@Scripts.Render("~/bundles/jquery")
+<link href='@Url.Content("~/Content/bootstrap.min.css")' rel="stylesheet" />
+<script src='@Url.Content("~/Scripts/bootstrap.min.js")'></script>
+<script src='@Url.Content("~/Scripts/common.js")'></script>
+<style>
+    .form-control {
+        margin: 10px 0px;
+    }
+</style>
+        <div class="form-group">
+            <div class="col-md-12">
+                <input class="form-control" data-val="true" id="Name" name="Name" placeholder="ETO Playbook Name" type="text" value="">
+            </div>
+
+
+            <div class=" col-md-offset-1 col-md-2">
+                <a class="btn btn-primary btnadd" href="#" style="color: white; margin-top: 10px;">Submit</a>
+            </div>
+        </div>
+  
+<script>
+    function setFrameheight() {
+        parent.jQuery("iframe#frmAction").attr('height', 113);
+    }
+    jQuery(document).ready(function () {
+        setTimeout(setFrameheight, 100);
+    });
+
+    $('body').on('click', '.btnadd', function () {
+        if ($('#Name').val() != null && $('#Name').val().trim() != '') {
+            /*POST*/
+            $.ajax({
+                url: '@Url.Content("~/ETOPlaybook/AddETOPlaybook")',
+                dataType: "json",
+                type: "POST",
+                contentType: 'application/json; charset=utf-8',
+                data: '{ETOPlaybookName:"' + $('#Name').val().trim() + '"}',
+                success: function (data) {
+                    var table = parent.$('#tbletoplaybook').DataTable();
+                    table.destroy();
+                    parent.$("#tbletoplaybook tbody").empty();
+                    parent.BindDataTable();
+                    parent.$('#tbletoplaybook').dataTable({
+                        "aoColumnDefs": [
+                            { 'orderable': false, 'aTargets': [1] }, { 'orderable': false, 'aTargets': [2] }
+                        ], order: []
+
+                    });
+                    //parent.BindDataTable();
+                    //parent.$('#tbletoplaybook').DataTable();
+                    //parent.$('#tbletoplaybook').append('<tr role="row" class="odd"><td class="sorting_1">' + $('#Name').val() +
+                    //    '</td><td>true</td><td><div class="col-datatable-editdelete">' +
+                    //    '<a ID="' + data + '" class="gridIcon btnEditETO" href="javascript:void(0);" onclick="ViewETOPlaybook(' + data + ')" data-target="#myModal2" data-toggle="modal"><i class="fa fa-pencil fa-lg"></i></a> | '+
+                    //    '<a ID="' + data + '" class="gridIcon dlt-prj" href="javascript:void(0);" onclick="DeleteETOPlaybook(' + data + ')"><i class="fa fa-trash fa-lg modal-link"></i></a></div></td>');
+                },
+                error: function (xhr) {
+                    alert('error');
+                }
+            })
+
+        }
+        parent.hidepopup();
+    })
+
+
+</script>

@@ -1,0 +1,188 @@
+13-08-2015 13:38:00	 The underlying provider failed on Open.     at System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   at System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at DCS.DAL.DCSEntities.GetAllProjectsIndex() in d:\TFS\DCS\DCS\DCS.DAL\DCS.Context.cs:line 142
+   at DCS.BAL.DataAccess.Repository`2.GetProjects() in d:\TFS\DCS\DCS\DCS.BAL\DataAccess\Repository.cs:line 64
+   at DCSProject.Controllers.ProjectController.Index() in d:\TFS\DCS\DCS\DCSProject\Controllers\ProjectController.cs:line 46
+28-08-2015 21:16:47	 The underlying provider failed on Open.     at System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   at System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at DCS.DAL.DCSEntities.GetAllProjectsIndex() in d:\TFS\DCS\DCS\DCS.DAL\DCS.Context.cs:line 143
+   at DCS.BAL.DataAccess.Repository`2.GetProjects() in d:\TFS\DCS\DCS\DCS.BAL\DataAccess\Repository.cs:line 70
+   at DCSProject.Controllers.ProjectController.Index() in d:\TFS\DCS\DCS\DCSProject\Controllers\ProjectController.cs:line 60
+28-08-2015 21:17:29	 The underlying provider failed on Open.     at System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   at System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at DCS.DAL.DCSEntities.GetAllProjectsIndex() in d:\TFS\DCS\DCS\DCS.DAL\DCS.Context.cs:line 143
+   at DCS.BAL.DataAccess.Repository`2.GetProjects() in d:\TFS\DCS\DCS\DCS.BAL\DataAccess\Repository.cs:line 70
+   at DCSProject.Controllers.ProjectController.Index() in d:\TFS\DCS\DCS\DCSProject\Controllers\ProjectController.cs:line 60
+28-08-2015 21:19:00	 The underlying provider failed on Open.     at System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   at System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at DCS.DAL.DCSEntities.GetAllProjectsIndex() in d:\TFS\DCS\DCS\DCS.DAL\DCS.Context.cs:line 143
+   at DCS.BAL.DataAccess.Repository`2.GetProjects() in d:\TFS\DCS\DCS\DCS.BAL\DataAccess\Repository.cs:line 70
+   at DCSProject.Controllers.ProjectController.Index() in d:\TFS\DCS\DCS\DCSProject\Controllers\ProjectController.cs:line 60
+28-08-2015 21:19:29	 The underlying provider failed on Open.     at System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   at System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at DCS.DAL.DCSEntities.GetAllProjectsIndex() in d:\TFS\DCS\DCS\DCS.DAL\DCS.Context.cs:line 143
+   at DCS.BAL.DataAccess.Repository`2.GetProjects() in d:\TFS\DCS\DCS\DCS.BAL\DataAccess\Repository.cs:line 70
+   at DCSProject.Controllers.ProjectController.Index() in d:\TFS\DCS\DCS\DCSProject\Controllers\ProjectController.cs:line 60
+28-08-2015 21:20:01	 The underlying provider failed on Open.     at System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   at System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at DCS.DAL.DCSEntities.GetAllProjectsIndex() in d:\TFS\DCS\DCS\DCS.DAL\DCS.Context.cs:line 143
+   at DCS.BAL.DataAccess.Repository`2.GetProjects() in d:\TFS\DCS\DCS\DCS.BAL\DataAccess\Repository.cs:line 70
+   at DCSProject.Controllers.ProjectController.Index() in d:\TFS\DCS\DCS\DCSProject\Controllers\ProjectController.cs:line 60
+28-08-2015 21:20:56	 The underlying provider failed on Open.     at System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   at System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at DCS.DAL.DCSEntities.GetAllProjectsIndex() in d:\TFS\DCS\DCS\DCS.DAL\DCS.Context.cs:line 143
+   at DCS.BAL.DataAccess.Repository`2.GetProjects() in d:\TFS\DCS\DCS\DCS.BAL\DataAccess\Repository.cs:line 70
+   at DCSProject.Controllers.ProjectController.Index() in d:\TFS\DCS\DCS\DCSProject\Controllers\ProjectController.cs:line 60
+28-08-2015 21:38:51	 The underlying provider failed on Open.     at System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   at System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at DCS.DAL.DCSEntities.GetAllProjectsIndex() in d:\TFS\DCS\DCS\DCS.DAL\DCS.Context.cs:line 143
+   at DCS.BAL.DataAccess.Repository`2.GetProjects() in d:\TFS\DCS\DCS\DCS.BAL\DataAccess\Repository.cs:line 70
+   at DCSProject.Controllers.ProjectController.Index() in d:\TFS\DCS\DCS\DCSProject\Controllers\ProjectController.cs:line 60
+28-08-2015 21:42:17	 The underlying provider failed on Open.     at System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   at System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at DCS.DAL.DCSEntities.GetAllProjectsIndex() in d:\TFS\DCS\DCS\DCS.DAL\DCS.Context.cs:line 143
+   at DCS.BAL.DataAccess.Repository`2.GetProjects() in d:\TFS\DCS\DCS\DCS.BAL\DataAccess\Repository.cs:line 70
+   at DCSProject.Controllers.ProjectController.Index() in d:\TFS\DCS\DCS\DCSProject\Controllers\ProjectController.cs:line 60
+09-09-2015 16:32:36	 The underlying provider failed on Open.     at System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   at System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at DCS.DAL.DCSEntities.GetAllProjectsIndex() in d:\TFS\DCS\DCS\DCS.DAL\DCS.Context.cs:line 143
+   at DCS.BAL.DataAccess.Repository`2.GetProjects() in d:\TFS\DCS\DCS\DCS.BAL\DataAccess\Repository.cs:line 70
+   at DCSProject.Controllers.ProjectController.Index() in d:\TFS\DCS\DCS\DCSProject\Controllers\ProjectController.cs:line 60
+18-09-2015 13:03:44	 The underlying provider failed on Open.     at System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   at System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at DCS.DAL.DCSEntities.GetAllProjectsIndex() in d:\DCS\DCS (17_09_2015)\DCS.DAL\DCS.Context.cs:line 143
+   at DCS.BAL.DataAccess.Repository`2.GetProjects() in d:\DCS\DCS (17_09_2015)\DCS.BAL\DataAccess\Repository.cs:line 70
+   at DCSProject.Controllers.ProjectController.Index() in d:\DCS\DCS (17_09_2015)\DCSProject\Controllers\ProjectController.cs:line 60
+11/9/2015 8:40:17 PM	 The underlying provider failed on Open.     at System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   at System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at DCS.DAL.DCSEntities.GetAllProjectsIndex() in d:\TFS\DCS\DCS\DCS.DAL\DCS.Context.cs:line 144
+   at DCS.BAL.DataAccess.Repository`2.GetProjects() in d:\TFS\DCS\DCS\DCS.BAL\DataAccess\Repository.cs:line 70
+   at DCSProject.Controllers.ProjectController.Index() in e:\Projects\moore\DCS\DCSProject\Controllers\ProjectController.cs:line 70
+11/9/2015 11:59:23 PM	 The underlying provider failed on Open.     at System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   at System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at DCS.DAL.DCSEntities.GetAllProjectsIndex() in d:\TFS\DCS\DCS\DCS.DAL\DCS.Context.cs:line 144
+   at DCS.BAL.DataAccess.Repository`2.GetProjects() in d:\TFS\DCS\DCS\DCS.BAL\DataAccess\Repository.cs:line 70
+   at DCSProject.Controllers.ProjectController.Index() in e:\Projects\moore\DCS\DCSProject\Controllers\ProjectController.cs:line 70
+11/13/2015 08:27:17	 The underlying provider failed on Open.     at System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   at System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at DCS.DAL.DCSEntities.GetAllProjectsIndex() in d:\TFS\DCS\DCS\DCS.DAL\DCS.Context.cs:line 144
+   at DCS.BAL.DataAccess.Repository`2.GetProjects() in d:\TFS\DCS\DCS\DCS.BAL\DataAccess\Repository.cs:line 70
+   at DCSProject.Controllers.ProjectController.Index() in e:\Projects\moore\DCS\DCSProject\Controllers\ProjectController.cs:line 70
+11/13/2015 08:30:33	 The underlying provider failed on Open.     at System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   at System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at DCS.DAL.DCSEntities.GetAllProjectsIndex() in d:\TFS\DCS\DCS\DCS.DAL\DCS.Context.cs:line 144
+   at DCS.BAL.DataAccess.Repository`2.GetProjects() in d:\TFS\DCS\DCS\DCS.BAL\DataAccess\Repository.cs:line 70
+   at DCSProject.Controllers.ProjectController.Index() in e:\Projects\moore\DCS\DCSProject\Controllers\ProjectController.cs:line 70
+11/13/2015 08:39:01	 The underlying provider failed on Open.     at System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   at System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at DCS.DAL.DCSEntities.GetAllProjectsIndex() in d:\TFS\DCS\DCS\DCS.DAL\DCS.Context.cs:line 144
+   at DCS.BAL.DataAccess.Repository`2.GetProjects() in d:\TFS\DCS\DCS\DCS.BAL\DataAccess\Repository.cs:line 70
+   at DCSProject.Controllers.ProjectController.Index() in e:\Projects\moore\DCS\DCSProject\Controllers\ProjectController.cs:line 70
+11/13/2015 08:58:51	 An error occurred while executing the command definition. See the inner exception for details.     at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.ObjectContext.CreateFunctionObjectResult[TElement](EntityCommand entityCommand, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ExecutionOptions executionOptions)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__46()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at DCS.DAL.DCSEntities.GetAllProjectsIndex() in d:\TFS\DCS\DCS\DCS.DAL\DCS.Context.cs:line 144
+   at DCS.BAL.DataAccess.Repository`2.GetProjects() in d:\TFS\DCS\DCS\DCS.BAL\DataAccess\Repository.cs:line 70
+   at DCSProject.Controllers.ProjectController.Index() in e:\Projects\moore\DCS\DCSProject\Controllers\ProjectController.cs:line 70

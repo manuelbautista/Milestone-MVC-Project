@@ -1,0 +1,258 @@
+﻿@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jquery-ui-1.11.4.min.js"></script>
+<link href="@Url.Content("~/Content/newstyle.css")" rel="stylesheet" />
+<link href="@Url.Content("~/Content/responsive.css")" rel="stylesheet" />
+@*<link href="~/Scripts/normalize.min.css" rel="stylesheet" />*@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<style type="text/css">
+    th {
+        /*min-width: 300px;*/
+        width: auto;
+    }
+
+    td {
+        /*min-width: 300px;*/
+        width: auto;
+        vertical-align: top;
+    }
+
+    #summary-list td:nth-child(odd) {
+        padding-top: 15px;
+    }
+
+    .main-btn {
+        background: #14379b;
+        /*/ Old browsers / background: -moz-linear-gradient(top, #14379b 0%, #3e68b4 50%, #14379b 100%);
+        / FF3.6+ / background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#14379b), color-stop(50%,#3e68b4), color-stop(100%,#14379b));
+        / Chrome,Safari4+ / background: -webkit-linear-gradient(top, #14379b 0%,#3e68b4 50%,#14379b 100%);
+        / Chrome10+,Safari5.1+ / background: -o-linear-gradient(top, #14379b 0%,#3e68b4 50%,#14379b 100%);
+        / Opera 11.10+ / background: -ms-linear-gradient(top, #14379b 0%,#3e68b4 50%,#14379b 100%);
+        / IE10+ / background: linear-gradient(to bottom, #14379b 0%,#3e68b4 50%,#14379b 100%);
+        / W3C / filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#14379b', endColorstr='#14379b',GradientType=0 );
+        / IE6-9 / padding: 5px 10px;*/
+        color: #fff;
+        border-radius: 8px;
+        font-size: 17px;
+        padding: 6px;
+        width: 100%;
+    }
+
+    #spn-overall, #spn-schedule, #spn-scope, #spn-financial, #spn-resource {
+        padding: 8px;
+        position: relative;
+        color: #fff;
+        border-radius: 6px;
+    }
+
+    .p-sign {
+        color: #000;
+        padding: 5px;
+        font-weight: bold;
+        font-size: 11px;
+        margin-bottom: 10px;
+        margin-right: 2px;
+        border-radius: 6px;
+    }
+
+    .legendmilestone {
+        display: inline-block;
+        padding: 5px;
+        font-size: 11px;
+        margin-bottom: 10px;
+        margin-right: 12px;
+        border-radius: 6px;
+        color: #fff;
+        float: right;
+    }
+
+
+    .blue-bg {
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: rgb(154, 210, 245);
+        margin: 10px 0;
+        padding: 10px;
+    }
+</style>
+<div class="container-fluid" id="bodydiv">
+    <div class="row" id="mainDiv">
+        <div class="col-md-12 col-lg-12">
+            <div class="panel panel-default">
+                <div style="background-color: #fff; border-radius: 12px; padding: 42px 11px; border-bottom: 4px solid;" class="panel-heading pnlwithrightbutton">
+                    <div class="row">
+                        <div class="pull-right">
+                            <span class="main-btn scope blue-btn">Overall Status</span>
+                            <span id="spn-overall" style="background-color: green;">G</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-md-12 col-lg-12">
+                                <h2 id="h2-project-name" style="color: blue;">Anthem Infrastructure Health Check</h2>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <h4 id="h4-fullname" style="color: blue;">Owners: Peddicord, Shawn</h4>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <h4 id="h4-partnername" style="color: blue;">Project Co-Owner/ Partner : Peddicord</h4>
+                            </div>
+                            <div class="col-md-12 col-lg-12">
+                                <h4 id="h4-ETOPlayBook-name" style="color: blue;">ETO Playbook: None</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="top-btns text-right">
+                                <span class="main-btn blue-btn">Scope</span>
+                                <span id="spn-scope" class="scope">G</span>
+                                <span class="main-btn blue-btn">Schedule</span>
+                                <span id="spn-schedule" class="schedule">G</span>
+                                <span class="main-btn blue-btn">Resources</span>
+                                <span id="spn-resource" class="resource">G</span>
+                                <span class="main-btn blue-btn">Financials</span>
+                                <span id="spn-financial" class="financial">G</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body" id="start">
+                    <div class="row" style="clear: both; color: #0029a2; height: auto; overflow: hidden; padding-bottom: 10px;">
+                        <span><b>Start Date :</b></span><span id="spn-startdate">Various</span>
+                        <span style="margin-left:20px;"><b>End Date :</b></span><span id="spn-enddate">Various</span>
+                        <span style="margin-left:20px;"><b>% Complete : </b></span><span id="spn-proj-complete">xx%</span>
+                        <span style="margin-left:20px;"><b>Project Legend:</b></span>
+                        <div class="pull-right" style="margin-top:10px;">
+                            <span style="background-color: red; color: #fff;" class="p-sign">Red</span>
+                            <span style="background-color: yellow;" class="p-sign">Amber</span>
+                            <span style="background-color: green; color: #fff;" class="p-sign">Green</span>
+                            <span style="background-color: grey; color: #fff;" class="p-sign">Completed</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12 col-xs-12">
+                            <div class="row">
+                                <div class="col-md-offset-6 col-lg-3 col-md-3 col-sm-6 col-xs-4">
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-7" style="margin: 0; padding: 0;">
+                                    <div class="pull-right">
+                                        <div style="float:left; line-height:35px;" class="m-legend"><span style="color: #0029a2; display: inline-block; line-height: 35px;"><b>Milestone Legend:</b></span></div>
+                                        <span style="background-color: #1f3a4f; color: #fff; border-radius: 5px;" class="legendmilestone2">Completed</span>
+                                        <span style="background-color: #abc7dd; border-radius: 5px; color: #fff;" class="legendmilestone2">In Progress</span>
+                                        <span style="background-color: #3d709b; color: #fff; border-radius: 5px;" class="legendmilestone2">Planned</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 ">
+                        <table style="width: 100%;">
+                            <thead>
+                                <tr id="header-row-duration">
+                                    <th style="border: 2px solid black; background: #9ad3f5;">
+                                        <span>April '15</span>
+                                    </th>
+                                    <th style="border: 2px solid black; background: #9ad3f5;">
+                                        <span>May '15</span>
+                                    </th>
+                                    <th style="border: 2px solid black; background: #9ad3f5;">
+                                        <span>Jun '15</span>
+                                    </th>
+                                    <th style="border: 2px solid black; background: #9ad3f5;">
+                                        <span>Jul '15</span>
+                                    </th>
+                                    <th style="border: 2px solid black; background: #9ad3f5;">
+                                        <span>Aug '15</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="summary-list">
+                                <tr>
+                                    <td style="border-bottom: 2px dotted black; border-left: 2px dotted black; height: 150px;">Citrix Start</td>
+                                    <td style="border-bottom: 2px dotted black; border-left: 2px dotted black; height: 150px;">Citrix Start</td>
+                                    <td style="border-bottom: 2px dotted black; border-left: 2px dotted black; height: 150px;">Citrix Start</td>
+                                    <td style="border-bottom: 2px dotted black; border-left: 2px dotted black; height: 150px;">Citrix Start</td>
+                                    <td style="border-bottom: 2px dotted black; border-left: 2px dotted black; border-right: 2px dotted black; height: 150px;">Citrix Start</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-xs-12">
+                        <div class="blue-bg">
+                            Project Description and  Business Value:
+                            <p id="p-proj-descrition" style="font-weight: normal;">Platform health checks for the various major Anthem environments to align with vendor recommendations and best practices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix" id="rowcss">
+            <div class="col-md-6 col-lg-6 col-xs-6 half-one cssclass" id="left">
+                <div class="blue-bg" style="min-height: 113px;">
+                    Executive Summary:
+                    <p id="p-proj-exec-summary"
+                       style="font-weight: normal;">
+                        Part of ongoing Data Center Services
+                        platform reliability efforts is conducting health checks on our major
+                        platforms.  Anthem  has a significant investment in these platforms
+                        and they require annual health checks to ensure they are optimized for
+                        performance, maximized for resource efficiencies, and risk is
+                        mitigated by leveraging experienced consultants both internal and
+                        external with proven best practices..  These health checks are
+                        documented  and  provide  Anthem with a roadmap for continual
+                        improvement.    Issues or improvements are scheduled and tracked
+                        through remediation efforts.
+                    </p>
+                </div>
+                <div class="blue-bg" style="min-height: 112px;">
+                    Funding Ask:
+                    <p id="p-proj-funding" style="font-weight: normal;">2015</p>
+                    <p style="font-weight: normal;"></p>
+                    <p style="font-weight: normal;"></p>
+                    <p style="font-weight: normal;"></p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xs-6 half-one cssclass" id="right">
+                <div class="blue-bg">
+                    Accomplishments:
+                    <p id="p-proj-accomplish"
+                       style="font-weight: normal;">
+                        Part of ongoing Data Center Services
+                        platform reliability efforts is conducting health checks on our major
+                        platforms.
+                    </p>
+                </div>
+                <div class="blue-bg">
+                    Key Risks/Issues:
+                    <p id="p-proj-keyrisk" style="font-weight: normal;">
+                        Part of ongoing Data Center Services platform reliability
+                        efforts is conducting health checks on our major platforms.
+                    </p>
+                </div>
+                <div class="blue-bg">
+                    Direction Needed:
+                    <p id="p-proj-direction"
+                       style="font-weight: normal;">
+                        Part of ongoing Data Center Services
+                        platform reliability efforts is conducting health checks on our major
+                        platforms.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="rowcss1">
+            <div class="col-lg-12 col-md-12">
+                <div class="table-responsive" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

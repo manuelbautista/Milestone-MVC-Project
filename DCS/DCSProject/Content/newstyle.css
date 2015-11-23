@@ -1,0 +1,142 @@
+﻿/****************EDIT MILESTONE PAGE STYLE STARTS*****************************************/
+
+.legendmilestone {
+    display: inline-block;
+    padding: 5px;
+    font-size: 8px;
+    margin-bottom: 10px;
+    margin-right: 7px;
+    border-radius: 6px;
+    color: #fff;
+    float: right;
+}
+
+.milestonelegendheading {
+    color: #0029a2;
+    font-size: 12px;
+    margin-right: 8px;
+}
+
+.milestonedetail {
+    margin-right: -16px;
+}
+
+.tableheading1 {
+    width: 50px;
+}
+
+.tableheading2 {
+    width: 40%;
+}
+
+.tableheading3 {
+    width: 100px;
+}
+
+.tableheading4 {
+    width: 40px;
+}
+
+.tableheading5 {
+    width: 97px;
+}
+
+.tableheading6 {
+    width: 50px;
+}
+
+.tableheading7 {
+    width: 30px;
+}
+
+.nopadding {
+    padding: 15px 6px!important;
+}
+/****************************************EDIT MILESTONE PAGE STYLE ENDS**************************************************/
+/*************************************DETAIL PAGE STYLE STARTS ***************************************************/
+
+.p-sign {
+    color: #000;
+    display: inline-block;
+    padding: 5px;
+    font-size: 11px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 6px;
+}
+
+.legendmilestone2 {
+    display: inline-block;
+    padding: 4px 3px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    
+    border-radius: 6px;
+    color: #000;
+}
+
+
+.blue-bg {
+    border: 1px solid black;
+    font-weight: bold;
+    background-color: rgb(154, 210, 245);
+    margin: 10px 0;
+    padding: 10px;
+}
+
+#summary-list td:nth-child(odd) {
+    padding-top: 15px;
+}
+
+.main-btn {
+    background: #14379b;
+    / Old browsers / background: -moz-linear-gradient(top, #14379b 0%, #3e68b4 50%, #14379b 100%);
+    / FF3.6+ / background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#14379b), color-stop(50%,#3e68b4), color-stop(100%,#14379b));
+    / Chrome,Safari4+ / background: -webkit-linear-gradient(top, #14379b 0%,#3e68b4 50%,#14379b 100%);
+    / Chrome10+,Safari5.1+ / background: -o-linear-gradient(top, #14379b 0%,#3e68b4 50%,#14379b 100%);
+    / Opera 11.10+ / background: -ms-linear-gradient(top, #14379b 0%,#3e68b4 50%,#14379b 100%);
+    / IE10+ / background: linear-gradient(to bottom, #14379b 0%,#3e68b4 50%,#14379b 100%);
+    / W3C / filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#14379b', endColorstr='#14379b',GradientType=0 );
+    / IE6-9 / padding: 5px 10px;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 17px;
+    padding: 6px;
+    
+}
+
+#spn-overall, #spn-schedule, #spn-scope, #spn-financial, #spn-resource {
+    padding: 5px;
+    position: relative;
+    color: #fff;
+    border-radius: 6px;
+    padding: 8px;
+}
+
+.start {
+    text-align: left;
+}
+
+ .schedule {
+        background-color: green;
+      
+    }
+
+    .scope {
+        background-color: green;
+       
+    }
+
+    .financial {
+        background-color: green;
+       
+    }
+
+    .resource {
+        background-color: green;
+        color: #000;
+       
+    }
+
+/**************************************DETAIL PAGE STYLE ENDS********************************************************/

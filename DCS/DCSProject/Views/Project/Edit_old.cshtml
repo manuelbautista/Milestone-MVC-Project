@@ -1,0 +1,545 @@
+﻿@model DCS.Common.Models.ProjectModel
+
+@{
+    if (Model.ID > 0)
+    {
+        ViewBag.Title = "Edit Project";
+    }
+    else
+    {
+        ViewBag.Title = "Create Project";
+    }
+}
+<script src='@Url.Content("~/Content/ckeditor/ckeditor.js")'></script>
+<script src='@Url.Content("~/Content/ckeditor/adapters/jquery.js")'></script>
+
+
+@using (Html.BeginForm("edit", "project", FormMethod.Post, new { id = "frmEditProject" }))
+{
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div class="editprojectlist clstopmargin">
+                <div class="panel panel-default">
+                    <div class="panel-heading pnlwithrightbutton">
+                        @if (Model.ID > 0)
+                        {
+                            <span class="spnpnlheading">
+                                Edit Project
+                            </span>
+                        }
+                        else
+                        {
+                            <span class="spnpnlheading">
+                                Create Project
+                            </span>
+                            if (ViewData["message"] != null)
+                            {
+                                <span style="margin-left:5%;color:red;font-weight:bold;">@ViewData["message"]</span>
+                            }
+                        }
+                        <a class="btn btn-primary pull-right" href="@Url.Action("index","project")">Back</a>
+                    </div>
+                    <div class="panel-body nopadding">
+                        <div class="col-lg-12 col-md-12" style="margin-top:15px;">
+                            <div class="col-lg-3 col-md-3 form-group">
+                                Project No:
+                                @if (Model.ID > 0)
+                                {
+                                    <label>@Model.ProjectNumber</label>
+                                    @Html.HiddenFor(x => x.ProjectNumber)
+                                }
+                                else
+                                {
+                                    @*<text>#</text>*@
+                                    @Html.TextBoxFor(m => m.ProjectNumber, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(x => x.ProjectNumber)
+                                }
+                            </div>
+                            <div class="col-lg-3 col-md-3 form-group">
+                                ETO Playbook?
+
+                                @if (Model.ID > 0)
+                                {
+                                    @Html.DropDownList("EOPlaybook", new SelectListItem[] { new SelectListItem() { Text = "Yes", Value = "true",Selected=Model.EOPlaybook.HasValue? Model.EOPlaybook.Value : false }, new SelectListItem()
+{ Text = "No", Value = "false",Selected=Model.EOPlaybook.HasValue? Model.EOPlaybook.Value : false} }, "-Select-", new { @class = "form-control" })
+                                }
+                                else
+                                {
+                                    @Html.DropDownList("EOPlaybook", new SelectListItem[] { new SelectListItem() { Text = "Yes", Value = "true" }, new SelectListItem()
+{ Text = "No", Value = "false"} }, "-Select-", new { @class = "form-control" })
+                                }
+
+                            </div>
+                            <div class="col-lg-3 col-md-3 form-group">
+                                Management Approval:
+                                @if (Model.ID > 0)
+                                {
+                                    @Html.EditorFor(model => model.ManagementApproval)
+                                }
+                                else
+                                {
+                                    @Html.DropDownList("ManagementApproval", new SelectListItem[] { new SelectListItem() { Text = "Yes", Value = "true" }, new SelectListItem()
+{ Text = "No", Value = "false"} }, "-Select-", new { @class = "form-control" })
+                                }
+                                @Html.ValidationMessageFor(x => x.ManagementApproval)
+
+                            </div>
+                            <div class="col-lg-3 col-md-3 form-group">
+                                Peer Review:
+                                @if (Model.ID > 0)
+                                {
+                                    @Html.EditorFor(model => model.PeerReview)
+                                }
+                                else
+                                {
+                                    @Html.DropDownList("PeerReview", new SelectListItem[] { new SelectListItem() { Text = "Yes", Value = "true" }, new SelectListItem()
+{ Text = "No", Value = "false"} }, "-Select-", new { @class = "form-control" })
+                                }
+
+                                @Html.ValidationMessageFor(x => x.PeerReview)
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="col-lg-3 col-md-3 form-group">Project Name: </div>
+                            <div class="col-lg-3 col-md-3 form-group">
+                                @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(x => x.Name)
+                            </div>
+                            <div class="col-lg-3 col-md-3 form-group">ETO Playbook: </div>
+                            <div class="col-lg-3 col-md-3 form-group">
+                                @Html.DropDownListFor(x => x.EOPlaybookId, new SelectList(ViewBag.ETOPlaybook, "ID", "Name"), "-Select-", new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="col-lg-3 col-md-3 form-group">Start Date: </div>
+                            <div class="col-lg-3 col-md-3 form-group">
+                                @Html.TextBox("StartDate", Model.ProjectStartDate, new { @class = "form-control" })
+                                <label class="field-validation-error" id="StartDateError"></label>
+                                <script>
+                                    $(function () {
+                                        $('#StartDate').datepicker({ dateFormat: 'mm/dd/yy', changeYear: true });
+                                    });
+                                </script>
+                            </div>
+                            <div class="col-lg-3 col-md-3 form-group"> </div>
+                            <div class="col-lg-3 col-md-3 form-group">
+
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="col-lg-3 col-md-3 form-group">End Date: </div>
+                            <div class="col-lg-3 col-md-3 form-group">
+                                @Html.TextBox("EndDate", Model.ProjectEndDate, new { @class = "form-control" })
+                                <label class="field-validation-error" id="EndDateError"></label>
+                                <script>
+                                    $(function () {
+                                        $('#EndDate').datepicker({ dateFormat: 'mm/dd/yy', changeYear: true });
+                                    });
+                                </script>
+                            </div>
+                            <div class="col-lg-3 col-md-3 form-group"></div>
+                            <div class="col-lg-3 col-md-3 form-group">
+
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="col-lg-3 col-md-3 form-group">Anthem Owner:</div>
+                            <div class="col-lg-3 col-md-3 form-group">
+                                <div class="wdh-100 clsddlchosen">
+                                    @Html.DropDownListFor(x => x.ProjectOwnerANTMId, new SelectList(ViewBag.ProjectOwnerNameANTM, "ID", "FullName"), "-Select-", new { @class = "form-control" })
+                                    <a class="btn btn-primary btn-xs pull-right dd-nodrag btnaddProjectOwnerNameANTM">
+                                        <img src="@Url.Content("~/Images/add.png")" style="height:30px" title="Add new" />
+
+                                        >
+                                    </a>
+                                    <a class="btn btn-primary btn-xs pull-right dd-nodrag btneditProjectOwnerNameANTM">
+                                        <img src="@Url.Content("~/Images/edit.png")" style="height:30px" title="Edit" />
+                                        >
+                                    </a>
+                                </div>
+                                @Html.ValidationMessageFor(x => x.ProjectOwnerANTMId)
+                            </div>
+                            <div class="col-lg-3 col-md-3 form-group">Project Co-Owner/ Partner :</div>
+                            <div class="col-ld-3 col-md-3 form-group">
+                                <div class="wdh-100 clsddlchosen">
+                                    @Html.DropDownListFor(x => x.ProjectOwnerExternalId, new SelectList(ViewBag.ProjectOwnerNameExternal, "ID", "FullName"), "-Select-", new { @class = "form-control" })
+                                    <a class="btn btn-primary btn-xs pull-right dd-nodrag btnaddProjectOwnerNameExternal">
+                                        <img src="@Url.Content("~/Images/add.png")" style="height:30px" title="Add new" />
+                                        >
+                                    </a>
+                                    <a class="btn btn-primary btn-xs pull-right dd-nodrag btneditProjectOwnerNameExternal">
+                                        <img src="@Url.Content("~/Images/edit.png")" style="height:30px" title="Edit" />
+                                        >
+                                    </a>
+                                </div>
+                                @Html.ValidationMessageFor(x => x.ProjectOwnerExternalId)
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="col-lg-3 col-md-3 form-group">Project Description and Business Value:</div>
+                            <div class="col-lg-9 col-md-9 form-group">
+                                @Html.TextAreaFor(x => x.Description, new { @class = "form-control ckeditor" })
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="col-lg-3 col-md-3 form-group">Executive Summary:</div>
+                            <div class="col-lg- col-md-9 form-group">
+                                @Html.TextAreaFor(x => x.ExecutiveStatus, new { @class = "form-control ckeditor" })
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="col-lg-3 col-md-3 form-group">Funding Ask:</div>
+                            <div class="col-lg-9 col-md-9 form-group">
+                                @Html.TextAreaFor(x => x.FundingAsk, new { @class = "form-control ckeditor" })
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="col-lg-3 col-md-3 form-group">Accomplishments:</div>
+                            <div class="col-lg-9 col-md-9 form-group">
+                                @Html.TextAreaFor(x => x.Accomplishments, new { @class = "form-control ckeditor" })
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="col-lg-3 col-md-3 form-group">Key Risks and Business:</div>
+                            <div class="col-lg-9 col-md-9 form-group">
+                                @Html.TextAreaFor(x => x.KeyRisksAndIssues, new { @class = "form-control ckeditor" })
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="col-lg-3 col-md-3 form-group">Direction Needed:</div>
+                            <div class="col-lg-9 col-md-9 form-group">
+                                @Html.TextAreaFor(x => x.Direction, new { @class = "form-control ckeditor" })
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="col-lg-6 col-md-6 form-group">
+                                <input id="btn-save-project" class="btn btn-primary" type="submit" onclick="return checkDatevalidations()" value="Submit" />
+                                <a class="btn btn-primary" href="@Url.Action("index","project")" style="color:white">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="col-md-12">
+                                                    Project No:
+                                                </div>
+
+                                                <div class="col-md-12">
+                                                    @if (Model.ID > 0)
+                                                    {
+                                                        <label>@Model.ProjectNumber</label>
+                                                        @Html.HiddenFor(x => x.ProjectNumber)
+                                                    }
+                                                    else
+                                                    {
+                                                        @*<text>#</text>*@
+                                                        @Html.TextBoxFor(m => m.ProjectNumber, new { @class = "form-control" })
+                                                        @Html.ValidationMessageFor(x => x.ProjectNumber)
+                                                    }
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+
+                                                <div class="col-md-12">
+                                                    ETO Playbook?
+                                                </div>
+
+                                                <div class="col-md-12">
+                                                    @if (Model.ID > 0)
+                                                    {
+                                                        @Html.DropDownList("EOPlaybook", new SelectListItem[] { new SelectListItem() { Text = "Yes", Value = "true",Selected=Model.EOPlaybook.HasValue? Model.EOPlaybook.Value : false }, new SelectListItem()
+{ Text = "No", Value = "false",Selected=Model.EOPlaybook.HasValue? Model.EOPlaybook.Value : false} }, "-Select-", new { @class = "form-control" })
+                                                    }
+                                                    else
+                                                    {
+                                                        @Html.DropDownList("EOPlaybook", new SelectListItem[] { new SelectListItem() { Text = "Yes", Value = "true" }, new SelectListItem()
+{ Text = "No", Value = "false"} }, "-Select-", new { @class = "form-control" })
+                                                    }
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+
+                                                <div class="col-md-12">
+                                                    Management Approval:
+                                                </div>
+
+                                                <div class="col-md-12">
+                                                    @if (Model.ID > 0)
+                                                    {
+                                                        @Html.EditorFor(model => model.ManagementApproval)
+                                                    }
+                                                    else
+                                                    {
+                                                        @Html.DropDownList("ManagementApproval", new SelectListItem[] { new SelectListItem() { Text = "Yes", Value = "true" }, new SelectListItem()
+{ Text = "No", Value = "false"} }, "-Select-", new { @class = "form-control" })
+                                                    }
+                                                    @Html.ValidationMessageFor(x => x.ManagementApproval)
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+
+                                                <div class="col-md-12">
+                                                    Peer Review:
+                                                </div>
+
+                                                <div class="col-md-12">
+                                                    @if (Model.ID > 0)
+                                                    {
+                                                        @Html.EditorFor(model => model.PeerReview)
+                                                    }
+                                                    else
+                                                    {
+                                                        @Html.DropDownList("PeerReview", new SelectListItem[] { new SelectListItem() { Text = "Yes", Value = "true" }, new SelectListItem()
+{ Text = "No", Value = "false"} }, "-Select-", new { @class = "form-control" })
+                                                    }
+
+                                                    @Html.ValidationMessageFor(x => x.PeerReview)
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <span class="col-md-3 control-label fix-label">
+                                                    Project Name:
+                                                </span>
+                                                <span class="col-md-9">
+                                                    @Html.TextBoxFor(x => x.Name, new { @class = "form-control pull-left" })
+                                                    @Html.ValidationMessageFor(x => x.Name)
+                                                </span>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <span class="col-md-4 control-label fix-label">
+                                                    ETO PLAYBOOK:
+                                                </span>
+                                                <span class="col-md-8">
+                                                    @if (Model.ID > 0)
+                                                    {
+                                                        @Html.DropDownList("EOPlaybook", new SelectListItem[] { new SelectListItem() { Text = "Yes", Value = "true",Selected=Model.EOPlaybook.HasValue? Model.EOPlaybook.Value : false }, new SelectListItem()
+{ Text = "No", Value = "false",Selected=Model.EOPlaybook.HasValue? Model.EOPlaybook.Value : false} }, "-Select-", new { @class = "form-control" })
+                                                    }
+                                                    else
+                                                    {
+                                                        @Html.DropDownList("EOPlaybook", new SelectListItem[] { new SelectListItem() { Text = "Yes", Value = "true" }, new SelectListItem()
+{ Text = "No", Value = "false"} }, "-Select-", new { @class = "form-control" })
+                                                    }
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="col-md-3 fix-label">
+                                                    Start Date:
+                                                </div>
+                                                <div class="col-md-8">
+                                                    @Html.TextBox("StartDate", Model.ProjectStartDate, new { @class = "form-control" })
+                                                    <label class="field-validation-error" id="StartDateError"></label>
+                                                    <script>
+                                                        $(function () {
+                                                            $('#StartDate').datepicker({ dateFormat: 'mm/dd/yy', changeYear: true });
+                                                        });
+                                                    </script>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="col-md-3 col-md-offset-1 fix-label">
+                                                    End Date:
+                                                </div>
+                                                <div class="col-md-8">
+                                                    @Html.TextBox("EndDate", Model.ProjectEndDate, new { @class = "form-control" })
+                                                    <label class="field-validation-error" id="EndDateError"></label>
+                                                    <script>
+                                                        $(function () {
+                                                            $('#EndDate').datepicker({ dateFormat: 'mm/dd/yy', changeYear: true });
+                                                        });
+                                                    </script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="col-md-4 fix-label">
+                                                        Anthem Owner:
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        @Html.DropDownListFor(x => x.ProjectOwnerANTMId, new SelectList(ViewBag.ProjectOwnerNameANTM, "ID", "FullName"), "-Select-", new { @class = "form-control" })
+
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <a class="btn btn-primary btn-xs pull-left dd-nodrag btnaddProjectOwnerNameANTM">
+                                                            <img src="@Url.Content("~/Images/add.png")" style="height:30px" title="Add new" />
+
+                                                            >
+                                                        </a>
+                                                        <a class="btn btn-primary btn-xs pull-left dd-nodrag btneditProjectOwnerNameANTM">
+                                                            <img src="@Url.Content("~/Images/edit.png")" style="height:30px" title="Edit" />
+                                                            >
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="col-md-5 fix-label">
+                                                        Project Co-Owner/Partner :
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        @Html.DropDownListFor(x => x.ProjectOwnerExternalId, new SelectList(ViewBag.ProjectOwnerNameExternal, "ID", "FullName"), "-Select-", new { @class = "form-control" })
+
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a class="btn btn-primary btn-xs pull-left dd-nodrag btnaddProjectOwnerNameExternal">
+                                                            <img src="@Url.Content("~/Images/add.png")" style="height:30px" title="Add new" />
+                                                            >
+                                                        </a>
+                                                        <a class="btn btn-primary btn-xs pull-left dd-nodrag btneditProjectOwnerNameExternal">
+                                                            <img src="@Url.Content("~/Images/edit.png")" style="height:30px" title="Edit" />
+                                                            >
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="col-md-offset-4 col-md-8">
+                                                        @Html.ValidationMessageFor(x => x.ProjectOwnerANTMId)
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="col-md-offset-4 col-md-8">
+                                                        @Html.ValidationMessageFor(x => x.ProjectOwnerExternalId)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="col-md-12">
+                                                        Project Description and Business Value:
+                                                        @Html.TextAreaFor(x => x.Description, new { @class = "form-control ckeditor" })
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-12">
+                                                            Executive Summary:
+                                                            @Html.TextAreaFor(x => x.ExecutiveStatus, new { @class = "form-control ckeditor" })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-12">
+                                                            Funding Ask:
+                                                            @Html.TextAreaFor(x => x.FundingAsk, new { @class = "form-control ckeditor" })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-12">
+                                                            Accomplishments:
+                                                            @Html.TextAreaFor(x => x.Accomplishments, new { @class = "form-control ckeditor" })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-12">
+                                                            Key Risks and Business:
+                                                            @Html.TextAreaFor(x => x.KeyRisksAndIssues, new { @class = "form-control ckeditor" })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-12">
+                                                            Direction Needed:
+                                                            @Html.TextAreaFor(x => x.Direction, new { @class = "form-control ckeditor" })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<script>
+    function checkDatevalidations() {
+        debugger;
+        if ($('#StartDate').val() == '') {
+            $('#EndDateError').html('')
+            $('#StartDateError').html('Please select Start Date of Project.').css('color', 'red').css('font-weight', '100')
+            return false
+        }
+        else if ($('#EndDate').val() == '') {
+            $('#StartDateError').html('')
+            $('#EndDateError').html('Please select End Date of Project.').css('color', 'red').css('font-weight', '100')
+            return false
+        }
+        else {
+            $('#StartDateError').html('')
+            $('#EndDateError').html('')
+            return true
+        }
+    }
+
+    $(document).ready(function () {
+        ETOPlaybookDropdown();
+        $("#EOPlaybook").change(function () {
+            ETOPlaybookDropdown();
+        });
+
+        $('.ckeditor').ckeditor();
+
+
+        $('#btn-save-project').click(function () {
+            if ($("#PeerReview").val() == "") {
+                alert("Please select Peer Review");
+                return false;
+            }
+            if ($("#ManagementApproval").val() == "") {
+                alert("Please select Management Approval");
+                return false;
+            }
+
+        });
+        $(".modal-content").css({ "width": "100%" });
+    });
+
+    function ETOPlaybookDropdown() {
+        var selectedText = $("#EOPlaybook").find("option:selected").text().toLowerCase();
+        if (selectedText == "no") {
+            $("#EOPlaybookId")[0].selectedIndex = 0;
+            $("#EOPlaybookId").attr("disabled", true);
+        }
+        else {
+            $("#EOPlaybookId").attr("disabled", false);
+        }
+        //if (selectedText == "yes") {
+        //    $("#EOPlaybookId").attr("disabled", false);
+
+        //}
+        //else {
+        //    $("#EOPlaybookId")[0].selectedIndex = 0;
+        //    $("#EOPlaybookId").attr("disabled", true);
+        //}
+    }
+</script>

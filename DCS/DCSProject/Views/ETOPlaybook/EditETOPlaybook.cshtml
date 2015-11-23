@@ -1,0 +1,57 @@
+﻿@model DCS.Common.Models.ETOPlaybookModel
+@{
+    Layout = null;
+}
+<div class="row">
+<div class="col-lg-12 col-md-12" style="margin-top:15px;float:none">
+    <div class="form-group">
+        @*<input class="form-control" data-val="true" id="Name" name="Name" placeholder="Project Owner Name - ANTM" type="text" value="">*@
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        @Html.HiddenFor(x => x.ID)
+    </div>
+</div>
+<div class="col-lg-12 col-md-12" style="float:none">
+    <a class="btn btn-primary btnadd" href="javascript:void(0)" data-dismiss="modal" aria-label="Close" style="color:white">Submit</a>
+</div>
+</div>
+<script>
+    function setFrameheight() {
+        parent.jQuery("iframe#frmAction").attr('height', 113);
+    }
+    jQuery(document).ready(function () {
+        setTimeout(setFrameheight, 100);
+    });
+
+    $('.btnadd').on('click', function () {
+        if ($('#Name').val() != null && $('#Name').val().trim() != '') {
+            var name = $('#Name').val().trim();
+           
+            /*POST*/
+            $.ajax({
+                url: '@Url.Content("~/ETOPlaybook/UpdateETOPlaybook")',
+                dataType: "json",
+                type: "POST",
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({
+                    Name: $('#Name').val().trim(),
+
+                    ID: $('#ID').val()
+                   
+                }),
+                success: function (data) {
+                   
+                    var table = parent.$('#tbletoplaybook').DataTable();
+                   
+                    table.destroy();
+                    $("#tbletoplaybook tbody").empty();
+                    BindDataTable();
+                    $('#tbletoplaybook').DataTable();
+                },
+                error: function (xhr) {
+                    alert('error');
+                }
+            })
+
+        }
+    })
+</script>

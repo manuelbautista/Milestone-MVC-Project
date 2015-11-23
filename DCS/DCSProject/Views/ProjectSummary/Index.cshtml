@@ -1,0 +1,562 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .dateformat {
+        display: block;
+        font-size: 12px;
+        font-style: italic;
+        width: 100px;
+    }
+</style>
+<script type="text/javascript">
+    var multipleIds = [];
+    $(document).ready(function () {
+        GetSummaryData();
+        $('#downloadBtn').on('click', function () {
+            var completecount = 0;
+            var chkcount = multipleIds.length;
+            $('#hdnchkcount').val(chkcount);
+            if (multipleIds.length > 0) {
+                $.each(multipleIds, function (key, value) {
+                    $('#dynamicDiv').append("<iframe style='display:block' id='pdfiframe_" + key + "' name='pdfiframe_" + key + "'></iframe>");
+                    $('#pdfiframe_' + key).attr("src", '@Url.Content("~/ProjectSummary/PdfDetail/")' + value).load(function (data) {
+                        completecount += 1;
+                        if (chkcount == completecount) {
+                            setTimeout(function () {
+                                for (var i = 0; i < completecount; i++) {
+                                    var src = $('#pdfiframe_' + i).contents().find("html").html();
+                                    $('#dynamicDiv').append("<textarea id='multiplePDFdiv_" + i + "' name='multiplePDFdiv_" + i + "'>" + escape(src) + "</textarea>");
+                                    if (i == parseInt(chkcount - 1)) {
+
+                                        $('#form1').submit();
+                                    }
+                                }
+                            }, 3000);
+                        }
+                    })
+                });
+            }
+            else {
+                alert("Please select files to Download");
+                return false;
+            }
+        });
+
+
+        //=====================
+        //PPT Download
+        $("#downloadPPT").on("click", function () {
+            var projectIds = "";
+            $("#projectIds").val("");
+            $("#downloadType").val("");
+            if (multipleIds.length > 0) {
+                for (var i = 0; i < multipleIds.length; i++) {
+                    projectIds += multipleIds[i] + ",";
+                }
+                $("#projectIds").val(projectIds);
+                $("#downloadType").val("PPT");
+                $('#form1').submit();
+            } else {
+                $("#projectIds").val("");
+                $("#downloadType").val("");
+                alert("Please select files to Download");
+            }
+        });
+        //=====================
+
+
+        $('#printBtn').on('click', function () {
+            var printDiv = '';
+            if (multipleIds.length > 0) {
+                $.each(multipleIds, function (key, value) {
+                    $.get('@Url.Content("~/ProjectSummary/PdfDetailDownload")', { id: value }, function () {
+
+                    }).done(function (data) {
+                        $('#PDFdiv').append(data);
+                        GetSummaryDetailsData(value);
+                    }).done(function () {
+                        var html = $('#PDFdiv').html();
+                        printDiv += $("#bodydiv").html();
+                        var allCss = $('head').html();
+                        allCss += '<style>#header{display:none;}#printbtn{display:none;}@@media all and (max-width:768px){.half-one{width:49%; float:left; margin: 0 .5%;}.clearfix{overflow:hidden; clear:both;}.blue-btn{background: #14379b;padding: 6px;border-radius: 8px;color: #fff;}.blue-bg {border: 1px solid black;font-weight: bold;background-color: rgb(154, 210, 245);margin: 10px 0;padding: 10px;}.scope, .schedule, .resource, .financial, .overall{border-radius:5px;}body{font-size:11px!important;}#mainDiv{font-size:11px!important;}.p-sign{min-width: 22%; padding: 8px 4px; border-radius: 5px; margin-right:2px; font-size: 10px; text-align: center; word-wrap: break-word; width: auto;}.legendmilestone2 {font-weight: normal; font-size: 11px;padding: 8px 4px; margin-right:2px; margin-top:10px;display:inline-block;}.fa-stop{transform: rotate(45deg);}}</style>';
+                        var mywindow = window.open('', 'Detail');
+                        mywindow.document.write('<html><head>' + allCss);
+                        mywindow.document.write('</head><body >');
+                        mywindow.document.write('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">');
+                        mywindow.document.write(printDiv);
+                        mywindow.document.write('</body></html>');
+                        mywindow.document.close(); // necessary for IE >= 10
+                        mywindow.focus(); // necessary for IE >= 10
+                        //alert(mywindow.document());
+                        setTimeout(function () {
+                            mywindow.print();
+                            mywindow.close();
+                        }, 1000);
+                        return true;
+
+                    });
+                });
+            }
+            else {
+                alert("Please select files to Print");
+                return false;
+            }
+        });
+    });
+
+    function setcolorcode(id) {
+        switch (id) {
+            case 1:
+                $('#spn-scope').text("R");
+                $('#spn-scope').css("background-color", "red");
+                break;
+            case 2:
+                $('#spn-scope').text("A");
+                $('#spn-scope').css("background-color", "yellow");
+                break;
+            case 3:
+                $('#spn-scope').text("G");
+                $('#spn-scope').css("background-color", "green");
+                break;
+            case 4:
+                $('#spn-scope').text("C");
+                $('#spn-scope').css("background-color", "grey");
+                break;
+            default:
+                $('#spn-scope').text("N/A");
+                $('#spn-scope').css("background-color", "#fff");
+                break;
+        }
+    }
+    function GetSummaryData() {
+        var urltemp = window.location.href;
+        console.log(urltemp);
+        var url = "";
+        if (urltemp.indexOf('index')) {
+            url = urltemp.replace('/index', '');
+        }
+        else {
+            url = urltemp;
+        }
+        $.ajax({
+            type: "POST",
+
+            // url: "../ProjectSummary/GetData",
+            url: '@Url.Content("~/ProjectSummary/GetData")',
+            contentType: "application/json;charset=utf-8;",
+            dataType: "json",
+            success: function (data) {
+                console.log(data.length);
+                var tmpHTML = "";
+                if (data != null && data.length > 0) {
+                    var tmpHTML = "";
+                    for (var i = 0; i < data.length; i++) {
+                        tmpHTML = tmpHTML + "<tr>";
+                        tmpHTML = tmpHTML + "<td><input type=\"checkbox\"  onchange=\"return FindPageIds(" + data[i].ProjectId + ",this)\"/></td>";
+                        // tmpHTML = tmpHTML + "<td><a href=\"/ProjectSummary/Detail/" + data[i].ProjectId + "\">" + i + "</a></td>";
+                        tmpHTML = tmpHTML + "<td>" + data[i].ProjectNumber + "<span class=\"dateformat\">(" + data[i].ProjectNumberModifiedDate + ")</span></td>";
+                        // tmpHTML = tmpHTML + "<td><a href=\"/ProjectSummary/Detail/" + data[i].ProjectId + "\">" + data[i].ProjectName + "<a></td>";
+                        tmpHTML = tmpHTML + "<td><a href=" + url + "/Detail/" + data[i].ProjectId + ">" + data[i].ProjectName + "</a>" + "<span class=\"dateformat\">(" + data[i].ProjectNameModifiedDate + ")</span></td>";
+                        tmpHTML = tmpHTML + "<td>" + data[i].AnthemOwner + "<span class=\"dateformat\">(" + data[i].AnthemOwnerModifiedDate + ")</span></td>";
+                        tmpHTML = tmpHTML + "<td>" + data[i].AnthemOwnerEmail + "<span class=\"dateformat\">(" + data[i].AnthemOwnerModifiedDate + ")</span></td>";
+                        tmpHTML = tmpHTML + "<td>" + data[i].ExternalOwner + "<span class=\"dateformat\">(" + data[i].ExternalOwnerModifiedDate + ")</span></td>";
+                        tmpHTML = tmpHTML + "<td>" + data[i].ExternalOwnerEmail + "<span class=\"dateformat\">(" + data[i].ExternalOwnerModifiedDate + ")</span></td>";
+                        tmpHTML = tmpHTML + "<td>" + data[i].ProjectStartDateString + "<span class=\"dateformat\">(" + data[i].ProjectStartDateModifiedDate + ")</span></td>";
+                        tmpHTML = tmpHTML + "<td>" + data[i].ProjectEndDateString + "<span class=\"dateformat\">(" + data[i].ProjectEndDateModifiedDate + ")</span></td>";
+                        tmpHTML = tmpHTML + "<td>" + data[i].ProjectComplete + "%" + "<span class=\"dateformat\">(" + data[i].ProjectCompleteModifiedDate + ")</span></td>";
+                        tmpHTML = tmpHTML + GetColorData(data[i].ProjectScope, data[i].ProjectScopeModifiedDate);
+                        tmpHTML = tmpHTML + GetColorData(data[i].ProjectSchedule, data[i].ProjectScheduleModifiedDate);
+                        tmpHTML = tmpHTML + GetColorData(data[i].ProjectResource, data[i].ProjectResourceModifiedDate);
+                        tmpHTML = tmpHTML + GetColorData(data[i].ProjectFinancial, data[i].ProjectFinancialModifiedDate);
+                        tmpHTML = tmpHTML + GetColorData(data[i].ProjectOverAll, data[i].ProjectOverAllModifiedDate);
+                        // tmpHTML = tmpHTML + "<td>" + data[i].ProjectLastUpdateString + "(" + data[i].ProjectNumber + ")</td>";
+                        tmpHTML = tmpHTML + "<td>" + data[i].IsETOPlayBook + "<span class=\"dateformat\">(" + data[i].ETOPlayBookModifiedDate + ")</span></td>";
+                        tmpHTML = tmpHTML + "<td>" + data[i].IsPeerReview + "<span class=\"dateformat\">(" + data[i].PeerReviewModifiedDate + ")</span></td>";
+                        //tmpHTML = tmpHTML + "<td>" + data[i].ProjectEffortRemaining + "</td>";
+                        if (data[i].ProjectDaysRemaining < 0) {
+                            tmpHTML = tmpHTML + "<td>" + (-1) * data[i].ProjectDaysRemaining + " days past due" + "</td>";
+                        }
+                        else {
+                            tmpHTML = tmpHTML + "<td>" + data[i].ProjectDaysRemaining + "</td>";
+                        }
+                        //tmpHTML = tmpHTML + "<td>" + data[i].ProjectRAGStatus + "</td>";
+                        // tmpHTML = tmpHTML + "<td colspan='2'>&nbsp;</td>";
+                        tmpHTML = tmpHTML + "</tr>";
+                        //console.log(tmpHTML);
+                    }
+                    $('#summary-list').html(tmpHTML);
+                }
+            },
+            error: function (xhr) {
+                console.log(xhr);
+                if (xhr.status == 500) { $('body').html(xhr.responseText); }
+            }
+
+        });
+    }
+
+    function GetColorData(colorCode, date) {
+        var cellHTML = "";
+        switch (colorCode) {
+            case "1":
+                cellHTML = "<td style=\"background-color:red;\">R<span class=\"dateformat\">(" + date + ")</span></td>";
+                break;
+            case "2":
+                cellHTML = "<td style=\"background-color:yellow;color:black;\">A<span class=\"dateformat\">(" + date + ")</span></td>";
+                break;
+            case "3":
+                cellHTML = "<td style=\"background-color:green;\">G<span class=\"dateformat\">(" + date + ")</span></td>";
+                break;
+            case "4":
+                cellHTML = "<td style=\"background-color:grey;\"><span class=\"dateformat\">(" + date + ")</span></td>";
+                break;
+            case "0":
+                cellHTML = "<td style=\"background-color:white;\"><span class=\"dateformat\">(" + date + ")</span></td>";
+                break;
+            default:
+               // cellHTML = "<td>" + colorCode + "<span class=\"dateformat\">(" + date + ")</span></td>";
+                cellHTML = "<td>" + colorCode + "</td>";
+                break;
+        }
+        return cellHTML;
+    }
+
+    function FindPageIds(Ids, caller) {
+
+        if ($(caller).is(':checked')) {
+            multipleIds.push(Ids);
+        }
+        else {
+            multipleIds.splice($.inArray(Ids, multipleIds), 1);
+        }
+    }
+
+</script>
+
+@using (Html.BeginForm("DownloadPdf", "ProjectSummary", FormMethod.Post, new { @id = "form1" }))
+{
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div class="projectlist clstopmargin">
+                <textarea id="PDFdiv" style="display:none;"></textarea>
+                <div id="dynamicDiv" style="display:none;"></div>
+                <input type="hidden" id="hdnchkcount" name="hdnchkcount" /><input type="hidden" id="projectIds" name="projectIds" /><input type="hidden" id="downloadType" name="downloadType" />
+                <div class="panel panel-default">
+                    <div class="panel-heading pnlwithrightbutton">
+                        <span class="spnpnlheading">Project Summary</span>
+                        @*<a class="btn btn-primary pull-right" href="@Url.Action("edit","project")" style="color:white">Create Project</a>*@
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table id="tblsummary" class="table table-striped table-bordered table-hover">
+                                <thead>
+                                    <tr>
+
+                                        <th>Select Project</th>
+                                        <th>Project Number</th>
+                                        <th>Project Name</th>
+                                        <th>Anthem Owner</th>
+                                        <th>Anthem Owner Email</th>
+                                        <th>Project Co-Owner</th>
+                                        <th>Project Co-Owner Email</th>
+                                        <th>Start</th>
+                                        <th>End</th>
+                                        <th>%&nbsp;Complete</th>
+                                        <th>&nbsp;Scope</th>
+                                        <th>Schedule</th>
+                                        <th>Resources</th>
+                                        <th>Financial</th>
+                                        <th>Overall</th>
+                                        @*<th>Last Updated</th>*@
+                                        <th>ETO Playbook</th>
+                                        <th>Peer Review</th>
+                                        @*<th>Efforts Remaining</th>*@
+                                        @*<th>Comment</th>*@
+                                        <th>Days Remaining</th>
+                                        @*<th>Calculated RAG Status</th>*@
+
+                                    </tr>
+                                </thead>
+                                <tbody id="summary-list">
+                                    @*No record(s) found.*@
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <br />
+                        <input type="button" value="Print" id="printBtn" class="btn btn-primary pull-left" />&nbsp; &nbsp;
+                        <input type="button" class="btn btn-primary " id="downloadBtn" value="Download PDF" />&nbsp; &nbsp;
+                        <input type="button" class="btn btn-primary " id="downloadPPT" value="Download PPT" />
+                        <!-- /.table-responsive -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        //   GetSummaryDetailsData();
+
+    });
+
+    function SetScope(scopeId) {
+        switch (scopeId) {
+            case 1:
+                $('#spn-scope').text("....");
+                $('#spn-scope').css("background-color", "red");
+                $('#spn-scope').css("color", "red");
+
+                break;
+            case 2:
+                $('#spn-scope').text("....");
+                $('#spn-scope').css("background-color", "yellow");
+                $('#spn-scope').css("color", "yellow");
+                break;
+            case 3:
+                $('#spn-scope').text("....");
+                $('#spn-scope').css("background-color", "green");
+                $('#spn-scope').css("color", "green");
+                break;
+            case 4:
+                $('#spn-scope').html("....");
+                $('#spn-scope').css("background-color", "grey");
+                $('#spn-scope').css("color", "grey");
+                break;
+            default:
+                $('#spn-scope').text("....");
+                $('#spn-scope').css("background-color", "#fff");
+                $('#spn-scope').css("color", "#fff");
+                break;
+        }
+    }
+
+    function SetSchedule(scheduleId) {
+        switch (scheduleId) {
+            case 1:
+                $('#spn-schedule').text("....");
+                $('#spn-schedule').css("background-color", "red");
+                $('#spn-schedule').css("color", "red");
+                break;
+            case 2:
+                $('#spn-schedule').text("....");
+                $('#spn-schedule').css("background-color", "yellow");
+                $('#spn-schedule').css("color", "yellow");
+                break;
+            case 3:
+                $('#spn-schedule').text("....");
+                $('#spn-schedule').css("background-color", "green");
+                $('#spn-schedule').css("color", "green");
+                break;
+            case 4:
+                $('#spn-schedule').html("....");
+                $('#spn-schedule').css("background-color", "grey");
+                $('#spn-schedule').css("color", "grey");
+                break;
+            default:
+                $('#spn-schedule').text("....");
+                $('#spn-schedule').css("background-color", "#fff");
+                $('#spn-schedule').css("color", "#fff");
+                break;
+        }
+    }
+
+    function SetResource(resourceId) {
+        switch (resourceId) {
+            case 1:
+                $('#spn-resource').text("....");
+                $('#spn-resource').css("background-color", "red");
+                $('#spn-resource').css("color", "red");
+                break;
+            case 2:
+                $('#spn-resource').text("....");
+                $('#spn-resource').css("background-color", "yellow");
+                $('#spn-resource').css("color", "yellow");
+                break;
+            case 3:
+                $('#spn-resource').text("....");
+                $('#spn-resource').css("background-color", "green");
+                $('#spn-resource').css("color", "green");
+                break;
+            case 4:
+                $('#spn-resource').html("....");
+                $('#spn-resource').css("background-color", "grey");
+                $('#spn-resource').css("color", "grey");
+                break;
+            default:
+                $('#spn-resource').text("....");
+                $('#spn-resource').css("background-color", "#fff");
+                $('#spn-resource').css("color", "#fff");
+                break;
+        }
+    }
+
+    function SetFinancial(financialId) {
+        switch (financialId) {
+            case 1:
+                $('#spn-financial').text("....");
+                $('#spn-financial').css("background-color", "red");
+                $('#spn-financial').css("color", "red");
+                break;
+            case 2:
+                $('#spn-financial').text("....");
+                $('#spn-financial').css("background-color", "yellow");
+                $('#spn-financial').css("color", "yellow");
+                break;
+            case 3:
+                $('#spn-financial').text("....");
+                $('#spn-financial').css("background-color", "green");
+                $('#spn-financial').css("color", "green");
+                break;
+            case 4:
+                $('#spn-financial').html("....");
+                $('#spn-financial').css("background-color", "grey");
+                $('#spn-financial').css("color", "grey");
+                break;
+            default:
+                $('#spn-financial').text("....");
+                $('#spn-financial').css("background-color", "#fff");
+                $('#spn-financial').css("color", "#fff");
+                break;
+        }
+    }
+
+    function SetOverAllStatus(overallStatusId) {
+        switch (overallStatusId) {
+            case 1:
+                $('#spn-overall').text("....");
+                $('#spn-overall').css("background-color", "red");
+                $('#spn-overall').css("color", "red");
+                break;
+            case 2:
+                $('#spn-overall').text("....");
+                $('#spn-overall').css("background-color", "yellow");
+                $('#spn-overall').css("color", "yellow");
+                break;
+            case 3:
+                $('#spn-overall').text("....");
+                $('#spn-overall').css("background-color", "green");
+                $('#spn-overall').css("color", "green");
+                break;
+            case 4:
+                $('#spn-overall').html("....");
+                $('#spn-overall').css("background-color", "grey");
+                $('#spn-overall').css("color", "grey");
+                break;
+            default:
+                $('#spn-overall').text("....");
+                $('#spn-overall').css("background-color", "#fff");
+                $('#spn-overall').css("color", "#fff");
+                break;
+        }
+    }
+
+    function GetSummaryDetailsData(value) {
+        //  var idarry = window.location.pathname.split("/");
+        // var id = idarry[idarry.length - 1];
+        //  var id = '@ViewBag.pdfid';
+        var id = value;
+        //alert(id + "~" + window.location.pathname);
+        $.ajax({
+            type: "POST",
+            url: '@Url.Content("~/ProjectSummary/GetSummaryDetail")',
+            async: false,
+            //  url: "../GetSummaryDetail",
+            //contentType: "application/json;charset=utf-8;",
+            data: { id: id },
+            dataType: "json",
+            success: function (data) {
+                if (data != null) {
+                    SetScope(data.ScopeId);
+                    SetSchedule(data.ScheduleId);
+                    SetResource(data.ResourceId);
+                    SetFinancial(data.FinancialId);
+                    SetOverAllStatus(data.OverallStatusId);
+                    $('#h2-project-name').html(data.ProjectName);
+                    $('#h4-fullname').html("Owners: " + data.AnthemOwner);
+                    $('#h4-ETOPlayBook-name').html("ETO PlayBook: " + data.ETOPlayBookName);
+                    $('#h4-partnername').html("Co-Owner: " + data.PartnerName);
+                    $('#spn-startdate').html(data.ProjectStartDateString);
+                    $('#spn-enddate').html(data.ProjectEndDateString);
+                    $('#spn-proj-complete').html(data.ProjectComplete);
+                    $('#p-proj-descrition').html(data.ProjectDescription);
+                    $('#p-proj-funding').html(data.ProjectFundingAsk);
+                    $('#p-proj-exec-summary').html(data.ProjectExecutiveSummary);
+                    $('#p-proj-accomplish').html(data.ProjectAccomplishments);
+                    $('#p-proj-keyrisk').html(data.ProjectKeyRiskIssues);
+                    $('#p-proj-direction').html(data.ProjectDirection);
+                    var tmpHeadHTML = "";
+                    var tmpCellHTML = "";
+                    for (var i = 0; i < data.ProjectDurationList.length; i++) {
+                        tmpHeadHTML = tmpHeadHTML + "<th style=\"border:2px solid black;background:#9ad3f5;\"><span>" + data.ProjectDurationList[i].Title + "</span></th>";
+                        tmpCellHTML = tmpCellHTML + "";
+                        if (i < data.ProjectDurationList.length - 1) {
+                            tmpCellHTML = tmpCellHTML + "<td style=\"border-bottom: 2px dotted black; border-left: 2px dotted black; height: 150px;\">";
+                            if (data.ProjectDurationList[i].MileStoneList.length > 0) {
+                                for (var j = 0; j < data.ProjectDurationList[i].MileStoneList.length; j++) {
+                                    var position = ((parseInt(data.ProjectDurationList[i].MileStoneList[j].MileStoneDateNumber) * 70) / 30);
+                                    var leftmargin = "margin-left:" + position + "px;";
+                                    var newTitle = data.ProjectDurationList[i].MileStoneList[j].Title;
+                                    if (!data.ProjectDurationList[i].MileStoneList[j].Title.length > 8) { newTitle = data.ProjectDurationList[i].MileStoneList[j].Title.substring(0, 8) + "..."; }
+                                    tmpCellHTML = tmpCellHTML + "<span style=\"width: auto;position: relative;display: inline-flex;margin:10px 0;\"><i class=\"fa fa-stop\" style=\"transform: rotate(45deg);padding-left: 5px;" + leftmargin + ";color:" + GetStatusColor(data.ProjectDurationList[i].MileStoneList[j].MilestoneStatus) + "\" alt=\"" + data.ProjectDurationList[i].MileStoneList[j].DateString + " " + data.ProjectDurationList[i].MileStoneList[j].Title + "\"  title=\"" + data.ProjectDurationList[i].MileStoneList[j].DateString + " " + data.ProjectDurationList[i].MileStoneList[j].Title + "\"></i>";
+                                    tmpCellHTML = tmpCellHTML + "<span style=\"margin-left: 5px;position: absolute;display: inline-table;line-height: 10px;width: 220px;font-size: 11px;\">" + newTitle + "</span></span><br/>";
+                                }
+                            }
+                            else {
+                                tmpCellHTML = tmpCellHTML + "&nbsp;"
+                            }
+                            tmpCellHTML = tmpCellHTML + "</td>";
+                        }
+                        else {
+                            tmpCellHTML = tmpCellHTML + "<td id=\"jason\" style=\"border-bottom: 2px dotted black; border-left: 2px dotted black; border-right: 2px dotted black; height: 150px;\">";
+                            if (data.ProjectDurationList[i].MileStoneList.length > 0) {
+                                for (var j = 0; j < data.ProjectDurationList[i].MileStoneList.length; j++) {
+                                    var position = ((parseInt(data.ProjectDurationList[i].MileStoneList[j].MileStoneDateNumber) * 70) / 30);
+                                    var leftmargin = "margin-left:" + position + "px;";
+                                    var newTitle = data.ProjectDurationList[i].MileStoneList[j].Title;
+                                    if (!data.ProjectDurationList[i].MileStoneList[j].Title.length > 8) { newTitle = data.ProjectDurationList[i].MileStoneList[j].Title.substring(0, 8) + "..."; }
+                                    tmpCellHTML = tmpCellHTML + "<span style=\"margin:10px 0;\"><i class=\"fa fa-stop\" style=\"transform: rotate(45deg);padding-left: 5px;" + leftmargin + ";color:" + GetStatusColor(data.ProjectDurationList[i].MileStoneList[j].MilestoneStatus) + "\" alt=\"" + data.ProjectDurationList[i].MileStoneList[j].DateString + " " + data.ProjectDurationList[i].MileStoneList[j].Title + "\"  title=\"" + data.ProjectDurationList[i].MileStoneList[j].DateString + " " + data.ProjectDurationList[i].MileStoneList[j].Title + "\"></i>";
+                                    //tmpCellHTML = tmpCellHTML + "<i class=\"fa fa-stop\" style=\"transform: rotate(45deg);padding-left: 5px;\" alt=\"" + data.ProjectDurationList[i].MileStoneList[j].DateString + "\"  title=\"" + data.ProjectDurationList[i].MileStoneList[j].DateString + "\"></i>";
+                                    tmpCellHTML = tmpCellHTML + "<span style=\"margin-left: 5px;font-size: 11px;\">" + newTitle + "</span></span><br/>";
+                                }
+                            }
+                            else {
+                                tmpCellHTML = tmpCellHTML + "&nbsp;"
+                            }
+                            tmpCellHTML = tmpCellHTML + "</td>";
+
+                        }
+                    }
+                    $('#header-row-duration').html(tmpHeadHTML);
+                    $('#summary-list').html(tmpCellHTML);
+
+                }
+            },
+            error: function (xhr, status) {
+                alert(xhr + " ~" + status)
+            }
+
+        });
+    }
+
+    function GetStatusColor(obj) {
+        if (obj == "1") {
+            return "#3d709b";  //Not Started
+        }
+        if (obj == "2") {
+            return "#abc7dd"; //In Progress
+        }
+        if (obj == "3") {
+            return "#1f3a4f"; //Completed
+        }
+        if (obj == "0") {
+            return "#000";
+        }
+    }
+</script>

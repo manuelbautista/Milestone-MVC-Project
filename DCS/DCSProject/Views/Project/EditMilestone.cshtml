@@ -1,0 +1,1211 @@
+﻿@using System.Globalization
+@using System.Web.Mvc;
+
+@model DCS.DAL.GetDetailForProject_Result
+@{
+
+    ViewBag.Title = "Milestone";
+
+}
+<link href='@Url.Content("~/Content/newstyle.css")' rel="stylesheet" />
+<link href='@Url.Content("~/Content/responsive.css")' rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<style>
+    .legendmilestone {
+        display: inline-block;
+        padding: 5px;
+        font-size: 8px;
+        margin-bottom: 10px;
+        margin-right: 7px;
+        border-radius: 6px;
+        color: #fff;
+        float: right;
+    }
+</style>
+@if (Model != null)
+{
+  using (Html.BeginForm("EditMilestone", "Project", FormMethod.Post, new { @id = "form1" }))
+  {
+    <textarea style="display:none" id="PDFdiv" name="PDFdiv"></textarea>
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div class="projectlist clstopmargin">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading pnlwithrightbutton">
+                        <span class="spnpnlheading">Project Status</span>
+                        <a class="btn btn-primary pull-right" href="@Url.Action("index", "project")" style="color:white">Back</a>
+                    </div>
+                    <div class="panel-body" id="exportPdfDiv">
+                        <div class="panel panel-default">
+
+                            <div class="panel-heading">
+                                Project Detail
+                            </div>
+                            <div class="panel-body nopadding">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form class="form-horizontal" role="form">
+                                            <div class="form-group">
+                                                <div class="col-md-12">
+                                                    Project No: @Model.ProjectNumber
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <b>Project Name: @Model.Name</b>
+                                                    &emsp;
+                                                    Overall % Complete: <span id="spn-overall-complete"></span>
+                                                    @Html.HiddenFor(m => m.ID)
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-12">
+                                                    Anthem Owner: @Model.ProjectOwnerANTMName
+                                                    &emsp;
+                                                    Co-Owner/ Partner: @Model.ProjectOwnerExternalName
+                                                    &emsp;
+                                                    ETO Playbook: @Model.ETOPlaybooks
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-12">
+                                                    project start:
+                                                    <span id="proj-startdate">
+                                                        
+                                                        @Model.StartDate.Value.ToString("MM/dd/yyyy", CultureInfo.InvariantCulture)
+                                                    </span>
+
+                                                    &emsp;
+                                                    project end:
+                                                    <span id="proj-enddate">
+                                                        
+                                                        @Model.EndDate.Value.ToString("MM/dd/yyyy", CultureInfo.InvariantCulture)
+                                                    </span>
+
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+
+                            <div class="panel-heading">
+                                Add Email Addresses &nbsp;&nbsp;<input type="checkbox" id="emailchkbox" name="emailchkbox" />
+                            </div>
+                            <div class="panel-body nopadding">
+                                <div id="emailDiv" class="col-md-12 col-sm-12 table-responsive pull-left" style="display: none">
+                                    <table id="tblEmail" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 50px;">#</th>
+                                                <th>Email</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="clsemailrow"></tbody>
+                                    </table>
+                                </div>
+
+                                <div id="emailListDiv" class="col-md-12 col-sm-12 table-responsive pull-left" style="display: none">
+                                    <table class="table" id="table-email-detail">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="email-detail">
+                                            <tr>
+                                                <td colspan="2">No Email(s) found.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Status Detail
+                            </div>
+                            <div class="panel-body nopadding">
+                                <div class="form-group" style="margin-top: 15px;">
+                                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                                        Select Scope
+                                        @Html.DropDownListFor(x => x.ScopeId, (IEnumerable<SelectListItem>)ViewBag.RequirementList, new { @class = "form-control", onchange = "return updateragstatus(this)" })
+                                        @Html.ValidationMessageFor(x => x.ScopeId)
+                                        @*@Html.DropDownList("ScopeId", (IEnumerable<SelectListItem>)ViewBag.RequirementList, "-Select-", new { @class = "form-control" , onchange="return updateragstatus(this)" })*@
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                                        Select Schedule
+                                        @Html.DropDownListFor(x => x.ScheduleId, (IEnumerable<SelectListItem>)ViewBag.RequirementList, new { @class = "form-control", onchange = "return updateragstatus(this)" })
+                                        @Html.ValidationMessageFor(x => x.ScheduleId)
+                                        @*@Html.DropDownList("ScheduleId", (IEnumerable<SelectListItem>)ViewBag.RequirementList, "-Select-", new { @class = "form-control", onchange = "return updateragstatus(this)" })*@
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                                        Select Resource
+                                        @Html.DropDownListFor(x => x.ResourcesId, (IEnumerable<SelectListItem>)ViewBag.RequirementList, new { @class = "form-control", onchange = "return updateragstatus(this)" })
+                                        @Html.ValidationMessageFor(x => x.ResourcesId)
+                                        @*@Html.DropDownList("ResourcesId", (IEnumerable<SelectListItem>)ViewBag.RequirementList, "-Select-", new { @class = "form-control", onchange = "return updateragstatus(this)" })*@
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                                        Select Financial
+                                        @Html.DropDownListFor(x => x.FinancialId, (IEnumerable<SelectListItem>)ViewBag.RequirementList, new { @class = "form-control", onchange = "return updateragstatus(this)" })
+                                        @Html.ValidationMessageFor(x => x.FinancialId)
+
+                                        @*@Html.DropDownList("FinancialId", (IEnumerable<SelectListItem>)ViewBag.RequirementList, "-Select-", new { @class = "form-control", onchange = "return updateragstatus(this)" })*@
+                                    </div>
+                                    <div class="col-lg-2 col-md-2  col-sm-12 col-xs-12">
+                                        Project Status:
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clsrag">
+                                            &nbsp;
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="row">
+
+                                    <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 ">
+                                        Milestone Detail
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
+                                        <div class="pull-right milestonedetail">
+                                            <span class="milestonelegendheading"><b>Milestone Legend:</b></span>
+                                            <span style="background-color: #3d709b;" class="legendmilestone">Planned</span>
+                                            <span style="background-color: #abc7dd;" class="legendmilestone">In Progress</span>
+                                            <span style="background-color: #1f3a4f;" class="legendmilestone">Completed</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-body nopadding">
+                            <div class="col-lg-12 col-md-12 col-sm-12 table-responsive pull-left">
+                                <table id="tblAppend" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="tableheading1">#</th>
+                                            <th class="tableheading2">Name</th>
+                                            <th class="tableheading3">Date</th>
+                                            @*<th>End Date</th>*@
+                                            <th class="tableheading4">% Comp.</th>
+                                            <th class="tableheading5">Status</th>
+                                            <th class="tableheading6"></th>
+                                            <th class="tableheading7"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="clsmilestonerow"></tbody>
+                                </table>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 table-responsive pull-left">
+                                <table class="table" id="table-milestone-detail">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Name</th>
+                                            <th>Date</th>
+                                            <th>% Comp.</th>
+                                            <th>Status</th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="milestone-detail">
+                                        <tr>
+                                            <td colspan="4">No milestone(s) found.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <input type="submit" id="submitBtn" class="btn btn-primary btnadd" style="color:white" value="Submit" />
+                        <a class="btn btn-primary btnadd" id="cancelbtn" href="@Url.Action("index", "project")" style="color:white">Cancel</a>
+                        <input id="hdnMsgBody" name="hdnMsgBody" type="hidden" />
+                        <input type="hidden" id="hdnImagePath" name="hdnImagePath" />
+                        <input type="hidden" id="hdnPercentage" name="hdnPercentage" />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+  }
+<script src="http://html2canvas.hertzen.com/build/html2canvas.js"></script>
+    <script type="text/javascript">
+        var count = 1;
+        var prescopevalue = '';
+        var preschedulevalue = '';
+        var preresourcevalue = '';
+        var prefinancevalue = '';
+        var imagePath = '';
+
+        function milestonerowhtml_old() {
+            var html = "";
+            html += "<div class=\"col-md-12 form-group milestonerow\">";
+            html += "<div class=\"col-md-2\"><span class=\"clslblmilestoneno\">" + count + "</span></div>";
+            html += "<div class=\"col-md-2\"><input type=\"text\" class=\"form-control clsmilestonename\" /></div>";
+            html += "<div class=\"col-md-2\"><input type=\"text\" class=\"form-control clsmilestonestart\" /></div>";
+            html += "<div class=\"col-md-2\"><input type=\"text\" class=\"form-control clsmilestoneend\" /></div>";
+            html += "<div class=\"col-md-2\"><input type=\"text\" class=\"form-control clsmilestonecomp\"/></div>";
+            html += "<div class=\"col-md-2\">";
+            if (count == 1) {
+                //html += "<a class=\"btn btn-primary btn-xs pull-left dd-nodrag btnaddMilestone\" onclick=\"addnewmilestone()\">";
+                //html += "<img src=\"/Images/add.png\" style=\"height:30px\" title=\"Add new\" />";
+                //html += "</a>";
+            }
+            else {
+                //html += "<a class=\"btn btn-primary btn-xs pull-left dd-nodrag btnaddMilestone\" onclick=\"addnewmilestone()\">";
+                //html += "<img src=\"/Images/add.png\" style=\"height:30px\" title=\"Add new\" />";
+                //html += "</a>";
+                html += "<a class=\"btn btn-primary btn-xs pull-left dd-nodrag btndeleteMilestone\">";
+                html += "<img src='@Url.Content("~/Images/delete.png")' style=\"height:30px\" title=\"Delete\" />";
+                html += "</a>";
+            }
+            html += "</div></div>";
+            return html;
+        }
+        $('#submitBtn').click(function () {
+
+            var msgBody = '';
+            var result = true;//formvalid();
+            if (result == true) {
+                if ($('#ScopeId').val() != prescopevalue) {
+                    msgBody += "Scope Id : " + getDropdownValueColorName(prescopevalue) + " to " + getDropdownValueColorName($('#ScopeId').val()) + " ";
+                }
+
+                if ($('#ScheduleId').val() != preschedulevalue) {
+                    msgBody += "Schedule Id : " + getDropdownValueColorName(preschedulevalue) + " to " + getDropdownValueColorName($('#ScheduleId').val()) + " ";
+                }
+
+                if ($('#ResourcesId').val() != preresourcevalue) {
+                    msgBody += "Resources Id : " + getDropdownValueColorName(preresourcevalue) + " to " + getDropdownValueColorName($('#ResourcesId').val()) + " ";
+                }
+
+                if ($('#FinancialId').val() != prefinancevalue) {
+                    msgBody += "Financial Id : " + getDropdownValueColorName(prefinancevalue) + " to " + getDropdownValueColorName($('#FinancialId').val()) + " ";
+                }
+
+                if (msgBody != '') {
+                    $('#PDFdiv').html();
+                    //console.log($('#PDFdiv').html());
+                    var pdfHtml = escape($('#PDFdiv').html());
+                    $('#PDFdiv').html(pdfHtml);
+                }
+
+                $('#hdnMsgBody').val(msgBody);
+                var percComp = $('#spn-overall-complete').text();
+                $('#hdnPercentage').val(percComp);
+                $('#form1').submit();
+
+
+
+                @*$('#tblAppend').hide();
+            $('#submitBtn').hide();
+            $('#cancelbtn').hide();
+
+            html2canvas($("#exportPdfDiv"), {
+                onrendered: function (canvas) {
+                    var myImage = canvas.toDataURL("image/png");
+                    $('#submitBtn').show();
+                    $('#cancelbtn').show();
+                    var file = dataURLtoBlob(myImage);
+                    var fd = new FormData();
+                    fd.append('ProjectList', file);
+                    $.ajax({
+                        type: "POST",
+                        url: '@Url.Content("~/Project/SaveImage")',
+                        data: fd,
+                        async: false,
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        success: function (data) {
+                            if (data.length > 0) {
+                                imagePath = data;
+                                $('#hdnImagePath').val(imagePath);
+                                $('#submitBtn').show();
+                                $('#cancelbtn').show();
+                                $('#tblAppend').show();
+                                $('#form1').submit();
+                            }
+
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+
+                        }
+                    });
+
+                }
+            });*@
+                // return false;
+            }
+        });
+
+
+
+        function getDropdownValueColorName(obj) {
+
+            if (obj == 0) {
+                return "Not Started";
+            }
+            else if (obj == 1) {
+                return "Red";
+            }
+            else if (obj == 2) {
+                return "Amber";
+            }
+            else if (obj == 3) {
+                return "Green";
+            }
+            else if (obj == 4) {
+                return "Completed";
+            }
+        }
+
+
+        function getcurrentdate() {
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = (1 + date.getMonth()).toString();
+            month = month.length > 1 ? month : '0' + month;
+            var day = date.getDate().toString();
+            day = day.length > 1 ? day : '0' + day;
+            return month + '/' + day + '/' + year;
+        }
+        //To do : (1)add new <td> with addimg button(2) set width=150px of startdate,comp%
+        function milestonerowhtml() {
+            var projstartdate = $('#proj-startdate').html().trim().replace(/-/gi, "/");
+            var startdateObj = new Date(projstartdate).toLocaleDateString("en-US");
+
+            var html = "";
+            html += "<tr class=\"milestonerow\">";
+            html += "<td><span class=\"clslblmilestoneno\">" + count + "</span><input type=\"hidden\" id=\"hdn-milestoneid\" value=\"0\" /></td>";
+            html += "<td><input type=\"text\" class=\"form-control clsmilestonename\" id=\"txtmilestonename" + count + "\" /><span id=\"spnmname" + count + "\" class=\"clsspnmname spnerror\"></span></td>";
+            html += "<td ><input type=\"text\" class=\"form-control clsmilestonestart\" id=\"txtmilestonestart" + count + "\" value=\"" + projstartdate + "\"/><span id=\"spnmstart" + count + "\" class=\"clsspnmstart spnerror\"></span></td>";
+            //html += "<td><input type=\"text\" class=\"form-control clsmilestoneend\" id=\"txtmilestoneend" + count + "\" value=\"" + currentdate + "\"/><span id=\"spnmend" + count + "\" class=\"clsspnmend spnerror\"></span></td>";
+            html += "<td ><input type=\"text\" class=\"form-control clsmilestonecomp\" id=\"txtmilestonecomp" + count + "\" maxlength=\"3\" onkeydown=\"return isNumericValue(event.keyCode);\" onkeyup=\"return isPercentageValue(this);\" value=\"0\"/><span id=\"spnmcomp" + count + "\" class=\"clsspnmcomp spnerror\"></span></td>";
+            html += "<td><input type=\"radio\" class=\"color-full3\" value=\"3\"  id=\"completedradio" + count + "\" name=\"radiostatus\" /><label id=\"completedLabel" + count + "\" class=\"radio3\"></label><input type=\"radio\" class=\"color-full2\" value=\"2\" id=\"inprogressradio" + count + "\" name=\"radiostatus\" /><label id=\"inprogressLabel" + count + "\" class=\"radio2\"></label><input type=\"radio\" value=\"1\" class=\"color-full\"  id=\"plannedradio" + count + "\" checked=\"checked\"  name=\"radiostatus\" /><label id=\"plannedLabel" + count + "\" class=\"radio\"></label></td>";
+            html += "<td><a onclick=\"addnewmilestone()\" class=\"btn btn-primary btn-xs dd-nodrag btnaddMilestone\"><img id=\"saveImageIcon\" title=\"Add Milestone\" style=\"height:30px\" src='@Url.Content("~/Images/add.png")'></a></td>";
+            html += "<td>";
+            html += "<a class=\"btn btn-primary btn-xs pull-left dd-nodrag btnCancelMilestone\" onclick=\"removemilestone()\">";
+            html += "<img src='@Url.Content("~/Images/delete.png")' style=\"height:30px\" title=\"Cancel\" />";
+            html += "</a>";
+            if (count == 1) {
+            }
+            else {
+                html += "<a class=\"btn btn-primary btn-xs pull-left dd-nodrag btndeleteMilestone\" onclick=\"removemilestone(this)\">";
+                html += "<img src='@Url.Content("~/Images/delete.png")' style=\"height:30px\" title=\"Delete\" />";
+                html += "</a>";
+            }
+            html += "</td></tr>";
+            return html;
+        }
+
+        function emailrowhtml() {
+            var html = "";
+            html += "<tr class=\"emailrow\">";
+            html += "<td><span class=\"clslblmilestoneno\">" + count + "</span><input type=\"hidden\" id=\"hdn-milestoneid\" value=\"0\" /></td>";
+            html += "<td ><input type=\"text\" class=\"form-control clsemailcomp\" id=\"txtemailcomp" + count + "\" /><span id=\"spnemailcomp" + count + "\" class=\"clsspnemailcomp spnerror\"></span></td>";
+            html += "<td><a onclick=\"saveEmail()\" class=\"btn btn-primary btn-xs dd-nodrag btnsaveEmail\"><img title=\"Save Email\" style=\"height:30px\" src='@Url.Content("~/Images/add.png")'></a> </td>";
+            html += "<td>";
+            html += "</td></tr>";
+            return html;
+        }
+
+        function removeEmail() {
+            $('#txtemailcomp1').val("");
+        }
+
+        function saveEmail() {
+            if (emailformvalid()) {
+                var email = "";
+
+                $("#tblEmail  tbody  tr").each(function (index) {
+                    email = $(this).find(".clsemailcomp").val();
+                });
+
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Content("~/Project/SaveEmail")",
+                    dataType: "json",
+                    data: {
+                        email: email,
+                        ID: $("#ID").val(),
+                    },
+                    processData: true,
+                    success: function (data) {
+                        if (data) {
+                            LoadEmail();
+                            removeEmail();
+                        }
+
+                    },
+                    error: function (xhr, ajaxOptions, error) {
+                        if (xhr.status == 200) {
+                            LoadEmail();
+                            removeEmail();
+
+                        }
+                        else {
+                            alert("Sorry,We are unable to process your request!");
+                        }
+                    }
+                });
+            }
+        }
+
+
+        function adddefaultmilestone() {
+            var mhtml = milestonerowhtml();
+            $('.clsmilestonerow').html(mhtml);
+        }
+
+        function adddefaultemail() {
+            var ehtml = emailrowhtml();
+            $('.clsemailrow').html(ehtml);
+        }
+
+        function addnewmilestone() {
+            if (formvalid()) {
+                var milestonename = "";
+                var milestonestart = "";
+                var milestonecomp = "";
+
+                $("#tblAppend  tbody  tr").each(function (index) {
+                    milestonename = $(this).find(".clsmilestonename").val();
+                    milestonestart = $(this).find(".clsmilestonestart").val();
+                    milestonecomp = $(this).find(".clsmilestonecomp").val();
+                    milestonestatus = $(this).find("input[name='radiostatus']:checked").val();
+                });
+
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Content("~/Project/AddMilestone")",
+                    dataType: "json",
+                    data: {
+                        milestonename: milestonename,
+                        milestonestart: milestonestart,
+                        milestonecomp: milestonecomp,
+                        milestonestatus: milestonestatus,
+                        ID: $("#ID").val(),
+                        milestoneid: $('#hdn-milestoneid').val()
+                    },
+                    processData: true,
+                    success: function (data) {
+                        var oldsrc = '@Url.Content("~/Images/add.png")';
+                        $('#saveImageIcon').attr("src", oldsrc);
+                        LoadMileStones();
+                        removemilestone();
+                    },
+                    error: function (xhr, ajaxOptions, error) {
+                        var oldsrc = '@Url.Content("~/Images/add.png")';
+                        $('#saveImageIcon').attr("src", oldsrc);
+                        if (xhr.status == 200) {
+                            LoadMileStones();
+                            removemilestone();
+                        }
+                        else {
+                            alert("Sorry,We are unable to process your request!");
+                        }
+                    }
+                });
+            }
+        }
+
+        function removemilestone() {
+            var projstartdate = $('#proj-startdate').html().trim().replace(/-/gi, "/");
+            $('#txtmilestonename1').val("");
+            $('#txtmilestonestart1').val(projstartdate);
+            $('#txtmilestonecomp1').val(0);
+            $("#plannedradio1").prop("checked", true);
+            $('#hdn-milestoneid').val("0");
+        }
+
+        function LoadEmail() {
+            var projectId = $('#ID').val();
+            $.ajax({
+                type: "POST",
+                url: "@Url.Content("~/Project/GetEmail")",
+                contentType: "application/json;charset=utf-8;",
+                data: '{"id":' + projectId + '}',
+                dataType: "json",
+                success: function (data) {
+                    if (data != null && data.length > 0) {
+                        var tempHTML = "";
+                        for (var i = 0; i < data.length; i++) {
+                            tempHTML = tempHTML + "<tr id=\"" + data[i].ID + "\">";
+                            tempHTML = tempHTML + "<td>" + parseInt(i + 1) + "</td>";
+                            tempHTML = tempHTML + "<td class=\"email\">" + data[i].Email + "</td>";
+                            tempHTML = tempHTML + "<td><a data-id=\"" + data[i].ID + "\" id=\"remove-email\" href='#'><i class='fa fa-trash-o' ></i></a></td>";
+                            tempHTML = tempHTML + "</tr>";
+                        }
+                        $("#email-detail").html(tempHTML);
+                    }
+                    else {
+                        tempHTML = "<tr><td>No Email Found.</td></tr>";
+                        $("#email-detail").html(tempHTML);
+                    }
+
+                },
+                error: function (xhr, status) { alert("Some Error produces on server"); }
+
+            });
+        }
+
+        function initializedatepicker() {
+            var projstartdate = $('#proj-startdate').html().trim().replace(/-/gi, "/");
+            var startdateObj = new Date(projstartdate).toLocaleDateString("en-US");
+            var projenddate = $('#proj-enddate').html().trim().replace(/-/gi, "/");
+            var enddateObj = new Date(projenddate).toLocaleDateString("en-US");
+            var dateFormat = 'mm-dd-yyyy';
+            var from = $("#txtmilestonestart" + count)
+                    .datepicker({
+                        changeMonth: true,
+                        changeYear: true,
+                        minDate: startdateObj,
+                        maxDate: enddateObj,
+                    }).on("change", function () {
+                        if ($(this).val() == null || $(this).val() == '') {
+                            $(this).parent().find('.clsspnmstart').html("Please enter start date.");
+                            $(this).focus();
+                        }
+                        else {
+                        }
+                        console.log("before to" + $(this).val());
+                        console.log("after to" + $(this).val());
+                    })
+            function getDate(element) {
+                var date;
+                try {
+                    date = $.datepicker.parseDate(dateFormat, element.value);
+                } catch (error) {
+                    alert(error);
+                    date = null;
+                }
+
+                return date;
+            }
+        }
+
+        function pageloadDropdownColor() {
+            prescopevalue = $('#ScopeId').val();
+            preschedulevalue = $('#ScheduleId').val();
+            preresourcevalue = $('#ResourcesId').val();
+            prefinancevalue = $('#FinancialId').val();
+            updateragstatus("#ScopeId");
+            updateragstatus("#ScheduleId");
+            updateragstatus("#ResourcesId");
+            updateragstatus("#FinancialId");
+
+
+        }
+
+        function changeColor(obj) {
+
+            if ($(obj).val() == '1') {
+                $(obj).css('background-color', 'red').css('border', '1px solid #000').css('color', '#fff').find("option").css('background-color', 'white').css('color', '#000')
+            }
+            if ($(obj).val() == '2') {
+                $(obj).css('background-color', '#FFC200').css('border', '1px solid #000').css('color', '#000').find("option").css('background-color', 'white').css('color', '#000')
+            }
+            if ($(obj).val() == '3') {
+                $(obj).css('background-color', 'green').css('border', '1px solid #000').css('color', '#fff').find("option").css('background-color', 'white').css('color', '#000')
+            }
+            if ($(obj).val() == '4' || $(obj).val() == "") {
+
+                $(obj).css('background-color', 'gray').css('border', '1px solid #000').css('color', '#000').find("option").css('background-color', 'white').css('color', '#000')
+            }
+            if ($(obj).val() == '0' || $(obj).val() == "") {
+
+                $(obj).css('background-color', 'white').css('border', '1px solid #000').css('color', '#000').find("option").css('background-color', 'white').css('color', '#000')
+            }
+        }
+
+        function updateragstatus(obj) {
+
+            var regbgcolor = "";
+            //if ($('#MilestoneScopeId').val() != '' && $('#MilestoneScheduleId').val() != '' && $('#MilestoneResourceId').val() != '' && $('#MilestoneFinancialId').val() != '')
+            // {
+            //alert($(obj).val());
+            changeColor(obj);
+
+            if ($('#ScopeId').val() == '1' || $('#ScheduleId').val() == '1' || $('#ResourcesId').val() == '1' || $('#FinancialId').val() == '1') {
+                regbgcolor = "Red";
+            }
+            if (regbgcolor == '') {
+                if ($('#ScopeId').val() == '2' || $('#ScheduleId').val() == '2' || $('#ResourcesId').val() == '2' || $('#FinancialId').val() == '2') {
+                    regbgcolor = "#FFC200";
+                }
+            }
+            if (regbgcolor == '') {
+                if ($('#ScopeId').val() == '3' && $('#ScheduleId').val() == '3' && $('#ResourcesId').val() == '3' && $('#FinancialId').val() == '3') {
+                    regbgcolor = "Green";
+                }
+            }
+            if (regbgcolor == '') {
+                if ($('#ScopeId').val() == '4' && $('#ScheduleId').val() == '4' && $('#ResourcesId').val() == '4' && $('#FinancialId').val() == '4') {
+                    regbgcolor = "gray";
+                }
+            }
+
+
+
+
+            //}
+            $('.clsrag').css({ "background": regbgcolor, "height": "33px", "border-radius": "5px", "-ms-border-radius": "5px", "-moz-border-radius": "5px", "-webkit-border-radius": "5px", "-o-border-radius": "5px","padding-top":"5px","color":(regbgcolor.toString().toLowerCase()=="red"||regbgcolor.toString().toLowerCase()=="green"?"#fff":"#000") }).text(regbgcolor);
+
+            return false;
+        }
+        function SendMail() {
+            var projectId = $('#ID').val();
+            $.ajax({
+                type: "POST",
+                url: "@Url.Content("~/Project/SendMail")",
+                contentType: "application/json;charset=utf-8;",
+                data: '{"id":' + projectId + '}',
+                dataType: "json",
+                success: function (data) {
+
+                },
+                error: function (xhr, status) { alert("Some Error produces on server"); }
+
+            });
+        }
+
+        function checkrowvalidation(obj, setfocus) {
+            var flag = true;
+
+            $(obj).find('.clsmilestonecomp').each(function () {
+                if ($(this).val() == null || $(this).val() == '') {
+                    $(this).parent().find('.clsspnmcomp').html("Please enter % completed.");
+                    flag = false;
+                    if (setfocus) {
+                        $(this).focus();
+                    }
+                }
+                else {
+                    $(this).parent().find('.clsspnmcomp').html('');
+                }
+            })
+
+            $(obj).find('.clsmilestonestart').each(function () {
+                if ($(this).val() == null || $(this).val() == '') {
+                    $(this).parent().find('.clsspnmstart').html("Please enter start date.");
+                    flag = false;
+                    //if (setfocus) {
+                    //    $(this).focus();
+                    //}
+                }
+                else {
+                    //write validation code later...OR disalble the textbox
+                }
+            })
+
+            $(obj).find('.clsmilestonename').each(function () {
+                if ($(this).val() == null || $(this).val() == '') {
+                    $(this).parent().find('.clsspnmname').html("Please enter milestone name.");
+                    flag = false;
+                    if (setfocus) {
+                        $(this).focus();
+                    }
+                }
+                else {
+                    $(this).parent().find('.clsspnmname').html('');
+                }
+            })
+
+            return flag;
+        }
+
+        function formvalid() {
+            var flag = true;
+            //$($(".milestonerow").get().reverse()).each(function () {
+            $(".milestonerow").each(function () {
+                if (flag) {
+                    flag = checkrowvalidation(this, true);
+
+                }
+                else { checkrowvalidation(this, false); }
+
+            })
+            return flag;
+        }
+        function emailformvalid() {
+            var flag = true;
+
+            $(".emailrow").each(function () {
+                if (flag) {
+                    flag = checkemailrowvalidation(this, true);
+
+                }
+                else { checkemailrowvalidation(this, false); }
+
+            })
+            return flag;
+        }
+
+        function checkemailrowvalidation(obj, setfocus) {
+            var flag = true;
+
+            $(obj).find('.clsemailcomp').each(function () {
+                if ($(this).val() == null || $(this).val() == '') {
+                    $(this).parent().find('.clsspnemailcomp').html("Please enter Email.");
+                    flag = false;
+                    if (setfocus) {
+                        $(this).focus();
+                    }
+                }
+                else {
+                    emailtxt = $(this).val();
+                    if (validateEmail(emailtxt)) {
+                        $(this).parent().find('.clsspnemailcomp').html('');
+                    }
+                    else {
+                        $(this).parent().find('.clsspnemailcomp').html("Please enter valid Email.");
+                        flag = false;
+                        if (setfocus) {
+                            $(this).focus();
+                        }
+                    }
+
+                }
+            })
+
+            return flag;
+        }
+
+        function validateEmail(email) {
+            var re = /^[a-zA-Z0-9_.-]+@@[a-zA-Z0-9]+[a-zA-Z0-9.-]+[a-zA-Z0-9]+.[a-z]{2,4}$/;
+            return re.test(email);
+        }
+
+
+        $('body').on('keyup', '.clsmilestonename', function () {
+            if ($(this).val() == null || $(this).val() == '') {
+                $(this).parent().find('.clsspnmname').html("Please enter milestone name.");
+                $(this).focus();
+            }
+            else {
+                $(this).parent().find('.clsspnmname').html('');
+            }
+        })
+
+
+        function isPercentageValue(obj) {
+            if ($(obj).val() > 100) {
+                $(obj).val($(obj).val().slice(0, -1));
+            }
+            if ($(obj).val() == null || $(obj).val() == '') {
+                $(obj).parent().find('.clsspnmcomp').html("Please enter % completed.");
+                $(obj).focus();
+            }
+            else {
+                $(obj).parent().find('.clsspnmcomp').html('');
+            }
+        }
+        $(document).ready(function () {
+            adddefaultmilestone();
+            initializedatepicker();
+            pageloadDropdownColor();
+            adddefaultemail();
+            var PID = $('#ID').val();
+            $('#PDFdiv').html('@Html.Raw(HttpUtility.JavaScriptStringEncode(Html.Action("PdfDetail", "ProjectSummary", new { id = @Model.ID }).ToString()))');
+
+        })
+    </script>
+    <script id="milestone-section" type="text/javascript">
+        $(document).ready(function () {
+
+            LoadMileStones();
+            LoadEmail();
+            GetOverAllPercentageForProject();
+
+            $('#emailchkbox').click(function () {
+                if ($('#emailchkbox').is(':checked')) {
+                    $('#emailDiv').show();
+                    $('#emailListDiv').show();
+                }
+                else {
+                    $('#emailDiv').hide();
+                    $('#emailListDiv').hide();
+                }
+            });
+
+            //$('#edit-milestone').live("click", function () {
+            $(document).on('click', "#edit-milestone", function () {
+                var milestoneId = $(this).attr("data-id"); console.log(milestoneId);
+                $('#txtmilestonename1').val($('#' + milestoneId + " .name").html());
+                var milstartdate = $('#' + milestoneId + " .sdate").html().trim().replace(/-/gi, "/");
+                //var startdateObj = new Date(milstartdate).toLocaleDateString("en-US");
+                //$('#txtmilestonestart1').val(startdateObj);
+
+                $('#txtmilestonestart1').val(milstartdate);
+                $('#txtmilestonecomp1').val($('#' + milestoneId + " .complete").html());
+                $('#hdn-milestoneid').val(milestoneId);
+                var newsrc = '@Url.Content("~/Images/edit.png")';
+                $('#saveImageIcon').attr("src", newsrc);
+                var statusvalue = $(this).attr("data-status");
+                $("input[name=radiostatus][value=" + statusvalue + "]").prop('checked', true);
+            });
+
+            $(document).on("click", "#remove-milestone", function () {
+                var milestoneId = $(this).attr("data-id"); console.log(milestoneId);
+                DeleteMileStone(milestoneId);
+            });
+
+            $(document).on("click", "#remove-email", function () {
+                var emailId = $(this).attr("data-id"); console.log(emailId);
+                DeleteEmail(emailId);
+            });
+            $(document).on('keyup', '.clsmilestonecomp', function () {
+                var el = $(this);
+                var comp = parseInt(el.val());
+                if (comp == 0) {
+                    el.parents('tr').find('input[class="color-full"]').trigger('click');
+                }
+                else if (comp > 0 && comp <= 99) {
+                    el.parents('tr').find('input[class="color-full2"]').trigger('click');
+                }
+                else {
+                    el.parents('tr').find('input[class="color-full3"]').trigger('click');
+                }
+            });
+        });
+
+
+
+        function LoadMileStones() {
+            var projectId = $('#ID').val();
+            $.ajax({
+                type: "POST",
+                url: "@Url.Content("~/Project/GetMileStones")",
+                // url: "/Project/GetMileStones",
+                contentType: "application/json;charset=utf-8;",
+                data: '{"id":' + projectId + '}',
+                dataType: "json",
+                success: function (data) {
+                    if (data != null && data.length > 0) {
+                        var tempHTML = "";
+                        for (var i = 0; i < data.length; i++) {
+                            tempHTML = tempHTML + "<tr id=\"" + data[i].ID + "\">";
+                            tempHTML = tempHTML + "<td>" + parseInt(i + 1) + "</td>";
+                            tempHTML = tempHTML + "<td class=\"name\">" + data[i].Name + "</td>";
+                            tempHTML = tempHTML + "<td class=\"sdate\">" + data[i].StartDateString + "</td>";
+                            tempHTML = tempHTML + "<td class=\"complete\">" + data[i].Complete + "</td>";
+                            tempHTML = tempHTML + "<td class=\"status\" style=\"background-color:" + GetStatusColor(data[i].MilestoneStatus) + ";width:40px;\"></td>";
+                            tempHTML = tempHTML + "<td ><a style=\"float:right\" data-id=\"" + data[i].ID + "\" data-status=\"" + data[i].MilestoneStatus + "\" id=\"edit-milestone\" href='#'><i class='fa fa-pencil'></i></a></td>";
+                            tempHTML = tempHTML + "<td><a data-id=\"" + data[i].ID + "\" id=\"remove-milestone\" href='#'><i class='fa fa-trash-o'></i></a></td>";
+                            tempHTML = tempHTML + "</tr>";
+                        }
+                        $("#milestone-detail").html(tempHTML);
+                    }
+                    else {
+                        tempHTML = "<tr><td>No Milestone(s) Found.</td></tr>";
+                        $("#milestone-detail").html(tempHTML);
+                    }
+                    GetOverAllPercentageForProject();
+                },
+                error: function (xhr, status) { alert("Some Error produces on server"); }
+
+            });
+        }
+
+        function GetStatusColor(obj) {
+            if (obj == "1") {
+                return "#3d709b";  //Not Started
+            }
+            if (obj == "2") {
+                return "#abc7dd"; //In Progress
+            }
+            if (obj == "3") {
+                return "#1f3a4f"; //Completed
+            }
+            if (obj == "0") {
+                return "#FFF";
+            }
+        }
+
+
+        function DeleteMileStone(milestoneId) {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Content("~/Project/RemoveMileStone")",
+                // url: "/Project/RemoveMileStone",
+                dataType: "json",
+                //contentType: "application/json",
+                data: {
+                    id: milestoneId,
+                    projectId: $('#ID').val()
+                },
+                processData: true,
+                success: function (data) {
+                    LoadMileStones();
+                    // alert("Milestone(s) deleted successfully.");
+
+                    // var url = "/Project/Index";
+                    // window.location.href = url;
+                },
+                error: function (xhr, ajaxOptions, error) {
+                    if (xhr.status == 200) {
+                        LoadMileStones();
+                        //alert("Milestone(s) deleted successfully.");
+                        //var url = "/Project/Index";
+                        // window.location.href = url;
+                    }
+                    else {
+                        alert(xhr.status);
+                    }
+                    //alert(error);
+                }
+            });
+        }
+
+
+        function DeleteEmail(emailId) {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Content("~/Project/DeleteMultiEmail")",
+                // url: "/Project/DeleteMultiEmail",
+                dataType: "json",
+                data: {
+                    id: emailId,
+                    projectId: $('#ID').val()
+                },
+                processData: true,
+                success: function (data) {
+
+                    LoadEmail();
+
+                },
+                error: function (xhr, ajaxOptions, error) {
+                    if (xhr.status == 200) {
+                        LoadEmail();
+                    }
+                    else {
+                        alert(xhr.status);
+                    }
+
+                }
+            });
+        }
+
+
+        function GetOverAllPercentageForProject() {
+            var projectId = $('#ID').val();
+            $.ajax({
+                type: "POST",
+                url: "@Url.Content("~/Project/GetOverAllPercentageForProject")",
+                //url: "/Project/GetOverAllPercentageForProject",
+                contentType: "application/json;charset=utf-8;",
+                data: '{"projectId":' + projectId + '}',
+                dataType: "json",
+                success: function (data) {
+                    $('#spn-overall-complete').text(data);
+
+                },
+                error: function (xhr, status) { alert("Some Error produces on server"); }
+
+            });
+        }
+
+    </script>
+    <script>
+    @*var imagePath = '';
+    $(function () {
+
+        $('#cmd').click(function () {
+
+            $('#submitBtn').hide();
+            $('#cancelbtn').hide();
+            html2canvas($("#exportPdfDiv"), {
+                onrendered: function (canvas) {
+                    var myImage = canvas.toDataURL("image/png");
+                    //var image = new Image();
+                    //image.src = myImage;
+                    //document.getElementById('imageDiv').appendChild(image);
+                    // window.open(myImage);
+                    $('#submitBtn').show();
+                    $('#cancelbtn').show();
+                    var file =  dataURLtoBlob(myImage);
+                    var fd = new FormData();
+                    fd.append('ProjectList', file);
+                    $.ajax({
+                        type: "POST",
+                        url: '@Url.Content("~/Project/SaveImage")',
+                        data: fd,
+                        async: false,
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        success: function(data) {
+                            if (data.length > 0) {
+                                imagePath = data;
+
+                            }
+
+                        },
+                        error: function(jqXHR, textStatus, errorThrown) {
+
+                        }
+                    });
+
+                }
+            });
+
+
+        });
+    });*@
+
+
+        function dataURLtoBlob(dataURL) {
+            var binary = atob(dataURL.split(',')[1]);
+            var array = [];
+            for (var i = 0; i < binary.length; i++) {
+                array.push(binary.charCodeAt(i));
+            }
+            return new Blob([new Uint8Array(array)], { type: 'image/png' });
+        }
+    </script>
+
+
+
+
+    <style>
+        /*ONE*/
+        input[type="radio"].color-full {
+            opacity: 0;
+            position: absolute;
+            display: inline-block;
+        }
+
+            input[type="radio"].color-full + label.radio {
+                display: inline-block;
+            }
+
+                input[type="radio"].color-full + label.radio:after {
+                    display: inline-block;
+                    content: "";
+                    text-align: center;
+                    color: #ccc;
+                    background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAB4CAYAAADyv9IsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODFDRUM0NUI0RkE1MTFFNUE3QTJFODcyQTlBNUZCMzMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODFDRUM0NUM0RkE1MTFFNUE3QTJFODcyQTlBNUZCMzMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4MUNFQzQ1OTRGQTUxMUU1QTdBMkU4NzJBOUE1RkIzMyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4MUNFQzQ1QTRGQTUxMUU1QTdBMkU4NzJBOUE1RkIzMyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmA8TesAAAtTSURBVHjarJnbi11X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') 100% 60% no-repeat;
+                    width: 20px;
+                    height: 20px;
+                    vertical-align: middle;
+                    margin: 0 2px;
+                    border-radius: 50%;
+                    border: 1px solid grey;
+                }
+
+            input[type="radio"].color-full:checked + label.radio:after {
+                color: #fff;
+                background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAB4CAYAAADyv9IsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODFDRUM0NUI0RkE1MTFFNUE3QTJFODcyQTlBNUZCMzMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODFDRUM0NUM0RkE1MTFFNUE3QTJFODcyQTlBNUZCMzMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4MUNFQzQ1OTRGQTUxMUU1QTdBMkU4NzJBOUE1RkIzMyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4MUNFQzQ1QTRGQTUxMUU1QTdBMkU4NzJBOUE1RkIzMyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmA8TesAAAtTSURBVHjarJnbi11X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') 100% 40% no-repeat;
+                border-color: white;
+                height: 22px;
+                width: 21px;
+            }
+
+        /*TWO*/
+        input[type="radio"].color-full2 {
+            opacity: 0;
+            position: absolute;
+            display: inline-block;
+        }
+
+            input[type="radio"].color-full2 + label.radio2 {
+                display: inline-block;
+            }
+
+                input[type="radio"].color-full2 + label.radio2:after {
+                    display: inline-block;
+                    content: "";
+                    text-align: center;
+                    color: #ccc;
+                    background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAB4CAYAAADyv9IsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODFDRUM0NUI0RkE1MTFFNUE3QTJFODcyQTlBNUZCMzMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODFDRUM0NUM0RkE1MTFFNUE3QTJFODcyQTlBNUZCMzMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4MUNFQzQ1OTRGQTUxMUU1QTdBMkU4NzJBOUE1RkIzMyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4MUNFQzQ1QTRGQTUxMUU1QTdBMkU4NzJBOUE1RkIzMyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmA8TesAAAtTSURBVHjarJnbi11X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') /*../../Images/radios.png*/ 100% 100% no-repeat;
+                    width: 20px;
+                    height: 20px;
+                    vertical-align: middle;
+                    margin: 0 2px;
+                    border-radius: 50%;
+                    border: 1px solid grey;
+                }
+
+            input[type="radio"].color-full2:checked + label.radio2:after {
+                color: #fff;
+                background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAB4CAYAAADyv9IsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODFDRUM0NUI0RkE1MTFFNUE3QTJFODcyQTlBNUZCMzMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODFDRUM0NUM0RkE1MTFFNUE3QTJFODcyQTlBNUZCMzMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4MUNFQzQ1OTRGQTUxMUU1QTdBMkU4NzJBOUE1RkIzMyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4MUNFQzQ1QTRGQTUxMUU1QTdBMkU4NzJBOUE1RkIzMyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmA8TesAAAtTSURBVHjarJnbi11X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') /*../../Images/radios.png*/ 100% 80% no-repeat;
+                border-color: white;
+                height: 22px;
+                width: 21px;
+            }
+
+        /*TWO*/
+        input[type="radio"].color-full3 {
+            opacity: 0;
+            position: absolute;
+            display: inline-block;
+        }
+
+            input[type="radio"].color-full3 + label.radio3 {
+                display: inline-block;
+            }
+
+                input[type="radio"].color-full3 + label.radio3:after {
+                    display: inline-block;
+                    content: "";
+                    text-align: center;
+                    color: #ccc;
+                    background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAB4CAYAAADyv9IsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODFDRUM0NUI0RkE1MTFFNUE3QTJFODcyQTlBNUZCMzMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODFDRUM0NUM0RkE1MTFFNUE3QTJFODcyQTlBNUZCMzMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4MUNFQzQ1OTRGQTUxMUU1QTdBMkU4NzJBOUE1RkIzMyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4MUNFQzQ1QTRGQTUxMUU1QTdBMkU4NzJBOUE1RkIzMyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmA8TesAAAtTSURBVHjarJnbi11X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') /*../../Images/radios.png*/ 100% 20% no-repeat;
+                    width: 20px;
+                    height: 20px;
+                    vertical-align: middle;
+                    margin: 0 2px;
+                    border-radius: 50%;
+                    border: 1px solid grey;
+                }
+
+            input[type="radio"].color-full3:checked + label.radio3:after {
+                color: #fff;
+                background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAB4CAYAAADyv9IsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODFDRUM0NUI0RkE1MTFFNUE3QTJFODcyQTlBNUZCMzMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODFDRUM0NUM0RkE1MTFFNUE3QTJFODcyQTlBNUZCMzMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4MUNFQzQ1OTRGQTUxMUU1QTdBMkU4NzJBOUE1RkIzMyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4MUNFQzQ1QTRGQTUxMUU1QTdBMkU4NzJBOUE1RkIzMyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmA8TesAAAtTSURBVHjarJnbi11XGcDXvp37mUs6taXRaZNTk7RIFSVOSUclguCD1iEIPoRcRN8Con9Afem7PuVJwRTJk4Khvgg+hEoaOwwKFrQNNGkbnVJ17NzOnOveZ/v91mXPuU0ymTl7WOw5e6/vt7/13fb6zvGePvMdNeY4LeOKjEUZR2Xk7fW2jFUZt2RclbHywZs3BgS9IaAv45qMJd/zqmEYqjAIlB94ir9U/npJquIkUXEcb/fSFNplgfbGAWsyrstYyOcilc/lVE7OOYEGAvV8AfZSlQisE8eq0+mqdqcjo7ssMucFercfiGa3Pc9bKObzqljMq1KhoIqFvAKOpr4AewIUzYCoZqutGq2WajbbqtluL6dpegZNQ6sdy9SwcrmoquWSqsi5UipqaBRFSkygZImq2zWweqOpoh0ehC5qQeAwLobWAUtogmbApqsVNTNVUVOVsiqXCnr5CPZ6Pb3MnUZLXwv8QGvD9aSXLD3z0tJpgFdwABNYJpoBOzIzJedqBsU5OAPYVn1HzGBgAhKtY0ZVxhWAi9gIB7A8lgkE2OOPzai52RmtdRSFWnB7p6Hy65GGxXGiNW61OthRhe1wEeBRno438xaKRkCBPTF3RMNzuVA8G6uNrW0TkG1s2RJbGsflTIgdBZgnzggNNMUBLB8omgGbOzKtH4QzOBrNVmZb5oc2tIST117WYSthQWjgTRyA1iwTzYAB5uAz13XAyzwz38jzB7AtGVAgaIkzQgOv4QBsxjKdZpz5zHXuM8/MT3XQy18b4KqkUy0x6aTjzIUGDnA267ch17nPPOYjh7xwVgHekqfVOn0Z4ELDeROb9Xt5bX1D32ce85FDXji3AF6VJ5yT3Ky6DMDYLs7w5rg4RFPOzDem6G4L5yrAFaqGqH+B3CSdXAYQZ4TGuEwx0Lqq7zR1Tsv1G/du/W7F5fJlUftE4LcXbG7qDECYONsrl4FhAikQyyJ/GTkHpJ6dl2jX5QtNsBcZsI9qsyxy511NDPuK611KEFWDRCc3SacH1MNtlolm/QU2HCr93Lgok07rRCc3JZ3IAFux24QG3sQBYoKRV0A47oWyOXVSBUlbRlOFcUOSvmmcFBRVHJZUkiuqRErd9NYdJSVr73fK5tRzfpA0ruU6G0u57mZVPeDoRNPbndzMjSQoXZ7eeqfX/1KysFO1qLt5u7Lz4YWHwXTmyBzmIoPsABDNou7W9VLzowX1iAcyyMLIgCzzILB+KAwNFAecxmbqkAcMWOKE9pX92Gw/NoUlwOaimtABy5c4OzopICw/TJr5iQGF5asJH76kU3tSMFi+5ObqxIDC8pOgeGtSQFgCzF8l0Q8LgwHLlxK0QtU4NFAYsHyjaulyo/jU8kFhyMLIigP1rBtNnT8IFBlkXU3M4nB669273Wj6TL389K/3Y1PmMBcZZMe+AuxTLlI1OrnZK+Qm6eSyiTgjNPAmDsBmI9ky/+VvHcIVn1V/+vkPB98pX/nxL8b2KR59SuDLLsJu11yfwquU93PS205tnyLQ0XeK7VNuy7iQC4NquRCpajGnpkrydpO9zXTZnPnMdblflXkXkPnqT35ZG9bQ9inS9Mguqyi7hYJs3xi5SHa2oqlorEQjNFOdbqJasrVjNGmAurH0KeoMmg70KcBKolm5kNOjlDfgCKDdOXQFCKghu7JQtiqeWeOCXBvsU0R9rRkgsyzpCIoGipZus4R2wJiPfTnSHr1KuiRLN30KDkAIbQACm6kYewEtCjSQXVkim6imwOrNjjaD2aWxgZLNVZJURXvbp8hNnggQjSrWGUemSmpWwGX5zLJZ7o7AclHLlCvsqXuVGDuqdpCYPgXVNTQahAKbmy5reCQP7IrwVs7U4043zmzpHCcc26cIMNCthK81YQLLLFtNZ6tF/SAAuhsQzxYbxrbMNzCfeO3rU8S+hIZnexUmMDmypgDMwefIAex8LeepoT4lVTrOUtur4ABsxjKdZpz5zPXE9ii6P+GMfNan9KRP0c2OgRAaeBMHOJtlNmy09XXuM4/5sXtAz/Yp4vpafwY0bGg4b2Kzfi+v11v6PvOYj5yBprZPSXrnxP3VzGthkMUZ3sQBw3GIpgPQONkWjulTqBrylAutINbp5DIgtmk2LlOAbTdl+TLfannjjZ/9YLdPkSec8DvdBZubOgMIWoT3ymVgDDHJsswd7VMk2nWfQm6STm2r3UOqzbLInXc1cahPUWeoGiQ6uUk6uaAlzggNFw3YjGWiWX+BHdunyKTTJDq5STqRAVmfIqGBN3GAaLwy/AoY26esfbLxvGTHojSN89KWRZ7t/9JeryANz7x0UIuykptzR2ZWpGTtDfzP2npYLkZ3jsxUj/l8ETF0AI5yuUhGrdRLfrWzU//pTrN78lNzs/HIO+W//1s/O10prJfLlePjYCP7QJnDXGSQHQCi2VS58Hq+UKw86osUGWRhZECWeRBYPxSGBooDLhWLxWOH3X3BgOWLN1/Zj832Y1PNIjQmtYOF5RNnE2srhOW7oJ3EAWvyfYqk08RgsHzJze7E+hRh+ZLo9ycFhOVL1Xi1x7fdhzxgwPKlBL3WbDbfPywQBiztZUpQu9WsH3ipIgsjKw7Us62d1ssHgSKDrKuJWRw+/tjszc16a1aK5r392JQ5zEUG2XGbdq2pFM3aJxvb36/X63e7nU63P075n2vcYw5z+6u1Tr8ffe/r4xT4h/3N5EG/pzBHfffF44Pp95s/3x3bp8io8i729TaNmeY9ii16ZqdG+6b7FIE+uE/xbdOT01tlswEdOJtNZlXm6T7lt2/dqw0DfffjTLY91gBf5QXCKNgzg+vct9tgvuK6LlC//zV6rR/mtrlR4O3uVO3OYXczmsp1ztrnC/LyH+xTBrfBZllm+zva63UTHpLoh2jva5v2lkRL06fgAF9rZ5cbmKWyT9RLs/tovVkSYCAbKb8Ppr++T72qhKbpU5gcaA09rVEUGljB2g6Ns6+dNSwxwZ2ZwMgnnmf6FJ7GmyDw3bI9rZkG5sQRYZB97dz2HSy1OzEc09PycjJ9iqdsS+F52c8ZLBPNgOUFymeW6zajYbz7c4mT9eh5lAtaZQLY9RvDcL3v9ocgrr/J0sTT8dfWlsXAzmPK9B7ut5LYbo/jvt9cdG+iXH/ikt32KXKhlqajEBzgbNZ1NqTxkesjcJOWpk+R6zWKStJzQevb0Egym/V7udXl63sT3In+TQ+49rrpU4R+LknTaqKDNtUgF2dAcEB/HALraE0TC5UhxULumz6FqiHqX4htOnkZzGzSRzMl1bCObcuQk+s3pOrs9imiyQkRXjC5uZsBcbJ3LrveUD4vy/XRPkVUv06ip/0Z4PdcjNkosEvU391o+LL8f97VxIE+RcYZqgaJTm4GOg5N0O9GhnEANmOZaNZfYMf2KTLpNIlObpJOZIBdc5vQwJs4APsPvwLG9il/fOvt54/OzSw+OTczX62UIn4xM81kUtiuN+Y/XttYXF3buPmNF19YkZK19zvl92/8NXz203N3jn/myWOyG/Ueso9J7/3z4/ff+9fayW9/7Yujfcof3vzb2S+dml9/rjZ//GEwu/31mIsMsgNANHvh2aOvP/XE3CO3FsggCyOzIcs8CKwfullv0KfUgtnPnb30hVPPXBbDH6q1mKoUZ26u/P0DX7z5yn5sth+bwvIJjUntYGH5xNmkgLB8F7QTaXz4mX3yv6ckycRgsHzJzYn1KbB8SfSJ9SmwfKkar5LoE2h6Uli+lKDXqBqHBcKApb1MCfro32sH7lOQhZFVG+rZ2++tvnwQKDLIupqYxeE3X/r8zb+8e3/2nbv37+3HpsxhLjLI7tUFuFfAJRJ9zCtAhwbexAHYbFj2/wIMABMBaqBHU1M+AAAAAElFTkSuQmCC') /*../../Images/radios.png*/ 100% 0 no-repeat;
+                border-color: white;
+                height: 22px;
+                width: 21px;
+            }
+    </style>
+    @*<style>
+
+
+            .color-full2 {
+                background: transparent url(/Images/radios.png) 100% 100% no-repeat;
+            }
+
+            .color-full3 {
+                background: transparent url(/Images/radios.png) 100% 20% no-repeat;
+            }
+
+            .color-full:checked {
+                background: transparent url(/Images/radios.png) 100% 40% no-repeat;
+            }
+
+            .color-full2:checked {
+                background: transparent url(/Images/radios.png) 100% 80% no-repeat;
+            }
+
+            .color-full3:checked {
+                background: transparent url(/Images/radios.png) 100% 0 no-repeat;
+            }
+        </style>*@
+}
+else
+{
+<div class="well" >
+    nothing to view here<br /> please go back <a href="/">click here</a>
+</div>
+}
+

@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DCSModelStoreContainer" CdmEntityContainer="DCSEntities">
+    <EntitySetMapping Name="ETOPlaybooks">
+      <EntityTypeMapping TypeName="DCSModel.ETOPlaybook">
+        <MappingFragment StoreEntitySet="ETOPlaybooks">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectMilestones">
+      <EntityTypeMapping TypeName="DCSModel.ProjectMilestone">
+        <MappingFragment StoreEntitySet="ProjectMilestones">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="MilestoneStatus" ColumnName="MilestoneStatus" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Complete" ColumnName="Complete" />
+          <ScalarProperty Name="RiskMilestoneId" ColumnName="RiskMilestoneId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectOwners">
+      <EntityTypeMapping TypeName="DCSModel.ProjectOwner">
+        <MappingFragment StoreEntitySet="ProjectOwners">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projects">
+      <EntityTypeMapping TypeName="DCSModel.Project">
+        <MappingFragment StoreEntitySet="Projects">
+          <ScalarProperty Name="FundingAsk" ColumnName="FundingAsk" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectNumber" ColumnName="ProjectNumber" />
+          <ScalarProperty Name="EOPlaybook" ColumnName="EOPlaybook" />
+          <ScalarProperty Name="EOPlaybookId" ColumnName="EOPlaybookId" />
+          <ScalarProperty Name="PeerReview" ColumnName="PeerReview" />
+          <ScalarProperty Name="ManagementApproval" ColumnName="ManagementApproval" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ProjectOwnerANTMId" ColumnName="ProjectOwnerANTMId" />
+          <ScalarProperty Name="ProjectOwnerExternalId" ColumnName="ProjectOwnerExternalId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ExecutiveStatus" ColumnName="ExecutiveStatus" />
+          <ScalarProperty Name="Accomplishments" ColumnName="Accomplishments" />
+          <ScalarProperty Name="KeyRisksAndIssues" ColumnName="KeyRisksAndIssues" />
+          <ScalarProperty Name="Direction" ColumnName="Direction" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectSchedules">
+      <EntityTypeMapping TypeName="DCSModel.ProjectSchedule">
+        <MappingFragment StoreEntitySet="ProjectSchedule">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Complete" ColumnName="Complete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectTrackings">
+      <EntityTypeMapping TypeName="DCSModel.ProjectTracking">
+        <MappingFragment StoreEntitySet="ProjectTracking">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="LastUpdateAny" ColumnName="LastUpdateAny" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EffortRemaining" ColumnName="EffortRemaining" />
+          <ScalarProperty Name="DaysRemaining" ColumnName="DaysRemaining" />
+          <ScalarProperty Name="ErrorRAG" ColumnName="ErrorRAG" />
+          <ScalarProperty Name="ErrorProgress" ColumnName="ErrorProgress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RiskMilestones">
+      <EntityTypeMapping TypeName="DCSModel.RiskMilestone">
+        <MappingFragment StoreEntitySet="RiskMilestone">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="DCSModel.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectStatus">
+      <EntityTypeMapping TypeName="DCSModel.ProjectStatu">
+        <MappingFragment StoreEntitySet="ProjectStatus">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ProjectStatusId" ColumnName="ProjectStatusId" />
+          <ScalarProperty Name="FinancialId" ColumnName="FinancialId" />
+          <ScalarProperty Name="ResourcesId" ColumnName="ResourcesId" />
+          <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+          <ScalarProperty Name="ScopeId" ColumnName="ScopeId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetAllProjects" FunctionName="DCSModel.Store.GetAllProjects">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DCSModel.GetAllProjects_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="ProjectNumber" ColumnName="ProjectNumber" />
+          <ScalarProperty Name="ProjectOwnerANTMName" ColumnName="ProjectOwnerANTMName" />
+          <ScalarProperty Name="ProjectOwnerExternalName" ColumnName="ProjectOwnerExternalName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetDetailForProject1" FunctionName="DCSModel.Store.GetDetailForProject">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DCSModel.GetDetailForProject1_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectNumber" ColumnName="ProjectNumber" />
+          <ScalarProperty Name="EOPlaybook" ColumnName="EOPlaybook" />
+          <ScalarProperty Name="EOPlaybookId" ColumnName="EOPlaybookId" />
+          <ScalarProperty Name="PeerReview" ColumnName="PeerReview" />
+          <ScalarProperty Name="ManagementApproval" ColumnName="ManagementApproval" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ProjectOwnerANTMId" ColumnName="ProjectOwnerANTMId" />
+          <ScalarProperty Name="ProjectOwnerExternalId" ColumnName="ProjectOwnerExternalId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ExecutiveStatus" ColumnName="ExecutiveStatus" />
+          <ScalarProperty Name="Accomplishments" ColumnName="Accomplishments" />
+          <ScalarProperty Name="KeyRisksAndIssues" ColumnName="KeyRisksAndIssues" />
+          <ScalarProperty Name="Direction" ColumnName="Direction" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ProjectOwnerANTMName" ColumnName="ProjectOwnerANTMName" />
+          <ScalarProperty Name="ProjectOwnerExternalName" ColumnName="ProjectOwnerExternalName" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Complete" ColumnName="Complete" />
+          <ScalarProperty Name="ETOPlaybooks" ColumnName="ETOPlaybooks" />
+          <ScalarProperty Name="ScopeId" ColumnName="ScopeId" />
+          <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+          <ScalarProperty Name="ResourcesId" ColumnName="ResourcesId" />
+          <ScalarProperty Name="FinancialId" ColumnName="FinancialId" />
+          <ScalarProperty Name="ProjectStatusId" ColumnName="ProjectStatusId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetProjectDetailById1" FunctionName="DCSModel.Store.GetProjectDetailById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DCSModel.GetProjectDetailById1_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectNumber" ColumnName="ProjectNumber" />
+          <ScalarProperty Name="EOPlaybook" ColumnName="EOPlaybook" />
+          <ScalarProperty Name="EOPlaybookId" ColumnName="EOPlaybookId" />
+          <ScalarProperty Name="PeerReview" ColumnName="PeerReview" />
+          <ScalarProperty Name="ManagementApproval" ColumnName="ManagementApproval" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ProjectOwnerANTMId" ColumnName="ProjectOwnerANTMId" />
+          <ScalarProperty Name="ProjectOwnerExternalId" ColumnName="ProjectOwnerExternalId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ExecutiveStatus" ColumnName="ExecutiveStatus" />
+          <ScalarProperty Name="Accomplishments" ColumnName="Accomplishments" />
+          <ScalarProperty Name="KeyRisksAndIssues" ColumnName="KeyRisksAndIssues" />
+          <ScalarProperty Name="Direction" ColumnName="Direction" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ProjectOwnerANTMName" ColumnName="ProjectOwnerANTMName" />
+          <ScalarProperty Name="ProjectOwnerExternalName" ColumnName="ProjectOwnerExternalName" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Complete" ColumnName="Complete" />
+          <ScalarProperty Name="ProjectMilestoneComplete" ColumnName="ProjectMilestoneComplete" />
+          <ScalarProperty Name="ProjectMilestoneName" ColumnName="ProjectMilestoneName" />
+          <ScalarProperty Name="ETOPlaybooks" ColumnName="ETOPlaybooks" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetDetailForProject" FunctionName="DCSModel.Store.GetDetailForProject">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DCSModel.GetDetailForProject_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectNumber" ColumnName="ProjectNumber" />
+          <ScalarProperty Name="EOPlaybook" ColumnName="EOPlaybook" />
+          <ScalarProperty Name="EOPlaybookId" ColumnName="EOPlaybookId" />
+          <ScalarProperty Name="PeerReview" ColumnName="PeerReview" />
+          <ScalarProperty Name="ManagementApproval" ColumnName="ManagementApproval" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ProjectOwnerANTMId" ColumnName="ProjectOwnerANTMId" />
+          <ScalarProperty Name="ProjectOwnerExternalId" ColumnName="ProjectOwnerExternalId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ExecutiveStatus" ColumnName="ExecutiveStatus" />
+          <ScalarProperty Name="Accomplishments" ColumnName="Accomplishments" />
+          <ScalarProperty Name="KeyRisksAndIssues" ColumnName="KeyRisksAndIssues" />
+          <ScalarProperty Name="Direction" ColumnName="Direction" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ProjectOwnerANTMName" ColumnName="ProjectOwnerANTMName" />
+          <ScalarProperty Name="ProjectOwnerExternalName" ColumnName="ProjectOwnerExternalName" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Complete" ColumnName="Complete" />
+          <ScalarProperty Name="ETOPlaybooks" ColumnName="ETOPlaybooks" />
+          <ScalarProperty Name="ScopeId" ColumnName="ScopeId" />
+          <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+          <ScalarProperty Name="ResourcesId" ColumnName="ResourcesId" />
+          <ScalarProperty Name="FinancialId" ColumnName="FinancialId" />
+          <ScalarProperty Name="ProjectStatusId" ColumnName="ProjectStatusId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllProjectsIndex" FunctionName="DCSModel.Store.GetAllProjectsIndex">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DCSModel.GetAllProjectsIndex_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="ProjectNumber" ColumnName="ProjectNumber" />
+          <ScalarProperty Name="ProjectOwnerANTMName" ColumnName="ProjectOwnerANTMName" />
+          <ScalarProperty Name="ProjectOwnerExternalName" ColumnName="ProjectOwnerExternalName" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ProjectMultiEmails">
+      <EntityTypeMapping TypeName="DCSModel.ProjectMultiEmail">
+        <MappingFragment StoreEntitySet="ProjectMultiEmail">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetProjectMultiEmail" FunctionName="DCSModel.Store.usp_GetProjectMultiEmail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DCSModel.usp_GetProjectMultiEmail_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_RemoveMultiEmail" FunctionName="DCSModel.Store.usp_RemoveMultiEmail" />
+    <FunctionImportMapping FunctionImportName="usp_SaveProjectMultiEmail" FunctionName="DCSModel.Store.usp_SaveProjectMultiEmail" />
+    <FunctionImportMapping FunctionImportName="usp_RemoveMultiEmail1" FunctionName="DCSModel.Store.usp_RemoveMultiEmail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DCSModel.usp_RemoveMultiEmail1_Result1">
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetProjectMultiEmail1" FunctionName="DCSModel.Store.usp_GetProjectMultiEmail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DCSModel.usp_GetProjectMultiEmail_Result1">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetProjectSummaryDetails1" FunctionName="DCSModel.Store.usp_GetProjectSummaryDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DCSModel.usp_GetProjectSummaryDetails1_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="PartnerName" ColumnName="PartnerName" />
+          <ScalarProperty Name="ProjectStartDate" ColumnName="ProjectStartDate" />
+          <ScalarProperty Name="ProjectEndDate" ColumnName="ProjectEndDate" />
+          <ScalarProperty Name="ProjectComplete" ColumnName="ProjectComplete" />
+          <ScalarProperty Name="EtoPlayBookName" ColumnName="EtoPlayBookName" />
+          <ScalarProperty Name="ProjectDescription" ColumnName="ProjectDescription" />
+          <ScalarProperty Name="ExecutiveStatus" ColumnName="ExecutiveStatus" />
+          <ScalarProperty Name="FundingAsk" ColumnName="FundingAsk" />
+          <ScalarProperty Name="Accomplishments" ColumnName="Accomplishments" />
+          <ScalarProperty Name="KeyRisksAndIssues" ColumnName="KeyRisksAndIssues" />
+          <ScalarProperty Name="Direction" ColumnName="Direction" />
+          <ScalarProperty Name="ScopeId" ColumnName="ScopeId" />
+          <ScalarProperty Name="ResourcesId" ColumnName="ResourcesId" />
+          <ScalarProperty Name="FinancialId" ColumnName="FinancialId" />
+          <ScalarProperty Name="ProjectStatusId" ColumnName="ProjectStatusId" />
+          <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetProjectSummaryDetails2" FunctionName="DCSModel.Store.usp_GetProjectSummaryDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DCSModel.usp_GetProjectSummaryDetails1_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="PartnerName" ColumnName="PartnerName" />
+          <ScalarProperty Name="ProjectStartDate" ColumnName="ProjectStartDate" />
+          <ScalarProperty Name="ProjectEndDate" ColumnName="ProjectEndDate" />
+          <ScalarProperty Name="ProjectComplete" ColumnName="ProjectComplete" />
+          <ScalarProperty Name="EtoPlayBookName" ColumnName="EtoPlayBookName" />
+          <ScalarProperty Name="ProjectDescription" ColumnName="ProjectDescription" />
+          <ScalarProperty Name="ExecutiveStatus" ColumnName="ExecutiveStatus" />
+          <ScalarProperty Name="FundingAsk" ColumnName="FundingAsk" />
+          <ScalarProperty Name="Accomplishments" ColumnName="Accomplishments" />
+          <ScalarProperty Name="KeyRisksAndIssues" ColumnName="KeyRisksAndIssues" />
+          <ScalarProperty Name="Direction" ColumnName="Direction" />
+          <ScalarProperty Name="ScopeId" ColumnName="ScopeId" />
+          <ScalarProperty Name="ResourcesId" ColumnName="ResourcesId" />
+          <ScalarProperty Name="FinancialId" ColumnName="FinancialId" />
+          <ScalarProperty Name="ProjectStatusId" ColumnName="ProjectStatusId" />
+          <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetProjectPercentageCompleteByProjectId" FunctionName="DCSModel.Store.usp_GetProjectPercentageCompleteByProjectId" />
+    <FunctionImportMapping FunctionImportName="usp_GetProjectPercentageCompleteByProjectId1" FunctionName="DCSModel.Store.usp_GetProjectPercentageCompleteByProjectId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DCSModel.usp_GetProjectPercentageCompleteByProjectId1_Result">
+          <ScalarProperty Name="Complete" ColumnName="Complete" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="fDelimitedList2Table" FunctionName="DCSModel.Store.fDelimitedList2Table" />
+    <FunctionImportMapping FunctionImportName="usp_GetETOPlayBookMileStones" FunctionName="DCSModel.Store.usp_GetETOPlayBookMileStones">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DCSModel.usp_GetETOPlayBookMileStones_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetProjectMileStones" FunctionName="DCSModel.Store.usp_GetProjectMileStones">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DCSModel.usp_GetProjectMileStones_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Complete" ColumnName="Complete" />
+          <ScalarProperty Name="MilestoneStatus" ColumnName="MilestoneStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetProjectSchedules1" FunctionName="DCSModel.Store.usp_GetProjectSchedules">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DCSModel.usp_GetProjectSchedules1_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Complete" ColumnName="Complete" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_RemoveOwner" FunctionName="DCSModel.Store.usp_RemoveOwner" />
+    <FunctionImportMapping FunctionImportName="usp_RemoveProject" FunctionName="DCSModel.Store.usp_RemoveProject" />
+    <FunctionImportMapping FunctionImportName="usp_RemoveProjectMileStone" FunctionName="DCSModel.Store.usp_RemoveProjectMileStone" />
+    <FunctionImportMapping FunctionImportName="usp_SaveProjectMileStone" FunctionName="DCSModel.Store.usp_SaveProjectMileStone" />
+    <EntitySetMapping Name="TimestampDetails">
+      <EntityTypeMapping TypeName="DCSModel.TimestampDetail">
+        <MappingFragment StoreEntitySet="TimestampDetail">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ColumnName" ColumnName="ColumnName" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetAllProjectsSummary" FunctionName="DCSModel.Store.usp_GetAllProjectsSummary">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DCSModel.usp_GetAllProjectsSummary_Result">
+          <ScalarProperty Name="ProjectNumber" ColumnName="ProjectNumber" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="AnthemOwner" ColumnName="AnthemOwner" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="ProjectModifedDate" ColumnName="ProjectModifedDate" />
+          <ScalarProperty Name="StatusModifiedDate" ColumnName="StatusModifiedDate" />
+          <ScalarProperty Name="MilestoneModifiedDate" ColumnName="MilestoneModifiedDate" />
+          <ScalarProperty Name="ProjectModifedDiff" ColumnName="ProjectModifedDiff" />
+          <ScalarProperty Name="StatusModifiedDiff" ColumnName="StatusModifiedDiff" />
+          <ScalarProperty Name="MilestoneModifiedDiff" ColumnName="MilestoneModifiedDiff" />
+          <ScalarProperty Name="AnthemEmail" ColumnName="AnthemEmail" />
+          <ScalarProperty Name="ExternalOwner" ColumnName="ExternalOwner" />
+          <ScalarProperty Name="ExternalEmail" ColumnName="ExternalEmail" />
+          <ScalarProperty Name="ProjectStartDate" ColumnName="ProjectStartDate" />
+          <ScalarProperty Name="ProjectEndDate" ColumnName="ProjectEndDate" />
+          <ScalarProperty Name="ProjectComplete" ColumnName="ProjectComplete" />
+          <ScalarProperty Name="ProjectScope" ColumnName="ProjectScope" />
+          <ScalarProperty Name="ProjectSchedule" ColumnName="ProjectSchedule" />
+          <ScalarProperty Name="ProjectResource" ColumnName="ProjectResource" />
+          <ScalarProperty Name="ProjectFinancial" ColumnName="ProjectFinancial" />
+          <ScalarProperty Name="ProjectOverAll" ColumnName="ProjectOverAll" />
+          <ScalarProperty Name="IsETOPlayBook" ColumnName="IsETOPlayBook" />
+          <ScalarProperty Name="IsPeerReview" ColumnName="IsPeerReview" />
+          <ScalarProperty Name="ProjectLastUpdate" ColumnName="ProjectLastUpdate" />
+          <ScalarProperty Name="ProjectEffortRemaining" ColumnName="ProjectEffortRemaining" />
+          <ScalarProperty Name="ProjectDaysRemaining" ColumnName="ProjectDaysRemaining" />
+          <ScalarProperty Name="ProjectRAGStatus" ColumnName="ProjectRAGStatus" />
+          <ScalarProperty Name="TimestampModifiedDetail" ColumnName="TimestampModifiedDetail" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

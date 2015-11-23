@@ -1,0 +1,92 @@
+D:\TFS\DCS\DCS\DCS.Common\bin\Release\DCS.Common.dll.config
+D:\TFS\DCS\DCS\DCS.Common\bin\Release\DCS.Common.dll
+D:\TFS\DCS\DCS\DCS.Common\bin\Release\DCS.Common.pdb
+D:\TFS\DCS\DCS\DCS.Common\bin\Release\EntityFramework.dll
+D:\TFS\DCS\DCS\DCS.Common\bin\Release\EntityFramework.SqlServer.dll
+D:\TFS\DCS\DCS\DCS.Common\bin\Release\Microsoft.Web.Infrastructure.dll
+D:\TFS\DCS\DCS\DCS.Common\bin\Release\System.Web.Helpers.dll
+D:\TFS\DCS\DCS\DCS.Common\bin\Release\System.Web.Mvc.dll
+D:\TFS\DCS\DCS\DCS.Common\bin\Release\System.Web.Razor.dll
+D:\TFS\DCS\DCS\DCS.Common\bin\Release\System.Web.WebPages.Deployment.dll
+D:\TFS\DCS\DCS\DCS.Common\bin\Release\System.Web.WebPages.dll
+D:\TFS\DCS\DCS\DCS.Common\bin\Release\System.Web.WebPages.Razor.dll
+D:\TFS\DCS\DCS\DCS.Common\bin\Release\EntityFramework.xml
+D:\TFS\DCS\DCS\DCS.Common\bin\Release\EntityFramework.SqlServer.xml
+D:\TFS\DCS\DCS\DCS.Common\bin\Release\System.Web.Helpers.xml
+D:\TFS\DCS\DCS\DCS.Common\bin\Release\System.Web.Mvc.xml
+D:\TFS\DCS\DCS\DCS.Common\bin\Release\System.Web.Razor.xml
+D:\TFS\DCS\DCS\DCS.Common\bin\Release\System.Web.WebPages.xml
+D:\TFS\DCS\DCS\DCS.Common\bin\Release\System.Web.WebPages.Deployment.xml
+D:\TFS\DCS\DCS\DCS.Common\bin\Release\System.Web.WebPages.Razor.xml
+D:\TFS\DCS\DCS\DCS.Common\obj\Release\DCS.Common.csprojResolveAssemblyReference.cache
+D:\TFS\DCS\DCS\DCS.Common\obj\Release\DCS.Common.dll
+D:\TFS\DCS\DCS\DCS.Common\obj\Release\DCS.Common.pdb
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\bin\Release\DCS.Common.dll.config
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\bin\Release\DCS.Common.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\bin\Release\DCS.Common.pdb
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\bin\Release\EntityFramework.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\bin\Release\EntityFramework.SqlServer.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\bin\Release\Microsoft.Web.Infrastructure.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\bin\Release\System.Web.Helpers.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\bin\Release\System.Web.Mvc.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\bin\Release\System.Web.Razor.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\bin\Release\System.Web.WebPages.Deployment.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\bin\Release\System.Web.WebPages.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\bin\Release\System.Web.WebPages.Razor.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\bin\Release\EntityFramework.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\bin\Release\EntityFramework.SqlServer.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\bin\Release\System.Web.Helpers.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\bin\Release\System.Web.Mvc.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\bin\Release\System.Web.Razor.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\bin\Release\System.Web.WebPages.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\bin\Release\System.Web.WebPages.Deployment.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\bin\Release\System.Web.WebPages.Razor.xml
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\obj\Release\DCS.Common.csprojResolveAssemblyReference.cache
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\obj\Release\DCS.Common.dll
+D:\ServerProjects\DCS\DCS (17_09_2015)\DCS.Common\obj\Release\DCS.Common.pdb
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\bin\Release\DCS.Common.dll.config
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\bin\Release\DCS.Common.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\bin\Release\DCS.Common.pdb
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\bin\Release\EntityFramework.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\bin\Release\EntityFramework.SqlServer.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\bin\Release\Microsoft.Web.Infrastructure.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\bin\Release\System.Web.Helpers.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\bin\Release\System.Web.Mvc.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\bin\Release\System.Web.Razor.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\bin\Release\System.Web.WebPages.Deployment.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\bin\Release\System.Web.WebPages.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\bin\Release\System.Web.WebPages.Razor.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\bin\Release\EntityFramework.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\bin\Release\EntityFramework.SqlServer.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\bin\Release\System.Web.Helpers.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\bin\Release\System.Web.Mvc.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\bin\Release\System.Web.Razor.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\bin\Release\System.Web.WebPages.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\bin\Release\System.Web.WebPages.Deployment.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\bin\Release\System.Web.WebPages.Razor.xml
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\obj\Release\DCS.Common.csprojResolveAssemblyReference.cache
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\obj\Release\DCS.Common.dll
+E:\ServerProjects\DCS\Latest\DCSwithoutdomain(10_10_2015)\DCS(10_10_2015)\DCS.Common\obj\Release\DCS.Common.pdb
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\bin\Release\DCS.Common.dll.config
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\bin\Release\DCS.Common.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\bin\Release\DCS.Common.pdb
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\bin\Release\EntityFramework.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\bin\Release\EntityFramework.SqlServer.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\bin\Release\Microsoft.Web.Infrastructure.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\bin\Release\System.Web.Helpers.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\bin\Release\System.Web.Mvc.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\bin\Release\System.Web.Razor.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\bin\Release\System.Web.WebPages.Deployment.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\bin\Release\System.Web.WebPages.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\bin\Release\System.Web.WebPages.Razor.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\bin\Release\EntityFramework.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\bin\Release\EntityFramework.SqlServer.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\bin\Release\System.Web.Helpers.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\bin\Release\System.Web.Mvc.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\bin\Release\System.Web.Razor.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\bin\Release\System.Web.WebPages.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\bin\Release\System.Web.WebPages.Deployment.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\bin\Release\System.Web.WebPages.Razor.xml
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\obj\Release\DCS.Common.csprojResolveAssemblyReference.cache
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\obj\Release\DCS.Common.dll
+D:\ServerProjects\DCS\DCS(27_10_2015)\DCS.Common\obj\Release\DCS.Common.pdb

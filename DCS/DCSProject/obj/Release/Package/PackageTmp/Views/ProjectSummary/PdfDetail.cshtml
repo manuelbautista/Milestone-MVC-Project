@@ -1,0 +1,564 @@
+﻿@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jquery-ui-1.11.4.min.js"></script>
+<link href="@Url.Content("~/Content/newstyle.css")" rel="stylesheet" />
+<link href="@Url.Content("~/Content/responsive.css")" rel="stylesheet" />
+@*<link href="~/Scripts/normalize.min.css" rel="stylesheet" />*@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<style type="text/css">
+    th {
+        /*min-width: 300px;*/
+        width: auto;
+    }
+
+    td {
+        /*min-width: 300px;*/
+        width: auto;
+        vertical-align: top;
+    }
+
+    #summary-list td:nth-child(odd) {
+        padding-top: 15px;
+    }
+
+    .main-btn {
+        background: #14379b;
+        /*/ Old browsers / background: -moz-linear-gradient(top, #14379b 0%, #3e68b4 50%, #14379b 100%);
+        / FF3.6+ / background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#14379b), color-stop(50%,#3e68b4), color-stop(100%,#14379b));
+        / Chrome,Safari4+ / background: -webkit-linear-gradient(top, #14379b 0%,#3e68b4 50%,#14379b 100%);
+        / Chrome10+,Safari5.1+ / background: -o-linear-gradient(top, #14379b 0%,#3e68b4 50%,#14379b 100%);
+        / Opera 11.10+ / background: -ms-linear-gradient(top, #14379b 0%,#3e68b4 50%,#14379b 100%);
+        / IE10+ / background: linear-gradient(to bottom, #14379b 0%,#3e68b4 50%,#14379b 100%);
+        / W3C / filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#14379b', endColorstr='#14379b',GradientType=0 );
+        / IE6-9 / padding: 5px 10px;*/
+        color: #fff;
+        border-radius: 8px;
+        font-size: 17px;
+        padding: 6px;
+        width: 100%;
+    }
+
+    #spn-overall, #spn-schedule, #spn-scope, #spn-financial, #spn-resource {
+        padding: 8px;
+        position: relative;
+        color: #fff;
+        border-radius: 6px;
+    }
+
+    .p-sign {
+        color: #000;
+        padding: 5px;
+        font-weight: bold;
+        font-size: 11px;
+        margin-bottom: 10px;
+        margin-right: 2px;
+        border-radius: 6px;
+    }
+
+    .legendmilestone {
+        display: inline-block;
+        padding: 5px;
+        font-size: 11px;
+        margin-bottom: 10px;
+        margin-right: 12px;
+        border-radius: 6px;
+        color: #fff;
+        float: right;
+    }
+
+
+    .blue-bg {
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: rgb(154, 210, 245);
+        margin: 10px 0;
+        padding: 10px;
+    }
+</style>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        
+        GetSummaryDetailsData();
+     
+    });
+
+    function SetScope(scopeId) {
+        switch (scopeId) {
+            case 1:
+                $('#spn-scope').text("....");
+                $('#spn-scope').css("background-color", "red");
+                $('#spn-scope').css("color", "red");
+
+                break;
+            case 2:
+                $('#spn-scope').text("....");
+                $('#spn-scope').css("background-color", "yellow");
+                $('#spn-scope').css("color", "yellow");
+                break;
+            case 3:
+                $('#spn-scope').text("....");
+                $('#spn-scope').css("background-color", "green");
+                $('#spn-scope').css("color", "green");
+                break;
+            case 4:
+                $('#spn-scope').html("....");
+                $('#spn-scope').css("background-color", "grey");
+                $('#spn-scope').css("color", "grey");
+                break;
+            default:
+                $('#spn-scope').text("....");
+                $('#spn-scope').css("background-color", "#fff");
+                $('#spn-scope').css("color", "#fff");
+                break;
+        }
+    }
+
+    function SetSchedule(scheduleId) {
+        switch (scheduleId) {
+            case 1:
+                $('#spn-schedule').text("....");
+                $('#spn-schedule').css("background-color", "red");
+                $('#spn-schedule').css("color", "red");
+                break;
+            case 2:
+                $('#spn-schedule').text("....");
+                $('#spn-schedule').css("background-color", "yellow");
+                $('#spn-schedule').css("color", "yellow");
+                break;
+            case 3:
+                $('#spn-schedule').text("....");
+                $('#spn-schedule').css("background-color", "green");
+                $('#spn-schedule').css("color", "green");
+                break;
+            case 4:
+                $('#spn-schedule').html("....");
+                $('#spn-schedule').css("background-color", "grey");
+                $('#spn-schedule').css("color", "grey");
+                break;
+            default:
+                $('#spn-schedule').text("....");
+                $('#spn-schedule').css("background-color", "#fff");
+                $('#spn-schedule').css("color", "#fff");
+                break;
+        }
+    }
+
+    function SetResource(resourceId) {
+        switch (resourceId) {
+            case 1:
+                $('#spn-resource').text("....");
+                $('#spn-resource').css("background-color", "red");
+                $('#spn-resource').css("color", "red");
+                break;
+            case 2:
+                $('#spn-resource').text("....");
+                $('#spn-resource').css("background-color", "yellow");
+                $('#spn-resource').css("color", "yellow");
+                break;
+            case 3:
+                $('#spn-resource').text("....");
+                $('#spn-resource').css("background-color", "green");
+                $('#spn-resource').css("color", "green");
+                break;
+            case 4:
+                $('#spn-resource').html("....");
+                $('#spn-resource').css("background-color", "grey");
+                $('#spn-resource').css("color", "grey");
+                break;
+            default:
+                $('#spn-resource').text("....");
+                $('#spn-resource').css("background-color", "#fff");
+                $('#spn-resource').css("color", "#fff");
+                break;
+        }
+    }
+
+    function SetFinancial(financialId) {
+        switch (financialId) {
+            case 1:
+                $('#spn-financial').text("....");
+                $('#spn-financial').css("background-color", "red");
+                $('#spn-financial').css("color", "red");
+                break;
+            case 2:
+                $('#spn-financial').text("....");
+                $('#spn-financial').css("background-color", "yellow");
+                $('#spn-financial').css("color", "yellow");
+                break;
+            case 3:
+                $('#spn-financial').text("....");
+                $('#spn-financial').css("background-color", "green");
+                $('#spn-financial').css("color", "green");
+                break;
+            case 4:
+                $('#spn-financial').html("....");
+                $('#spn-financial').css("background-color", "grey");
+                $('#spn-financial').css("color", "grey");
+                break;
+            default:
+                $('#spn-financial').text("....");
+                $('#spn-financial').css("background-color", "#fff");
+                $('#spn-financial').css("color", "#fff");
+                break;
+        }
+    }
+
+    function SetOverAllStatus(overallStatusId) {
+        switch (overallStatusId) {
+            case 1:
+                $('#spn-overall').text("....");
+                $('#spn-overall').css("background-color", "red");
+                $('#spn-overall').css("color", "red");
+                break;
+            case 2:
+                $('#spn-overall').text("....");
+                $('#spn-overall').css("background-color", "yellow");
+                $('#spn-overall').css("color", "yellow");
+                break;
+            case 3:
+                $('#spn-overall').text("....");
+                $('#spn-overall').css("background-color", "green");
+                $('#spn-overall').css("color", "green");
+                break;
+            case 4:
+                $('#spn-overall').html("....");
+                $('#spn-overall').css("background-color", "grey");
+                $('#spn-overall').css("color", "grey");
+                break;
+            default:
+                $('#spn-overall').text("....");
+                $('#spn-overall').css("background-color", "#fff");
+                $('#spn-overall').css("color", "#fff");
+                break;
+        }
+    }
+
+    function GetSummaryDetailsData() {
+        var idarry = window.location.pathname.split("/");
+        console.log(idarry);
+        var id = idarry[idarry.length - 1];
+        if ('@ViewBag.pdfid' != null) {
+            id = '@ViewBag.pdfid';
+        }
+        
+        //alert(id + "~" + window.location.pathname);
+        $.ajax({
+            type: "POST",
+            url: '@Url.Content("~/ProjectSummary/GetSummaryDetail")',
+            //  url: "../GetSummaryDetail",
+            //contentType: "application/json;charset=utf-8;",
+            data: { id: id },
+            dataType: "json",
+            success: function (data) {
+                if (data != null) {
+                    SetScope(data.ScopeId);
+                    SetSchedule(data.ScheduleId);
+                    SetResource(data.ResourceId);
+                    SetFinancial(data.FinancialId);
+                    SetOverAllStatus(data.OverallStatusId);
+                    $('#h2-project-name').html(data.ProjectName);
+                    $('#h4-fullname').html("Owners :" + data.AnthemOwner);
+                    $('#h4-ETOPlayBook-name').html("ETO PlayBook :" + data.ETOPlayBookName);
+                    $('#h4-partnername').html("Co-Owner :" + data.PartnerName);
+                    $('#spn-startdate').html(data.ProjectStartDateString);
+                    $('#spn-enddate').html(data.ProjectEndDateString);
+                    $('#spn-proj-complete').html(data.ProjectComplete);
+                    $('#p-proj-descrition').html(data.ProjectDescription);
+                    $('#p-proj-funding').html(data.ProjectFundingAsk);
+                    $('#p-proj-exec-summary').html(data.ProjectExecutiveSummary);
+                    $('#p-proj-accomplish').html(data.ProjectAccomplishments);
+                    $('#p-proj-keyrisk').html(data.ProjectKeyRiskIssues);
+                    $('#p-proj-direction').html(data.ProjectDirection);
+                    var tmpHeadHTML = "";
+                    var tmpCellHTML = "";
+                    for (var i = 0; i < data.ProjectDurationList.length; i++) {
+                        tmpHeadHTML = tmpHeadHTML + "<th style=\"border:2px solid black;background:#9ad3f5;\"><span>" + data.ProjectDurationList[i].Title + "</span></th>";
+                        tmpCellHTML = tmpCellHTML + "";
+                        if (i < data.ProjectDurationList.length - 1) {
+                            tmpCellHTML = tmpCellHTML + "<td style=\"border-bottom: 2px dotted black; border-left: 2px dotted black; height: 150px;\">";
+                            if (data.ProjectDurationList[i].MileStoneList.length > 0) {
+                                for (var j = 0; j < data.ProjectDurationList[i].MileStoneList.length; j++) {
+                                    var position = ((parseInt(data.ProjectDurationList[i].MileStoneList[j].MileStoneDateNumber) * 70) / 30);
+                                    var leftmargin = "margin-left:" + position + "px;";
+                                    var newTitle = data.ProjectDurationList[i].MileStoneList[j].Title;
+                                    if (!data.ProjectDurationList[i].MileStoneList[j].Title.length > 8) { newTitle = data.ProjectDurationList[i].MileStoneList[j].Title.substring(0, 8) + "..."; }
+                                    tmpCellHTML = tmpCellHTML + "<span style=\"width: auto;position: relative;display: inline-flex;margin:10px 0;\"><i class=\"fa fa-stop\" style=\"transform: rotate(45deg);padding-left: 5px;" + leftmargin + ";color:" + GetStatusColor(data.ProjectDurationList[i].MileStoneList[j].MilestoneStatus) + "\" alt=\"" + data.ProjectDurationList[i].MileStoneList[j].DateString + " " + data.ProjectDurationList[i].MileStoneList[j].Title + "\"  title=\"" + data.ProjectDurationList[i].MileStoneList[j].DateString + " " + data.ProjectDurationList[i].MileStoneList[j].Title + "\"></i>";
+                                    tmpCellHTML = tmpCellHTML + "<span style=\"margin-left: 5px;position: absolute;display: inline-table;line-height: 10px;width: 220px;font-size: 11px;\">" + newTitle + "</span></span><br/>";
+                                }
+                            }
+                            else {
+                                tmpCellHTML = tmpCellHTML + "&nbsp;"
+                            }
+                            tmpCellHTML = tmpCellHTML + "</td>";
+                        }
+                        else {
+                            tmpCellHTML = tmpCellHTML + "<td id=\"jason\" style=\"border-bottom: 2px dotted black; border-left: 2px dotted black; border-right: 2px dotted black; height: 150px;\">";
+                            if (data.ProjectDurationList[i].MileStoneList.length > 0) {
+                                for (var j = 0; j < data.ProjectDurationList[i].MileStoneList.length; j++) {
+                                    var position = ((parseInt(data.ProjectDurationList[i].MileStoneList[j].MileStoneDateNumber) * 70) / 30);
+                                    var leftmargin = "margin-left:" + position + "px;";
+                                    var newTitle = data.ProjectDurationList[i].MileStoneList[j].Title;
+                                    if (!data.ProjectDurationList[i].MileStoneList[j].Title.length > 8) { newTitle = data.ProjectDurationList[i].MileStoneList[j].Title.substring(0, 8) + "..."; }
+                                    tmpCellHTML = tmpCellHTML + "<span style=\"width: auto;position: relative;display: inline-flex;margin:10px 0;\"><i class=\"fa fa-stop\" style=\"transform: rotate(45deg);padding-left: 5px;" + leftmargin + ";color:" + GetStatusColor(data.ProjectDurationList[i].MileStoneList[j].MilestoneStatus) + "\" alt=\"" + data.ProjectDurationList[i].MileStoneList[j].DateString + " " + data.ProjectDurationList[i].MileStoneList[j].Title + "\"  title=\"" + data.ProjectDurationList[i].MileStoneList[j].DateString + " " + data.ProjectDurationList[i].MileStoneList[j].Title + "\"></i>";
+                                    //tmpCellHTML = tmpCellHTML + "<i class=\"fa fa-stop\" style=\"transform: rotate(45deg);padding-left: 5px;\" alt=\"" + data.ProjectDurationList[i].MileStoneList[j].DateString + "\"  title=\"" + data.ProjectDurationList[i].MileStoneList[j].DateString + "\"></i>";
+                                    tmpCellHTML = tmpCellHTML + "<span style=\"margin-left:5px;position: absolute;display: inline-table;width:400px;line-height:16px;\">" + newTitle + "</span></span><br/>";
+                                }
+                            }
+                            else {
+                                tmpCellHTML = tmpCellHTML + "&nbsp;"
+                            }
+                            tmpCellHTML = tmpCellHTML + "</td>";
+
+                        }
+                    }
+                    $('#header-row-duration').html(tmpHeadHTML);
+                    $('#summary-list').html(tmpCellHTML);
+
+                }
+            },
+            error: function (xhr, status) {
+                alert(xhr + " ~" + status)
+            }
+
+        });
+    }
+
+    function GetStatusColor(obj) {
+        if (obj == "1") {
+            return "#3d709b";  //Not Started
+        }
+        if (obj == "2") {
+            return "#abc7dd"; //In Progress
+        }
+        if (obj == "3") {
+            return "#1f3a4f"; //Completed
+        }
+        if (obj == "0") {
+            return "#000";
+        }
+    }
+</script>
+<div class="container-fluid" id="bodydiv">
+    <div class="row" id="mainDiv">
+        <div class="col-md-12 col-lg-12">
+            <div class="panel panel-default">
+                <div style="background-color: #fff; border-radius: 12px; border-bottom: 4px solid;" class="panel-heading pnlwithrightbutton">
+                    <div class="row">
+                        <div class="pull-right">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                               
+                                <span class="main-btn">Overall Status</span>
+                                <span id="spn-overall" style="background-color: green;">G</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-md-12 col-lg-12">
+                                <h2 id="h2-project-name" style="color: blue;">Anthem Infrastructure Health Check</h2>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <h4 id="h4-fullname" style="color: blue;">Owners: Peddicord, Shawn</h4>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <h4 id="h4-partnername" style="color: blue;">Project Co-Owner/ Partner : Peddicord</h4>
+                            </div>
+                            <div class="col-md-12 col-lg-12">
+                                <h4 id="h4-ETOPlayBook-name" style="color: blue;">ETO Playbook: None</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-offset-4 col-lg-8 col-md-offset-4 col-md-8">
+                            <div class="top-btns">
+                                <div class="col-lg-2 col-sm-5 col-md-5 col-xs-2">
+                                    <span class="main-btn">Scope</span>
+                                </div>
+                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                    <span id="spn-scope" class="scope">G</span>
+                                </div>
+                                <div class="col-lg-2 col-sm-5 col-md-5 col-xs-2">
+                                    <span class="main-btn">Schedule</span>
+                                </div>
+                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                    <span id="spn-schedule" class="schedule">G</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-sm-5 col-md-5 col-xs-2">
+                                <span class="main-btn">Resources</span>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                <span id="spn-resource" class="resource">G</span>
+                            </div>
+                            <div class="col-lg-2 col-sm-5 col-md-5 col-xs-2">
+                                <span class="main-btn">Financials</span>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                <span id="spn-financial" class="financial">G</span>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="panel-body" id="start">
+
+                <div class="row" style="color: #0029a2;">
+
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-2" style="margin: 0; padding: 0;">
+                        <div class="start"><span><b>Start Date :</b></span><span id="spn-startdate">Various</span></div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-2" style="margin: 0; padding: 0;">
+                        <div class="end"><span><b>End Date :</b></span><span id="spn-enddate">Various</span></div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-2">
+                        <div class="complete"><span><b>% Complete : </b></span><span id="spn-proj-complete">xx%</span></div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-7 col-xs-2">
+                        <div class="legendproject"><span><b>Project Legend:</b></span></div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-5 col-xs-4 s-p-sign" style="margin: 0; padding: 0;">
+                        <div class="pull-right">
+                            <span style="background-color: red; color: #fff;" class="p-sign">Red</span>
+                            <span style="background-color: yellow;" class="p-sign">Amber</span>
+                            <span style="background-color: green; color: #fff;" class="p-sign">Green</span>
+                            <span style="background-color: grey; color: #fff;" class="p-sign">Completed</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-xs-6 pull-right">
+                        <div class="col-md-offset-6 col-lg-3 col-md-3 col-sm-6 col-xs-5">
+                            <div class="m-legend"><span style="color: #0029a2; display: inline-block; line-height: 35px;"><b>Milestone Legend:</b></span></div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-7" style="margin: 0; padding: 0;">
+                            <div class="pull-right">
+                                <span style="background-color: #1f3a4f; color: #fff; border-radius: 5px;" class="legendmilestone2">Completed</span>
+                                <span style="background-color: #abc7dd; border-radius: 5px; color: #fff;" class="legendmilestone2">In Progress</span>
+                                <span style="background-color: #3d709b; color: #fff; border-radius: 5px;" class="legendmilestone2">Planned</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-lg-12 ">
+                    <table style="width: 100%;">
+                        <thead>
+                            <tr id="header-row-duration">
+                                <th style="border: 2px solid black; background: #9ad3f5;">
+                                    <span>April '15</span>
+                                </th>
+                                <th style="border: 2px solid black; background: #9ad3f5;">
+                                    <span>May '15</span>
+                                </th>
+                                <th style="border: 2px solid black; background: #9ad3f5;">
+                                    <span>Jun '15</span>
+                                </th>
+                                <th style="border: 2px solid black; background: #9ad3f5;">
+                                    <span>Jul '15</span>
+                                </th>
+                                <th style="border: 2px solid black; background: #9ad3f5;">
+                                    <span>Aug '15</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="summary-list">
+                            <tr>
+                                <td style="border-bottom: 2px dotted black; border-left: 2px dotted black; height: 150px;">Citrix Start</td>
+                                <td style="border-bottom: 2px dotted black; border-left: 2px dotted black; height: 150px;">Citrix Start</td>
+                                <td style="border-bottom: 2px dotted black; border-left: 2px dotted black; height: 150px;">Citrix Start</td>
+                                <td style="border-bottom: 2px dotted black; border-left: 2px dotted black; height: 150px;">Citrix Start</td>
+                                <td style="border-bottom: 2px dotted black; border-left: 2px dotted black; border-right: 2px dotted black; height: 150px;">Citrix Start</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-xs-12">
+                    <div class="blue-bg">
+                        Project Description and  Business Value:
+                    <p id="p-proj-descrition" style="font-weight: normal;">Platform health checks for the various major Anthem environments to align with vendor recommendations and best practices.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row" id="rowcss">
+        <div class="col-md-6 col-lg-6 col-xs-6 cssclass" id="left">
+            <div class="blue-bg" style="min-height: 113px;">
+                Executive Summary:
+                    <p id="p-proj-exec-summary"
+                        style="font-weight: normal;">
+                        Part of ongoing Data Center Services
+                        platform reliability efforts is conducting health checks on our major
+                        platforms.  Anthem  has a significant investment in these platforms
+                        and they require annual health checks to ensure they are optimized for
+                        performance, maximized for resource efficiencies, and risk is
+                        mitigated by leveraging experienced consultants both internal and
+                        external with proven best practices..  These health checks are
+                        documented  and  provide  Anthem with a roadmap for continual
+                        improvement.    Issues or improvements are scheduled and tracked
+                        through remediation efforts.
+                    </p>
+            </div>
+            <div class="blue-bg" style="min-height: 112px;">
+                Funding Ask:
+                    <p id="p-proj-funding" style="font-weight: normal;">2015</p>
+                <p style="font-weight: normal;"></p>
+                <p style="font-weight: normal;"></p>
+                <p style="font-weight: normal;"></p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-xs-6 cssclass" id="right">
+            <div class="blue-bg">
+                Accomplishments:
+                    <p id="p-proj-accomplish"
+                        style="font-weight: normal;">
+                        Part of ongoing Data Center Services
+                        platform reliability efforts is conducting health checks on our major
+                        platforms.
+                    </p>
+            </div>
+            <div class="blue-bg">
+                Key Risks/Issues:
+                    <p id="p-proj-keyrisk" style="font-weight: normal;">
+                        Part of ongoing Data Center Services platform reliability
+                        efforts is conducting health checks on our major platforms.
+                    </p>
+            </div>
+            <div class="blue-bg">
+                Direction Needed:
+                    <p id="p-proj-direction"
+                        style="font-weight: normal;">
+                        Part of ongoing Data Center Services
+                        platform reliability efforts is conducting health checks on our major
+                        platforms.
+                    </p>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="rowcss1">
+
+        <div class="col-lg-12 col-md-12">
+            <div class="table-responsive" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+    <!-- /.table-responsive -->
+</div>

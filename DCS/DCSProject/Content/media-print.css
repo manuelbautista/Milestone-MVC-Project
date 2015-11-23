@@ -1,0 +1,22 @@
+﻿tbody#summary-list > td, #header-row-duration > th {
+    width: 100% !important;
+    min-height: 165px;
+    max-height: 165px;
+    display: block;
+}
+
+tbody#summary-list, .report-thead {
+    width: 50%;
+}
+
+.parent-table {
+    width: 100%;
+}
+
+    .parent-table tr td.first-td {
+        width: 30%;
+    }
+
+    .parent-table tr td.second-td {
+        width: 68%;
+    }

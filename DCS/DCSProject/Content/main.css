@@ -1,0 +1,33 @@
+﻿form {margin-bottom:0px;}
+.nopadding { padding:0 !important; }
+.nomargin { margin:0 !important; }
+
+.btn.btn-primary.btn-xs , .btn.btn-danger.btn-xs { border:none;padding:0 3px;background:#ffffff;}
+.btn-danger:hover { background-color:#ffffff;}
+.btn.btn-primary.btn-xs:hover, .btn.btn-danger.btn-xs:hover { background-color:#ffffff;}
+.dvheader { width:800px;}
+.cf.nestable-lists {width:800px; }
+.clssearch {width:200px;padding:2px 5px;font-size:15px;}
+.btnGo{margin-top:2px;}
+.clsddlchosen { display: inline-flex;}
+.clslblmilestoneno { text-align:center;}
+
+
+.panel .panel-heading.pnlwithrightbutton {display:inline-block; width:100%; vertical-align:middle;}
+.clstopmargin { margin-top:15px;}
+.panel-heading.pnlwithrightbutton .spnpnlheading { font-size:20px;}
+.spnerror {color:red;}
+.field-validation-error span {color:red; }
+.wdh-100 { width:100%;}
+
+@media screen and (min-width: 769px) {
+    .navbar-toggle {
+        display: none;
+    }
+}
+.fix-label{
+    top:8px;
+}
+.cke{
+    margin: 11px 0 11px 0;
+}

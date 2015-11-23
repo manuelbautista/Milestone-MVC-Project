@@ -1,0 +1,906 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DCSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ETOPlaybook">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Modified" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="Projects" Relationship="Self.FK_Projects_ETOPlaybooks" FromRole="ETOPlaybooks" ToRole="Projects" />
+    <NavigationProperty Name="Projects1" Relationship="Self.FK_Projects_ETOPlaybooks1" FromRole="ETOPlaybooks" ToRole="Projects" />
+  </EntityType>
+  <EntityType Name="ProjectMilestone">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ProjectId" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="Complete" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RiskMilestoneId" Type="Int32" />
+    <NavigationProperty Name="RiskMilestone" Relationship="Self.FK_ProjectMilestones_Projects" FromRole="ProjectMilestones" ToRole="RiskMilestone" />
+    <NavigationProperty Name="Project" Relationship="Self.FK_ProjectMilestones_Projects1" FromRole="ProjectMilestones" ToRole="Projects" />
+    <Property Name="MilestoneStatus" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ProjectOwner">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Modified" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="Projects" Relationship="Self.FK_Projects_ProjectOwners" FromRole="ProjectOwners" ToRole="Projects" />
+    <NavigationProperty Name="Projects1" Relationship="Self.FK_Projects_ProjectOwners1" FromRole="ProjectOwners" ToRole="Projects" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ProjectNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EOPlaybook" Type="Boolean" />
+    <Property Name="EOPlaybookId" Type="Int32" />
+    <Property Name="PeerReview" Type="Boolean" />
+    <Property Name="ManagementApproval" Type="Boolean" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectOwnerANTMId" Type="Int32" />
+    <Property Name="ProjectOwnerExternalId" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExecutiveStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Accomplishments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KeyRisksAndIssues" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Direction" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Modified" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="ETOPlaybook" Relationship="Self.FK_Projects_ETOPlaybooks" FromRole="Projects" ToRole="ETOPlaybooks" />
+    <NavigationProperty Name="ETOPlaybook1" Relationship="Self.FK_Projects_ETOPlaybooks1" FromRole="Projects" ToRole="ETOPlaybooks" />
+    <NavigationProperty Name="ProjectMilestones" Relationship="Self.FK_ProjectMilestones_Projects1" FromRole="Projects" ToRole="ProjectMilestones" />
+    <NavigationProperty Name="ProjectOwner" Relationship="Self.FK_Projects_ProjectOwners" FromRole="Projects" ToRole="ProjectOwners" />
+    <NavigationProperty Name="ProjectOwner1" Relationship="Self.FK_Projects_ProjectOwners1" FromRole="Projects" ToRole="ProjectOwners" />
+    <NavigationProperty Name="ProjectSchedules" Relationship="Self.FK_ProjectSchedule_Projects" FromRole="Projects" ToRole="ProjectSchedule" />
+    <NavigationProperty Name="ProjectTrackings" Relationship="Self.FK_ProjectTracking_Projects" FromRole="Projects" ToRole="ProjectTracking" />
+    <NavigationProperty Name="ProjectStatus" Relationship="DCSModel.FK_ProjectStatus_Projects" FromRole="Project" ToRole="ProjectStatu" />
+    <Property Name="FundingAsk" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProjectSchedule">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ProjectId" Type="Int32" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="Complete" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="Project" Relationship="Self.FK_ProjectSchedule_Projects" FromRole="ProjectSchedule" ToRole="Projects" />
+  </EntityType>
+  <EntityType Name="ProjectTracking">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ProjectId" Type="Int32" />
+    <Property Name="LastUpdateAny" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="EffortRemaining" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DaysRemaining" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ErrorRAG" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ErrorProgress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Project" Relationship="Self.FK_ProjectTracking_Projects" FromRole="ProjectTracking" ToRole="Projects" />
+  </EntityType>
+  <EntityType Name="RiskMilestone">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Modified" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="ProjectMilestones" Relationship="Self.FK_ProjectMilestones_Projects" FromRole="RiskMilestone" ToRole="ProjectMilestones" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="ProjectStatus" Relationship="DCSModel.FK_ProjectStatus_Status" FromRole="Status" ToRole="ProjectStatu" />
+    <NavigationProperty Name="ProjectStatus1" Relationship="DCSModel.FK_ProjectStatus_Status1" FromRole="Status" ToRole="ProjectStatu" />
+    <NavigationProperty Name="ProjectStatus2" Relationship="DCSModel.FK_ProjectStatus_Status2" FromRole="Status" ToRole="ProjectStatu" />
+    <NavigationProperty Name="ProjectStatus3" Relationship="DCSModel.FK_ProjectStatus_Status3" FromRole="Status" ToRole="ProjectStatu" />
+    <NavigationProperty Name="ProjectStatus4" Relationship="DCSModel.FK_ProjectStatus_Status4" FromRole="Status" ToRole="ProjectStatu" />
+  </EntityType>
+  <Association Name="FK_Projects_ETOPlaybooks">
+    <End Role="ETOPlaybooks" Type="Self.ETOPlaybook" Multiplicity="0..1" />
+    <End Role="Projects" Type="Self.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ETOPlaybooks">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Projects">
+        <PropertyRef Name="EOPlaybookId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Projects_ETOPlaybooks1">
+    <End Role="ETOPlaybooks" Type="Self.ETOPlaybook" Multiplicity="0..1" />
+    <End Role="Projects" Type="Self.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ETOPlaybooks">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Projects">
+        <PropertyRef Name="EOPlaybookId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectMilestones_Projects">
+    <End Role="RiskMilestone" Type="Self.RiskMilestone" Multiplicity="0..1" />
+    <End Role="ProjectMilestones" Type="Self.ProjectMilestone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RiskMilestone">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectMilestones">
+        <PropertyRef Name="RiskMilestoneId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectMilestones_Projects1">
+    <End Role="Projects" Type="Self.Project" Multiplicity="0..1" />
+    <End Role="ProjectMilestones" Type="Self.ProjectMilestone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectMilestones">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Projects_ProjectOwners">
+    <End Role="ProjectOwners" Type="Self.ProjectOwner" Multiplicity="0..1" />
+    <End Role="Projects" Type="Self.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectOwners">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Projects">
+        <PropertyRef Name="ProjectOwnerANTMId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Projects_ProjectOwners1">
+    <End Role="ProjectOwners" Type="Self.ProjectOwner" Multiplicity="0..1" />
+    <End Role="Projects" Type="Self.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectOwners">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Projects">
+        <PropertyRef Name="ProjectOwnerExternalId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectSchedule_Projects">
+    <End Role="Projects" Type="Self.Project" Multiplicity="0..1" />
+    <End Role="ProjectSchedule" Type="Self.ProjectSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectSchedule">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectTracking_Projects">
+    <End Role="Projects" Type="Self.Project" Multiplicity="0..1" />
+    <End Role="ProjectTracking" Type="Self.ProjectTracking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectTracking">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DCSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ETOPlaybooks" EntityType="Self.ETOPlaybook" />
+    <EntitySet Name="ProjectMilestones" EntityType="Self.ProjectMilestone" />
+    <EntitySet Name="ProjectOwners" EntityType="Self.ProjectOwner" />
+    <EntitySet Name="Projects" EntityType="Self.Project" />
+    <EntitySet Name="ProjectSchedules" EntityType="Self.ProjectSchedule" />
+    <EntitySet Name="ProjectTrackings" EntityType="Self.ProjectTracking" />
+    <EntitySet Name="RiskMilestones" EntityType="Self.RiskMilestone" />
+    <EntitySet Name="Status" EntityType="Self.Status" />
+    <AssociationSet Name="FK_Projects_ETOPlaybooks" Association="Self.FK_Projects_ETOPlaybooks">
+      <End Role="ETOPlaybooks" EntitySet="ETOPlaybooks" />
+      <End Role="Projects" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Projects_ETOPlaybooks1" Association="Self.FK_Projects_ETOPlaybooks1">
+      <End Role="ETOPlaybooks" EntitySet="ETOPlaybooks" />
+      <End Role="Projects" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectMilestones_Projects" Association="Self.FK_ProjectMilestones_Projects">
+      <End Role="RiskMilestone" EntitySet="RiskMilestones" />
+      <End Role="ProjectMilestones" EntitySet="ProjectMilestones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectMilestones_Projects1" Association="Self.FK_ProjectMilestones_Projects1">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectMilestones" EntitySet="ProjectMilestones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Projects_ProjectOwners" Association="Self.FK_Projects_ProjectOwners">
+      <End Role="ProjectOwners" EntitySet="ProjectOwners" />
+      <End Role="Projects" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Projects_ProjectOwners1" Association="Self.FK_Projects_ProjectOwners1">
+      <End Role="ProjectOwners" EntitySet="ProjectOwners" />
+      <End Role="Projects" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectSchedule_Projects" Association="Self.FK_ProjectSchedule_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectSchedule" EntitySet="ProjectSchedules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectTracking_Projects" Association="Self.FK_ProjectTracking_Projects">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectTracking" EntitySet="ProjectTrackings" />
+    </AssociationSet>
+    <EntitySet Name="ProjectStatus" EntityType="DCSModel.ProjectStatu" />
+    <AssociationSet Name="FK_ProjectStatus_Projects" Association="DCSModel.FK_ProjectStatus_Projects">
+      <End Role="Project" EntitySet="Projects" />
+      <End Role="ProjectStatu" EntitySet="ProjectStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectStatus_Status" Association="DCSModel.FK_ProjectStatus_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="ProjectStatu" EntitySet="ProjectStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectStatus_Status1" Association="DCSModel.FK_ProjectStatus_Status1">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="ProjectStatu" EntitySet="ProjectStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectStatus_Status2" Association="DCSModel.FK_ProjectStatus_Status2">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="ProjectStatu" EntitySet="ProjectStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectStatus_Status3" Association="DCSModel.FK_ProjectStatus_Status3">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="ProjectStatu" EntitySet="ProjectStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectStatus_Status4" Association="DCSModel.FK_ProjectStatus_Status4">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="ProjectStatu" EntitySet="ProjectStatus" />
+    </AssociationSet>
+    <FunctionImport Name="GetAllProjects" ReturnType="Collection(DCSModel.GetAllProjects_Result)" />
+    <FunctionImport Name="GetProjectById" ReturnType="Collection(DCSModel.GetProjectById_Result)">
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetProjectById1" ReturnType="Collection(DCSModel.GetProjectById1_Result)">
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetProjectById2" ReturnType="Collection(DCSModel.GetProjectById2_Result)">
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetProjectById3" ReturnType="Collection(DCSModel.GetProjectById3_Result)">
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetProjectById4" ReturnType="Collection(DCSModel.GetProjectById4_Result)">
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetProjectDetailById" ReturnType="Collection(DCSModel.GetProjectDetailById_Result)">
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetDetailForProject" ReturnType="Collection(DCSModel.GetDetailForProject_Result)">
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetDetailForProject1" ReturnType="Collection(DCSModel.GetDetailForProject1_Result)">
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetProjectById5" ReturnType="Collection(DCSModel.GetProjectById5_Result)">
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetProjectDetailById1" ReturnType="Collection(DCSModel.GetProjectDetailById1_Result)">
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_GetProjectSchedules" ReturnType="Collection(DCSModel.usp_GetProjectSchedules_Result)" />
+    <FunctionImport Name="GetAllProjectsIndex" ReturnType="Collection(DCSModel.GetAllProjectsIndex_Result)" />
+    <EntitySet Name="ProjectMultiEmails" EntityType="DCSModel.ProjectMultiEmail" />
+    <FunctionImport Name="usp_GetProjectMultiEmail" ReturnType="Collection(DCSModel.usp_GetProjectMultiEmail_Result)">
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_RemoveMultiEmail" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_SaveProjectMultiEmail" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_RemoveMultiEmail1" ReturnType="Collection(DCSModel.usp_RemoveMultiEmail1_Result1)">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_GetProjectMultiEmail1" ReturnType="Collection(DCSModel.usp_GetProjectMultiEmail_Result1)">
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_GetProjectSummaryDetails">
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_GetProjectSummaryDetails1" ReturnType="Collection(DCSModel.usp_GetProjectSummaryDetails1_Result)">
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_GetProjectSummaryDetails2" ReturnType="Collection(DCSModel.usp_GetProjectSummaryDetails1_Result)">
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_GetProjectPercentageCompleteByProjectId" ReturnType="Collection(Decimal)">
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_GetProjectPercentageCompleteByProjectId1" ReturnType="Collection(DCSModel.usp_GetProjectPercentageCompleteByProjectId1_Result)">
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="fDelimitedList2Table" IsComposable="true" ReturnType="Collection(String)">
+      <Parameter Name="pStringList" Mode="In" Type="String" />
+      <Parameter Name="pDelimiter" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_GetETOPlayBookMileStones" ReturnType="Collection(DCSModel.usp_GetETOPlayBookMileStones_Result)" />
+    <FunctionImport Name="usp_GetProjectMileStones" ReturnType="Collection(DCSModel.usp_GetProjectMileStones_Result)">
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_GetProjectSchedules1" ReturnType="Collection(DCSModel.usp_GetProjectSchedules1_Result)" />
+    <FunctionImport Name="usp_RemoveOwner" ReturnType="Collection(String)">
+      <Parameter Name="OwnerId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_RemoveProject">
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_RemoveProjectMileStone">
+      <Parameter Name="MileStoneId" Mode="In" Type="Int32" />
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_SaveProjectMileStone" ReturnType="Collection(Decimal)">
+      <Parameter Name="MileStoneId" Mode="In" Type="Int32" />
+      <Parameter Name="ProjectId" Mode="In" Type="Int32" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Complete" Mode="In" Type="Decimal" />
+      <Parameter Name="MilestoneStatus" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="TimestampDetails" EntityType="DCSModel.TimestampDetail" />
+    <FunctionImport Name="usp_GetAllProjectsSummary" ReturnType="Collection(DCSModel.usp_GetAllProjectsSummary_Result)" />
+  </EntityContainer>
+  <EntityType Name="ProjectStatu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="Int32" Nullable="false" />
+    <Property Name="ScopeId" Type="Int32" />
+    <Property Name="ScheduleId" Type="Int32" />
+    <Property Name="ResourcesId" Type="Int32" />
+    <Property Name="FinancialId" Type="Int32" />
+    <Property Name="ProjectStatusId" Type="Int32" />
+    <NavigationProperty Name="Project" Relationship="DCSModel.FK_ProjectStatus_Projects" FromRole="ProjectStatu" ToRole="Project" />
+    <NavigationProperty Name="Status" Relationship="DCSModel.FK_ProjectStatus_Status" FromRole="ProjectStatu" ToRole="Status" />
+    <NavigationProperty Name="Status1" Relationship="DCSModel.FK_ProjectStatus_Status1" FromRole="ProjectStatu" ToRole="Status" />
+    <NavigationProperty Name="Status2" Relationship="DCSModel.FK_ProjectStatus_Status2" FromRole="ProjectStatu" ToRole="Status" />
+    <NavigationProperty Name="Status3" Relationship="DCSModel.FK_ProjectStatus_Status3" FromRole="ProjectStatu" ToRole="Status" />
+    <NavigationProperty Name="Status4" Relationship="DCSModel.FK_ProjectStatus_Status4" FromRole="ProjectStatu" ToRole="Status" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <Association Name="FK_ProjectStatus_Projects">
+    <End Type="DCSModel.Project" Role="Project" Multiplicity="1" />
+    <End Type="DCSModel.ProjectStatu" Role="ProjectStatu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectStatu">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectStatus_Status">
+    <End Type="DCSModel.Status" Role="Status" Multiplicity="0..1" />
+    <End Type="DCSModel.ProjectStatu" Role="ProjectStatu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectStatu">
+        <PropertyRef Name="ScopeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectStatus_Status1">
+    <End Type="DCSModel.Status" Role="Status" Multiplicity="0..1" />
+    <End Type="DCSModel.ProjectStatu" Role="ProjectStatu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectStatu">
+        <PropertyRef Name="ScopeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectStatus_Status2">
+    <End Type="DCSModel.Status" Role="Status" Multiplicity="0..1" />
+    <End Type="DCSModel.ProjectStatu" Role="ProjectStatu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectStatu">
+        <PropertyRef Name="ScheduleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectStatus_Status3">
+    <End Type="DCSModel.Status" Role="Status" Multiplicity="0..1" />
+    <End Type="DCSModel.ProjectStatu" Role="ProjectStatu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectStatu">
+        <PropertyRef Name="ResourcesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectStatus_Status4">
+    <End Type="DCSModel.Status" Role="Status" Multiplicity="0..1" />
+    <End Type="DCSModel.ProjectStatu" Role="ProjectStatu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProjectStatu">
+        <PropertyRef Name="ProjectStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="GetAllProjects_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Created" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ProjectNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProjectOwnerANTMName" Nullable="true" MaxLength="101" />
+    <Property Type="String" Name="ProjectOwnerExternalName" Nullable="true" MaxLength="101" />
+  </ComplexType>
+  <ComplexType Name="GetProjectById_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="ProjectNumber" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="EOPlaybook" Nullable="true" />
+    <Property Type="Int32" Name="EOPlaybookId" Nullable="true" />
+    <Property Type="Boolean" Name="PeerReview" Nullable="true" />
+    <Property Type="Boolean" Name="ManagementApproval" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ProjectOwnerANTMId" Nullable="true" />
+    <Property Type="Int32" Name="ProjectOwnerExternalId" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="true" />
+    <Property Type="String" Name="ExecutiveStatus" Nullable="true" />
+    <Property Type="String" Name="Accomplishments" Nullable="true" />
+    <Property Type="String" Name="KeyRisksAndIssues" Nullable="true" />
+    <Property Type="String" Name="Direction" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="DateTime" Name="Created" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="Modified" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="CreatedBy" Nullable="true" />
+    <Property Type="Int32" Name="ModifiedBy" Nullable="true" />
+    <Property Type="String" Name="ProjectOwnerANTMName" Nullable="true" MaxLength="101" />
+    <Property Type="String" Name="ProjectOwnerExternalName" Nullable="true" MaxLength="101" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Complete" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="GetProjectById1_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="ProjectNumber" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="EOPlaybook" Nullable="true" />
+    <Property Type="Int32" Name="EOPlaybookId" Nullable="true" />
+    <Property Type="Boolean" Name="PeerReview" Nullable="true" />
+    <Property Type="Boolean" Name="ManagementApproval" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ProjectOwnerANTMId" Nullable="true" />
+    <Property Type="Int32" Name="ProjectOwnerExternalId" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="true" />
+    <Property Type="String" Name="ExecutiveStatus" Nullable="true" />
+    <Property Type="String" Name="Accomplishments" Nullable="true" />
+    <Property Type="String" Name="KeyRisksAndIssues" Nullable="true" />
+    <Property Type="String" Name="Direction" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="DateTime" Name="Created" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="Modified" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="CreatedBy" Nullable="true" />
+    <Property Type="Int32" Name="ModifiedBy" Nullable="true" />
+    <Property Type="String" Name="ProjectOwnerANTMName" Nullable="true" MaxLength="101" />
+    <Property Type="String" Name="ProjectOwnerExternalName" Nullable="true" MaxLength="101" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Complete" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ProjectMilestoneComplete" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="ProjectMilestoneName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ETOPlaybooks" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetProjectById2_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="ProjectNumber" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="EOPlaybook" Nullable="true" />
+    <Property Type="Int32" Name="EOPlaybookId" Nullable="true" />
+    <Property Type="Boolean" Name="PeerReview" Nullable="true" />
+    <Property Type="Boolean" Name="ManagementApproval" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ProjectOwnerANTMId" Nullable="true" />
+    <Property Type="Int32" Name="ProjectOwnerExternalId" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="true" />
+    <Property Type="String" Name="ExecutiveStatus" Nullable="true" />
+    <Property Type="String" Name="Accomplishments" Nullable="true" />
+    <Property Type="String" Name="KeyRisksAndIssues" Nullable="true" />
+    <Property Type="String" Name="Direction" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="DateTime" Name="Created" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="Modified" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="CreatedBy" Nullable="true" />
+    <Property Type="Int32" Name="ModifiedBy" Nullable="true" />
+    <Property Type="String" Name="ProjectOwnerANTMName" Nullable="true" MaxLength="101" />
+    <Property Type="String" Name="ProjectOwnerExternalName" Nullable="true" MaxLength="101" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Complete" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ProjectMilestoneComplete" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="ProjectMilestoneName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ETOPlaybooks" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetProjectById3_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="ProjectNumber" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="EOPlaybook" Nullable="true" />
+    <Property Type="Int32" Name="EOPlaybookId" Nullable="true" />
+    <Property Type="Boolean" Name="PeerReview" Nullable="true" />
+    <Property Type="Boolean" Name="ManagementApproval" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ProjectOwnerANTMId" Nullable="true" />
+    <Property Type="Int32" Name="ProjectOwnerExternalId" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="true" />
+    <Property Type="String" Name="ExecutiveStatus" Nullable="true" />
+    <Property Type="String" Name="Accomplishments" Nullable="true" />
+    <Property Type="String" Name="KeyRisksAndIssues" Nullable="true" />
+    <Property Type="String" Name="Direction" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="DateTime" Name="Created" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="Modified" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="CreatedBy" Nullable="true" />
+    <Property Type="Int32" Name="ModifiedBy" Nullable="true" />
+    <Property Type="String" Name="ProjectOwnerANTMName" Nullable="true" MaxLength="101" />
+    <Property Type="String" Name="ProjectOwnerExternalName" Nullable="true" MaxLength="101" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Complete" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ProjectMilestoneComplete" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="ProjectMilestoneName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ETOPlaybooks" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetProjectById4_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="ProjectNumber" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="EOPlaybook" Nullable="true" />
+    <Property Type="Int32" Name="EOPlaybookId" Nullable="true" />
+    <Property Type="Boolean" Name="PeerReview" Nullable="true" />
+    <Property Type="Boolean" Name="ManagementApproval" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ProjectOwnerANTMId" Nullable="true" />
+    <Property Type="Int32" Name="ProjectOwnerExternalId" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="true" />
+    <Property Type="String" Name="ExecutiveStatus" Nullable="true" />
+    <Property Type="String" Name="Accomplishments" Nullable="true" />
+    <Property Type="String" Name="KeyRisksAndIssues" Nullable="true" />
+    <Property Type="String" Name="Direction" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="DateTime" Name="Created" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="Modified" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="CreatedBy" Nullable="true" />
+    <Property Type="Int32" Name="ModifiedBy" Nullable="true" />
+    <Property Type="String" Name="ProjectOwnerANTMName" Nullable="true" MaxLength="101" />
+    <Property Type="String" Name="ProjectOwnerExternalName" Nullable="true" MaxLength="101" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Complete" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ProjectMilestoneComplete" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="ProjectMilestoneName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ETOPlaybooks" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetProjectDetailById_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="ProjectNumber" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="EOPlaybook" Nullable="true" />
+    <Property Type="Int32" Name="EOPlaybookId" Nullable="true" />
+    <Property Type="Boolean" Name="PeerReview" Nullable="true" />
+    <Property Type="Boolean" Name="ManagementApproval" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ProjectOwnerANTMId" Nullable="true" />
+    <Property Type="Int32" Name="ProjectOwnerExternalId" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="true" />
+    <Property Type="String" Name="ExecutiveStatus" Nullable="true" />
+    <Property Type="String" Name="Accomplishments" Nullable="true" />
+    <Property Type="String" Name="KeyRisksAndIssues" Nullable="true" />
+    <Property Type="String" Name="Direction" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="DateTime" Name="Created" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="Modified" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="CreatedBy" Nullable="true" />
+    <Property Type="Int32" Name="ModifiedBy" Nullable="true" />
+    <Property Type="String" Name="ProjectOwnerANTMName" Nullable="true" MaxLength="101" />
+    <Property Type="String" Name="ProjectOwnerExternalName" Nullable="true" MaxLength="101" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Complete" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ProjectMilestoneComplete" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="ProjectMilestoneName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ETOPlaybooks" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetDetailForProject_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="ProjectNumber" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="EOPlaybook" Nullable="true" />
+    <Property Type="Int32" Name="EOPlaybookId" Nullable="true" />
+    <Property Type="Boolean" Name="PeerReview" Nullable="true" />
+    <Property Type="Boolean" Name="ManagementApproval" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ProjectOwnerANTMId" Nullable="true" />
+    <Property Type="Int32" Name="ProjectOwnerExternalId" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="true" />
+    <Property Type="String" Name="ExecutiveStatus" Nullable="true" />
+    <Property Type="String" Name="Accomplishments" Nullable="true" />
+    <Property Type="String" Name="KeyRisksAndIssues" Nullable="true" />
+    <Property Type="String" Name="Direction" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="DateTime" Name="Created" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="Modified" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="CreatedBy" Nullable="true" />
+    <Property Type="Int32" Name="ModifiedBy" Nullable="true" />
+    <Property Type="String" Name="ProjectOwnerANTMName" Nullable="true" MaxLength="101" />
+    <Property Type="String" Name="ProjectOwnerExternalName" Nullable="true" MaxLength="101" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Complete" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="ETOPlaybooks" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="ScopeId" Nullable="true" />
+    <Property Type="Int32" Name="ScheduleId" Nullable="true" />
+    <Property Type="Int32" Name="ResourcesId" Nullable="true" />
+    <Property Type="Int32" Name="FinancialId" Nullable="true" />
+    <Property Type="Int32" Name="ProjectStatusId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetDetailForProject1_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="ProjectNumber" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="EOPlaybook" Nullable="true" />
+    <Property Type="Int32" Name="EOPlaybookId" Nullable="true" />
+    <Property Type="Boolean" Name="PeerReview" Nullable="true" />
+    <Property Type="Boolean" Name="ManagementApproval" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ProjectOwnerANTMId" Nullable="true" />
+    <Property Type="Int32" Name="ProjectOwnerExternalId" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="true" />
+    <Property Type="String" Name="ExecutiveStatus" Nullable="true" />
+    <Property Type="String" Name="Accomplishments" Nullable="true" />
+    <Property Type="String" Name="KeyRisksAndIssues" Nullable="true" />
+    <Property Type="String" Name="Direction" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="DateTime" Name="Created" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="Modified" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="CreatedBy" Nullable="true" />
+    <Property Type="Int32" Name="ModifiedBy" Nullable="true" />
+    <Property Type="String" Name="ProjectOwnerANTMName" Nullable="true" MaxLength="101" />
+    <Property Type="String" Name="ProjectOwnerExternalName" Nullable="true" MaxLength="101" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Complete" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="ETOPlaybooks" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="ScopeId" Nullable="true" />
+    <Property Type="Int32" Name="ScheduleId" Nullable="true" />
+    <Property Type="Int32" Name="ResourcesId" Nullable="true" />
+    <Property Type="Int32" Name="FinancialId" Nullable="true" />
+    <Property Type="Int32" Name="ProjectStatusId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetProjectById5_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="ProjectNumber" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="EOPlaybook" Nullable="true" />
+    <Property Type="Int32" Name="EOPlaybookId" Nullable="true" />
+    <Property Type="Boolean" Name="PeerReview" Nullable="true" />
+    <Property Type="Boolean" Name="ManagementApproval" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ProjectOwnerANTMId" Nullable="true" />
+    <Property Type="Int32" Name="ProjectOwnerExternalId" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="true" />
+    <Property Type="String" Name="ExecutiveStatus" Nullable="true" />
+    <Property Type="String" Name="Accomplishments" Nullable="true" />
+    <Property Type="String" Name="KeyRisksAndIssues" Nullable="true" />
+    <Property Type="String" Name="Direction" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="DateTime" Name="Created" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="Modified" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="CreatedBy" Nullable="true" />
+    <Property Type="Int32" Name="ModifiedBy" Nullable="true" />
+    <Property Type="String" Name="ProjectOwnerANTMName" Nullable="true" MaxLength="101" />
+    <Property Type="String" Name="ProjectOwnerExternalName" Nullable="true" MaxLength="101" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Complete" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ProjectMilestoneComplete" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="ProjectMilestoneName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ETOPlaybooks" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetProjectDetailById1_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="ProjectNumber" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="EOPlaybook" Nullable="true" />
+    <Property Type="Int32" Name="EOPlaybookId" Nullable="true" />
+    <Property Type="Boolean" Name="PeerReview" Nullable="true" />
+    <Property Type="Boolean" Name="ManagementApproval" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ProjectOwnerANTMId" Nullable="true" />
+    <Property Type="Int32" Name="ProjectOwnerExternalId" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="true" />
+    <Property Type="String" Name="ExecutiveStatus" Nullable="true" />
+    <Property Type="String" Name="Accomplishments" Nullable="true" />
+    <Property Type="String" Name="KeyRisksAndIssues" Nullable="true" />
+    <Property Type="String" Name="Direction" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="DateTime" Name="Created" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="Modified" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="CreatedBy" Nullable="true" />
+    <Property Type="Int32" Name="ModifiedBy" Nullable="true" />
+    <Property Type="String" Name="ProjectOwnerANTMName" Nullable="true" MaxLength="101" />
+    <Property Type="String" Name="ProjectOwnerExternalName" Nullable="true" MaxLength="101" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Complete" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ProjectMilestoneComplete" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="ProjectMilestoneName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ETOPlaybooks" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="usp_GetProjectSchedules_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Complete" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="ProjectId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetAllProjectsIndex_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Created" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ProjectNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProjectOwnerANTMName" Nullable="true" MaxLength="101" />
+    <Property Type="String" Name="ProjectOwnerExternalName" Nullable="true" MaxLength="101" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <EntityType Name="ProjectMultiEmail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="Int32" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="usp_GetProjectMultiEmail_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="ProjectId" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="usp_RemoveMultiEmail1_Result1">
+    <Property Type="Int32" Name="ProjectId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="usp_GetProjectMultiEmail_Result1">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="ProjectId" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="usp_GetProjectSummaryDetails1_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="ProjectName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="101" />
+    <Property Type="String" Name="PartnerName" Nullable="true" MaxLength="101" />
+    <Property Type="DateTime" Name="ProjectStartDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ProjectEndDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="ProjectComplete" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="EtoPlayBookName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ProjectDescription" Nullable="true" />
+    <Property Type="String" Name="ExecutiveStatus" Nullable="true" />
+    <Property Type="String" Name="FundingAsk" Nullable="true" />
+    <Property Type="String" Name="Accomplishments" Nullable="true" />
+    <Property Type="String" Name="KeyRisksAndIssues" Nullable="true" />
+    <Property Type="String" Name="Direction" Nullable="true" />
+    <Property Type="Int32" Name="ScopeId" Nullable="true" />
+    <Property Type="Int32" Name="ResourcesId" Nullable="true" />
+    <Property Type="Int32" Name="FinancialId" Nullable="true" />
+    <Property Type="Int32" Name="ProjectStatusId" Nullable="true" />
+    <Property Type="Int32" Name="ScheduleId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_GetProjectPercentageCompleteByProjectId1_Result">
+    <Property Type="Decimal" Name="Complete" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="usp_GetETOPlayBookMileStones_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_GetProjectMileStones_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Complete" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="MilestoneStatus" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="usp_GetProjectSchedules1_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Complete" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="ProjectId" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="TimestampDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectId" Type="Int32" />
+    <Property Name="ColumnName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <ComplexType Name="usp_GetAllProjectsSummary_Result">
+    <Property Type="String" Name="ProjectNumber" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ProjectId" Nullable="false" />
+    <Property Type="String" Name="ProjectName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AnthemOwner" Nullable="true" MaxLength="101" />
+    <Property Type="DateTime" Name="LastUpdated" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="ProjectModifedDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="StatusModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="MilestoneModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="ProjectModifedDiff" Nullable="true" />
+    <Property Type="Int32" Name="StatusModifiedDiff" Nullable="true" />
+    <Property Type="Int32" Name="MilestoneModifiedDiff" Nullable="true" />
+    <Property Type="String" Name="AnthemEmail" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ExternalOwner" Nullable="true" MaxLength="101" />
+    <Property Type="String" Name="ExternalEmail" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="ProjectStartDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="ProjectEndDate" Nullable="false" Precision="23" />
+    <Property Type="Decimal" Name="ProjectComplete" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="String" Name="ProjectScope" Nullable="true" />
+    <Property Type="String" Name="ProjectSchedule" Nullable="true" />
+    <Property Type="String" Name="ProjectResource" Nullable="true" />
+    <Property Type="String" Name="ProjectFinancial" Nullable="true" />
+    <Property Type="String" Name="ProjectOverAll" Nullable="true" />
+    <Property Type="String" Name="IsETOPlayBook" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="IsPeerReview" Nullable="false" MaxLength="3" />
+    <Property Type="DateTime" Name="ProjectLastUpdate" Nullable="false" Precision="23" />
+    <Property Type="Decimal" Name="ProjectEffortRemaining" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ProjectDaysRemaining" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="ProjectRAGStatus" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="TimestampModifiedDetail" Nullable="true" />
+  </ComplexType>
+</Schema>
